@@ -29,9 +29,9 @@ namespace QLKTX
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.button3 = new System.Windows.Forms.Button();
+			this.butcreate = new System.Windows.Forms.Button();
 			this.label5 = new System.Windows.Forms.Label();
-			this.button1 = new System.Windows.Forms.Button();
+			this.butlogin = new System.Windows.Forms.Button();
 			this.cbShowpass = new System.Windows.Forms.CheckBox();
 			this.txtPassword = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
@@ -41,20 +41,21 @@ namespace QLKTX
 			this.butexit = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
-			// button3
+			// butcreate
 			// 
-			this.button3.AutoSize = true;
-			this.button3.BackColor = System.Drawing.Color.GhostWhite;
-			this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.button3.FlatAppearance.BorderSize = 0;
-			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-			this.button3.Location = new System.Drawing.Point(80, 302);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(130, 27);
-			this.button3.TabIndex = 5;
-			this.button3.Text = "CREATE ACCOUNT";
-			this.button3.UseVisualStyleBackColor = false;
+			this.butcreate.AutoSize = true;
+			this.butcreate.BackColor = System.Drawing.Color.GhostWhite;
+			this.butcreate.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.butcreate.FlatAppearance.BorderSize = 0;
+			this.butcreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.butcreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+			this.butcreate.Location = new System.Drawing.Point(80, 302);
+			this.butcreate.Name = "butcreate";
+			this.butcreate.Size = new System.Drawing.Size(130, 27);
+			this.butcreate.TabIndex = 5;
+			this.butcreate.Text = "CREATE ACCOUNT";
+			this.butcreate.UseVisualStyleBackColor = false;
+			this.butcreate.Click += new System.EventHandler(this.butcreate_Click);
 			// 
 			// label5
 			// 
@@ -65,20 +66,20 @@ namespace QLKTX
 			this.label5.TabIndex = 99999999;
 			this.label5.Text = "Don\'t have an account?";
 			// 
-			// button1
+			// butlogin
 			// 
-			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-			this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.button1.FlatAppearance.BorderSize = 0;
-			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button1.ForeColor = System.Drawing.Color.White;
-			this.button1.Location = new System.Drawing.Point(37, 215);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(216, 35);
-			this.button1.TabIndex = 4;
-			this.button1.Text = "LOGIN";
-			this.button1.UseVisualStyleBackColor = false;
-			this.button1.Click += new System.EventHandler(this.button1_Click);
+			this.butlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+			this.butlogin.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.butlogin.FlatAppearance.BorderSize = 0;
+			this.butlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.butlogin.ForeColor = System.Drawing.Color.White;
+			this.butlogin.Location = new System.Drawing.Point(37, 215);
+			this.butlogin.Name = "butlogin";
+			this.butlogin.Size = new System.Drawing.Size(216, 35);
+			this.butlogin.TabIndex = 4;
+			this.butlogin.Text = "LOGIN";
+			this.butlogin.UseVisualStyleBackColor = false;
+			this.butlogin.Click += new System.EventHandler(this.butlogin_Click);
 			// 
 			// cbShowpass
 			// 
@@ -169,9 +170,9 @@ namespace QLKTX
 			this.BackColor = System.Drawing.Color.GhostWhite;
 			this.ClientSize = new System.Drawing.Size(285, 385);
 			this.Controls.Add(this.butexit);
-			this.Controls.Add(this.button3);
+			this.Controls.Add(this.butcreate);
 			this.Controls.Add(this.label5);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.butlogin);
 			this.Controls.Add(this.cbShowpass);
 			this.Controls.Add(this.txtPassword);
 			this.Controls.Add(this.label3);
@@ -192,9 +193,9 @@ namespace QLKTX
 
 		#endregion
 
-		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.Button butcreate;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button butlogin;
 		private System.Windows.Forms.CheckBox cbShowpass;
 		private System.Windows.Forms.TextBox txtPassword;
 		private System.Windows.Forms.Label label3;

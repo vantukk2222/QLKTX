@@ -37,10 +37,11 @@ namespace QLKTX
 			this.label4 = new System.Windows.Forms.Label();
 			this.txtcompassword = new System.Windows.Forms.TextBox();
 			this.cbShowpass = new System.Windows.Forms.CheckBox();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
+			this.butreg = new System.Windows.Forms.Button();
+			this.butclear = new System.Windows.Forms.Button();
 			this.label5 = new System.Windows.Forms.Label();
-			this.button3 = new System.Windows.Forms.Button();
+			this.butback = new System.Windows.Forms.Button();
+			this.butexit = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -127,34 +128,35 @@ namespace QLKTX
 			this.cbShowpass.TabIndex = 7;
 			this.cbShowpass.Text = "Show password";
 			this.cbShowpass.UseVisualStyleBackColor = true;
+			this.cbShowpass.CheckedChanged += new System.EventHandler(this.cbShowpass_CheckedChanged);
 			// 
-			// button1
+			// butreg
 			// 
-			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-			this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.button1.FlatAppearance.BorderSize = 0;
-			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button1.ForeColor = System.Drawing.Color.White;
-			this.button1.Location = new System.Drawing.Point(35, 346);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(216, 35);
-			this.button1.TabIndex = 8;
-			this.button1.Text = "REGISTER";
-			this.button1.UseVisualStyleBackColor = false;
+			this.butreg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+			this.butreg.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.butreg.FlatAppearance.BorderSize = 0;
+			this.butreg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.butreg.ForeColor = System.Drawing.Color.White;
+			this.butreg.Location = new System.Drawing.Point(35, 346);
+			this.butreg.Name = "butreg";
+			this.butreg.Size = new System.Drawing.Size(216, 35);
+			this.butreg.TabIndex = 8;
+			this.butreg.Text = "REGISTER";
+			this.butreg.UseVisualStyleBackColor = false;
 			// 
-			// button2
+			// butclear
 			// 
-			this.button2.BackColor = System.Drawing.Color.GhostWhite;
-			this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.button2.FlatAppearance.BorderSize = 0;
-			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-			this.button2.Location = new System.Drawing.Point(35, 399);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(216, 35);
-			this.button2.TabIndex = 9;
-			this.button2.Text = "CLEAR";
-			this.button2.UseVisualStyleBackColor = false;
+			this.butclear.BackColor = System.Drawing.Color.GhostWhite;
+			this.butclear.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.butclear.FlatAppearance.BorderSize = 0;
+			this.butclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.butclear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+			this.butclear.Location = new System.Drawing.Point(35, 399);
+			this.butclear.Name = "butclear";
+			this.butclear.Size = new System.Drawing.Size(216, 35);
+			this.butclear.TabIndex = 9;
+			this.butclear.Text = "CLEAR";
+			this.butclear.UseVisualStyleBackColor = false;
 			// 
 			// label5
 			// 
@@ -165,19 +167,37 @@ namespace QLKTX
 			this.label5.TabIndex = 10;
 			this.label5.Text = "Already have an account?";
 			// 
-			// button3
+			// butback
 			// 
-			this.button3.BackColor = System.Drawing.Color.White;
-			this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.button3.FlatAppearance.BorderSize = 0;
-			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-			this.button3.Location = new System.Drawing.Point(83, 461);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(120, 24);
-			this.button3.TabIndex = 11;
-			this.button3.Text = "BACK TO LOGIN";
-			this.button3.UseVisualStyleBackColor = false;
+			this.butback.BackColor = System.Drawing.Color.White;
+			this.butback.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.butback.FlatAppearance.BorderSize = 0;
+			this.butback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.butback.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
+			this.butback.Location = new System.Drawing.Point(83, 461);
+			this.butback.Name = "butback";
+			this.butback.Size = new System.Drawing.Size(120, 24);
+			this.butback.TabIndex = 11;
+			this.butback.Text = "BACK TO LOGIN";
+			this.butback.UseVisualStyleBackColor = false;
+			this.butback.Click += new System.EventHandler(this.butback_Click);
+			// 
+			// butexit
+			// 
+			this.butexit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.butexit.BackColor = System.Drawing.Color.GhostWhite;
+			this.butexit.FlatAppearance.BorderColor = System.Drawing.Color.GhostWhite;
+			this.butexit.FlatAppearance.BorderSize = 0;
+			this.butexit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.GhostWhite;
+			this.butexit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.GhostWhite;
+			this.butexit.ForeColor = System.Drawing.Color.Salmon;
+			this.butexit.Location = new System.Drawing.Point(261, 0);
+			this.butexit.Name = "butexit";
+			this.butexit.Size = new System.Drawing.Size(24, 24);
+			this.butexit.TabIndex = 25;
+			this.butexit.Text = "X";
+			this.butexit.UseVisualStyleBackColor = false;
+			this.butexit.Click += new System.EventHandler(this.butexit_Click);
 			// 
 			// Register
 			// 
@@ -185,10 +205,11 @@ namespace QLKTX
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.GhostWhite;
 			this.ClientSize = new System.Drawing.Size(285, 544);
-			this.Controls.Add(this.button3);
+			this.Controls.Add(this.butexit);
+			this.Controls.Add(this.butback);
 			this.Controls.Add(this.label5);
-			this.Controls.Add(this.button2);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.butclear);
+			this.Controls.Add(this.butreg);
 			this.Controls.Add(this.cbShowpass);
 			this.Controls.Add(this.txtcompassword);
 			this.Controls.Add(this.label4);
@@ -220,10 +241,11 @@ namespace QLKTX
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.TextBox txtcompassword;
 		private System.Windows.Forms.CheckBox cbShowpass;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button butreg;
+		private System.Windows.Forms.Button butclear;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.Button butback;
+		private System.Windows.Forms.Button butexit;
 	}
 }
 

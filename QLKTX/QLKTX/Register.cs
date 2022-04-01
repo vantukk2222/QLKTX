@@ -26,5 +26,28 @@ namespace QLKTX
 		{
 
 		}
+
+		private void butback_Click(object sender, EventArgs e)
+		{
+			this.Close();
+			Login log = new Login();
+			log.Show();
+		}
+
+		private void butexit_Click(object sender, EventArgs e)
+		{
+			this.Close();
+			Login log = new Login();
+			log.Show();
+		}
+
+		private void cbShowpass_CheckedChanged(object sender, EventArgs e)
+		{
+			if (txtPassword.PasswordChar == '\0' && txtcompassword.PasswordChar == '\0')
+			{
+				txtPassword.PasswordChar = txtcompassword.PasswordChar ='*' ;
+			}
+			else txtPassword.PasswordChar = txtcompassword.PasswordChar = '\0' ;
+		}
 	}
 }

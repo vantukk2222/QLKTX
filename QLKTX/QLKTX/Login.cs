@@ -20,7 +20,7 @@ namespace QLKTX
 			InitializeComponent();
 		}
 
-		private void button1_Click(object sender, EventArgs e)
+		private void butlogin_Click(object sender, EventArgs e)
 		{
 			SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-IHJACRP;Initial Catalog=QLKyTucXa;Integrated Security=True");
 			
@@ -48,6 +48,13 @@ namespace QLKTX
 				txtPassword.PasswordChar = '*';
 			}
 			else txtPassword.PasswordChar = '\0';
+		}
+
+		private void butcreate_Click(object sender, EventArgs e)
+		{
+			Register reg = new Register();
+			reg.Show();
+			this.Hide();
 		}
 	}
 }
