@@ -11,13 +11,13 @@ using System.Data.SqlClient;
 
 namespace QLKTX
 {
-	public partial class Form1 : Form
+	public partial class Register : Form
 	{
 		SqlConnection connectAcc;
 		SqlCommand cmdAcc;
 		string str = "@Data Source=DESKTOP-IHJACRP;Initial Catalog=QLKyTucXa;Integrated Security=True";
 		SqlDataAdapter adapter = new SqlDataAdapter();
-		public Form1()
+		public Register()
 		{
 			InitializeComponent();
 		}
