@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace QLKTX
 {
 	public partial class Register : Form
 	{
-		SqlConnection connectAcc;
-		SqlCommand cmdAcc;
-		string str = "@Data Source=DESKTOP-IHJACRP;Initial Catalog=QLKyTucXa;Integrated Security=True";
-		SqlDataAdapter adapter = new SqlDataAdapter();
+		
 		public Register()
 		{
 			InitializeComponent();
@@ -48,6 +46,32 @@ namespace QLKTX
 				txtPassword.PasswordChar = txtcompassword.PasswordChar ='*' ;
 			}
 			else txtPassword.PasswordChar = txtcompassword.PasswordChar = '\0' ;
+		}
+
+		private void butreg_Click(object sender, EventArgs e)
+		{
+			string ConnectionString = ConfigurationManager.ConnectionStrings["QLKTX.Properties.Settings.QLKTXConnectionString"].ConnectionString;
+			SqlConnection sqlcon = new SqlConnection(ConnectionString);
+
+			string query = "Select * from Account Where account = '" + txtUsername.Text.Trim() + "'";
+			string queryfull = "Select * from Account Where account = '" + txtUsername.Text.Trim() + "' and password = '" + txtPassword.Text.Trim() + "'";
+			SqlDataAdapter xda = new SqlDataAdapter(queryfull, sqlcon);
+			SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
+			DataTable dtblfull = new DataTable();
+			DataTable dtbl = new DataTable();
+			sda.Fill(dtbl);
+			if (txtUsername.Text == "" || txtPassword.Text == "")
+			{
+				MessageBox.Show("Please fill form");
+			}
+			else if (txtcompassword.Text != txtPassword.Text)
+			{
+				MessageBox.Show("Password do not match");
+			}
+			else 
+			{ 
+
+			}
 		}
 	}
 }

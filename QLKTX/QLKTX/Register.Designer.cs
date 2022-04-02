@@ -143,6 +143,7 @@ namespace QLKTX
 			this.butreg.TabIndex = 8;
 			this.butreg.Text = "REGISTER";
 			this.butreg.UseVisualStyleBackColor = false;
+			this.butreg.Click += new System.EventHandler(this.butreg_Click);
 			// 
 			// butclear
 			// 
