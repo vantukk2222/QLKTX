@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using System.Configuration;
 namespace QLKTX
 {
 	public partial class Login : Form
@@ -22,7 +22,8 @@ namespace QLKTX
 
 		private void butlogin_Click(object sender, EventArgs e)
 		{
-			SqlConnection sqlcon = new SqlConnection(@"Data Source=DESKTOP-IHJACRP;Initial Catalog=QLKyTucXa;Integrated Security=True");
+            string ConnectionString = ConfigurationManager.ConnectionStrings["QLKTX.Properties.Settings.QLKTXConnectionString"].ConnectionString;
+            SqlConnection sqlcon = new SqlConnection(ConnectionString);
 			
 			string query = "Select * from Account Where account = '" + txtUsername.Text.Trim() +"' and password = '" + txtPassword.Text.Trim() + "'";
 			SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
