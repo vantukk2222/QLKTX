@@ -50,28 +50,63 @@ namespace QLKTX
 
 		private void butreg_Click(object sender, EventArgs e)
 		{
-			string ConnectionString = ConfigurationManager.ConnectionStrings["QLKTX.Properties.Settings.QLKTXConnectionString"].ConnectionString;
-			SqlConnection sqlcon = new SqlConnection(ConnectionString);
+			string ConnectionStringCheck = ConfigurationManager.ConnectionStrings["QLKTX.Properties.Settings.QLKTXConnectionString"].ConnectionString;
+			SqlConnection sqlconcheck = new SqlConnection(ConnectionStringCheck);
 
-			string query = "Select * from Account Where account = '" + txtUsername.Text.Trim() + "'";
-			string queryfull = "Select * from Account Where account = '" + txtUsername.Text.Trim() + "' and password = '" + txtPassword.Text.Trim() + "'";
-			SqlDataAdapter xda = new SqlDataAdapter(queryfull, sqlcon);
-			SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
-			DataTable dtblfull = new DataTable();
-			DataTable dtbl = new DataTable();
-			sda.Fill(dtbl);
-			if (txtUsername.Text == "" || txtPassword.Text == "")
+			string querycheck = "Select * from Account Where account = '" + txtUsername.Text.Trim() + "' and password = '" + txtPassword.Text.Trim() + "'";
+			SqlDataAdapter sda = new SqlDataAdapter(querycheck, sqlconcheck);
+			DataTable dtblcheck = new DataTable();
+			sda.Fill(dtblcheck);
+			if (dtblcheck.Rows.Count == 1)
 			{
-				MessageBox.Show("Please fill form");
+				MessageBox.Show("Username already exists!");
 			}
-			else if (txtcompassword.Text != txtPassword.Text)
+			else
 			{
-				MessageBox.Show("Password do not match");
-			}
-			else 
-			{ 
+				if (txtUsername.Text == "" || txtPassword.Text == "")
+				{
+					MessageBox.Show("Please fill form!");
+				}
+				
+				else if (txtcompassword.Text != txtPassword.Text)
+				{
+					MessageBox.Show("Password do not match!");
+				}
+				else if (txtPassword.Text == txtUsername.Text)
+				{
+					MessageBox.Show("Please choose a stronger password!");
+				}
+				else
+				{
+					string ConnectionStringCheckid = ConfigurationManager.ConnectionStrings["QLKTX.Properties.Settings.QLKTXConnectionString"].ConnectionString;
+					SqlConnection sqlconcheckid = new SqlConnection(ConnectionStringCheckid);
 
+					string queryid = "Select * from Account";
+					SqlDataAdapter sdaid = new SqlDataAdapter(queryid, sqlconcheckid);
+					DataTable dtblid = new DataTable();
+					sdaid.Fill(dtblid);
+					int x = int.Parse(dtblid.Rows.Count.ToString()) + 1;
+					string ConnectionString = ConfigurationManager.ConnectionStrings["QLKTX.Properties.Settings.QLKTXConnectionString"].ConnectionString;
+					SqlConnection sqlcon = new SqlConnection(ConnectionString);
+					SqlCommand cmd = new SqlCommand(@"INSERT INTO ACCOUNT
+					([loginid]
+					,[account]
+					,[password])
+					VALUES
+					('" + x + "','" + txtUsername.Text + "','" + txtPassword.Text + "')", sqlcon);
+					sqlcon.Open();
+					cmd.ExecuteNonQuery();
+					sqlcon.Close();
+					MessageBox.Show("Register Successfully!!!");
+					txtcompassword.Text = txtPassword.Text = txtUsername.Text = "";
+
+				}
 			}
 		}
-	}
+
+        private void butclear_Click(object sender, EventArgs e)
+        {
+			txtcompassword.Text = txtPassword.Text = txtUsername.Text = "";
+		}
+    }
 }

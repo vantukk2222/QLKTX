@@ -40,6 +40,7 @@ namespace QLKTX
 			this.label1 = new System.Windows.Forms.Label();
 			this.butexit = new System.Windows.Forms.Button();
 			this.SuspendLayout();
+			this.AcceptButton = this.butlogin;
 			// 
 			// butcreate
 			// 
