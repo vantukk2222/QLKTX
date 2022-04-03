@@ -31,7 +31,10 @@ namespace QLKTX
 			sda.Fill(dtbl);
 			if (dtbl.Rows.Count == 1)
 			{
-				MessageBox.Show("Login Success!!!");
+				Main fmain = new Main();
+				fmain.Show();
+				this.Hide();
+				MessageBox.Show("Welcome "+txtUsername.Text);
 			}
 			else
 				MessageBox.Show("Check your username and password");

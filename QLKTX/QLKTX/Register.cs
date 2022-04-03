@@ -72,7 +72,7 @@ namespace QLKTX
 				{
 					MessageBox.Show("Password do not match!");
 				}
-				else if (txtPassword.Text == txtUsername.Text)
+				else if (txtPassword.Text == txtUsername.Text || txtUsername.Text.Length < 6 || txtPassword.Text.Length < 6)
 				{
 					MessageBox.Show("Please choose a stronger password!");
 				}

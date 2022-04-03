@@ -73,7 +73,7 @@ namespace QLKTX
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(216, 28);
-            this.txtUsername.TabIndex = 3;
+            this.txtUsername.TabIndex = 1;
             // 
             // label3
             // 
@@ -94,7 +94,7 @@ namespace QLKTX
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(216, 28);
-            this.txtPassword.TabIndex = 3;
+            this.txtPassword.TabIndex = 2;
             // 
             // label4
             // 
@@ -115,7 +115,7 @@ namespace QLKTX
             this.txtcompassword.Name = "txtcompassword";
             this.txtcompassword.PasswordChar = '*';
             this.txtcompassword.Size = new System.Drawing.Size(216, 28);
-            this.txtcompassword.TabIndex = 6;
+            this.txtcompassword.TabIndex = 3;
             // 
             // cbShowpass
             // 
@@ -125,7 +125,7 @@ namespace QLKTX
             this.cbShowpass.Location = new System.Drawing.Point(132, 304);
             this.cbShowpass.Name = "cbShowpass";
             this.cbShowpass.Size = new System.Drawing.Size(119, 21);
-            this.cbShowpass.TabIndex = 7;
+            this.cbShowpass.TabIndex = 912212;
             this.cbShowpass.Text = "Show password";
             this.cbShowpass.UseVisualStyleBackColor = true;
             this.cbShowpass.CheckedChanged += new System.EventHandler(this.cbShowpass_CheckedChanged);
@@ -140,7 +140,7 @@ namespace QLKTX
             this.butreg.Location = new System.Drawing.Point(35, 346);
             this.butreg.Name = "butreg";
             this.butreg.Size = new System.Drawing.Size(216, 35);
-            this.butreg.TabIndex = 8;
+            this.butreg.TabIndex = 4;
             this.butreg.Text = "REGISTER";
             this.butreg.UseVisualStyleBackColor = false;
             this.butreg.Click += new System.EventHandler(this.butreg_Click);
@@ -155,7 +155,7 @@ namespace QLKTX
             this.butclear.Location = new System.Drawing.Point(35, 399);
             this.butclear.Name = "butclear";
             this.butclear.Size = new System.Drawing.Size(216, 35);
-            this.butclear.TabIndex = 9;
+            this.butclear.TabIndex = 5;
             this.butclear.Text = "CLEAR";
             this.butclear.UseVisualStyleBackColor = false;
             this.butclear.Click += new System.EventHandler(this.butclear_Click);
@@ -166,7 +166,7 @@ namespace QLKTX
             this.label5.Location = new System.Drawing.Point(61, 441);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(164, 17);
-            this.label5.TabIndex = 10;
+            this.label5.TabIndex = 1099;
             this.label5.Text = "Already have an account?";
             // 
             // butback
@@ -179,7 +179,7 @@ namespace QLKTX
             this.butback.Location = new System.Drawing.Point(83, 461);
             this.butback.Name = "butback";
             this.butback.Size = new System.Drawing.Size(120, 24);
-            this.butback.TabIndex = 11;
+            this.butback.TabIndex = 1166;
             this.butback.Text = "BACK TO LOGIN";
             this.butback.UseVisualStyleBackColor = false;
             this.butback.Click += new System.EventHandler(this.butback_Click);
@@ -203,6 +203,7 @@ namespace QLKTX
             // 
             // Register
             // 
+            this.AcceptButton = this.butreg;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
