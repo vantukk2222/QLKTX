@@ -34,7 +34,7 @@ namespace QLKTX
 				Main fmain = new Main();
 				fmain.Show();
 				this.Hide();
-				MessageBox.Show("Welcome "+txtUsername.Text);
+                MessageBox.Show("Welcome "+txtUsername.Text);
 			}
 			else
 				MessageBox.Show("Check your username and password");
@@ -42,8 +42,8 @@ namespace QLKTX
 
 		private void butexit_Click(object sender, EventArgs e)
 		{
-			this.Close();
-		}
+            Application.Exit();
+        }
 
 		private void cbShowpass_CheckedChanged(object sender, EventArgs e)
 		{
@@ -58,7 +58,7 @@ namespace QLKTX
 		{
 			Register reg = new Register();
 			reg.Show();
-			this.Hide();
-		}
+            this.Hide();
+        }
 	}
 }
