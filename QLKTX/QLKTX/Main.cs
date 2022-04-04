@@ -21,5 +21,41 @@ namespace QLKTX
         {
             Application.Exit();
         }
+
+        private void butQLSV_Click(object sender, EventArgs e)
+        {
+            MainPanel.Controls.Clear();
+            UC_QLSV qlsv = new UC_QLSV();
+            qlsv.Dock = DockStyle.Fill;
+            MainPanel.Controls.Add(qlsv);
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void MainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2GradientButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void butLogOut_Click(object sender, EventArgs e)
+        {
+
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
