@@ -165,10 +165,10 @@
     <None Include="Resources\building.png" />
     <None Include="Resources\Exit.png" />
     <EmbeddedResource Include="QLKTX.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <Content Include="QLKTX_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>QLKTX.mdf</DependentUpon>
     </Content>
   </ItemGroup>
