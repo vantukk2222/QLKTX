@@ -10,18 +10,13 @@ using System.Windows.Forms;
 
 namespace QLKTX
 {
-    public partial class UC_QLSV : UserControl
+    public partial class UC_QLPhong : UserControl
     {
-        public UC_QLSV()
+        public UC_QLPhong()
         {
             InitializeComponent();
         }
 
-        private void UC_QLSV_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        
     }
 }

@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace QLKTX
 {
-    public partial class UC_QLSV : UserControl
+    public partial class UC_QLHoaDon : UserControl
     {
-        public UC_QLSV()
+        public UC_QLHoaDon()
         {
             InitializeComponent();
         }
 
-        private void UC_QLSV_Load(object sender, EventArgs e)
+        private void UC_QLHoaDon_Load(object sender, EventArgs e)
         {
 
         }
