@@ -35,7 +35,7 @@ namespace QLKTX
             this.icbtInDanhSach = new FontAwesome.Sharp.IconButton();
             this.icbtGioiThieu = new FontAwesome.Sharp.IconButton();
             this.icbtTongQuan = new FontAwesome.Sharp.IconButton();
-            this.icbtTimKiem = new FontAwesome.Sharp.IconButton();
+            this.icbtPhieuBaoCao = new FontAwesome.Sharp.IconButton();
             this.icbtHoaDon = new FontAwesome.Sharp.IconButton();
             this.icbtQLSV = new FontAwesome.Sharp.IconButton();
             this.icbtQLP = new FontAwesome.Sharp.IconButton();
@@ -69,12 +69,13 @@ namespace QLKTX
             // panelMenu
             // 
             this.panelMenu.AllowDrop = true;
+            this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(122)))), ((int)(((byte)(244)))));
             this.panelMenu.Controls.Add(this.icbtLogOut);
             this.panelMenu.Controls.Add(this.icbtInDanhSach);
             this.panelMenu.Controls.Add(this.icbtGioiThieu);
             this.panelMenu.Controls.Add(this.icbtTongQuan);
-            this.panelMenu.Controls.Add(this.icbtTimKiem);
+            this.panelMenu.Controls.Add(this.icbtPhieuBaoCao);
             this.panelMenu.Controls.Add(this.icbtHoaDon);
             this.panelMenu.Controls.Add(this.icbtQLSV);
             this.panelMenu.Controls.Add(this.icbtQLP);
@@ -178,28 +179,28 @@ namespace QLKTX
             this.icbtTongQuan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.icbtTongQuan.UseVisualStyleBackColor = false;
             // 
-            // icbtTimKiem
+            // icbtPhieuBaoCao
             // 
-            this.icbtTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(122)))), ((int)(((byte)(244)))));
-            this.icbtTimKiem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.icbtTimKiem.FlatAppearance.BorderSize = 0;
-            this.icbtTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icbtTimKiem.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.icbtTimKiem.ForeColor = System.Drawing.Color.White;
-            this.icbtTimKiem.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.icbtTimKiem.IconColor = System.Drawing.Color.White;
-            this.icbtTimKiem.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.icbtTimKiem.IconSize = 30;
-            this.icbtTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtTimKiem.Location = new System.Drawing.Point(0, 279);
-            this.icbtTimKiem.Name = "icbtTimKiem";
-            this.icbtTimKiem.Size = new System.Drawing.Size(230, 55);
-            this.icbtTimKiem.TabIndex = 4;
-            this.icbtTimKiem.Tag = "Tìm kiếm";
-            this.icbtTimKiem.Text = "Tìm kiếm";
-            this.icbtTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.icbtTimKiem.UseVisualStyleBackColor = false;
+            this.icbtPhieuBaoCao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(122)))), ((int)(((byte)(244)))));
+            this.icbtPhieuBaoCao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.icbtPhieuBaoCao.FlatAppearance.BorderSize = 0;
+            this.icbtPhieuBaoCao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icbtPhieuBaoCao.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icbtPhieuBaoCao.ForeColor = System.Drawing.Color.White;
+            this.icbtPhieuBaoCao.IconChar = FontAwesome.Sharp.IconChar.PenFancy;
+            this.icbtPhieuBaoCao.IconColor = System.Drawing.Color.White;
+            this.icbtPhieuBaoCao.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.icbtPhieuBaoCao.IconSize = 30;
+            this.icbtPhieuBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.icbtPhieuBaoCao.Location = new System.Drawing.Point(0, 279);
+            this.icbtPhieuBaoCao.Name = "icbtPhieuBaoCao";
+            this.icbtPhieuBaoCao.Size = new System.Drawing.Size(230, 55);
+            this.icbtPhieuBaoCao.TabIndex = 4;
+            this.icbtPhieuBaoCao.Tag = "Phiếu báo cáo";
+            this.icbtPhieuBaoCao.Text = "Phiếu báo cáo";
+            this.icbtPhieuBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.icbtPhieuBaoCao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.icbtPhieuBaoCao.UseVisualStyleBackColor = false;
             // 
             // icbtHoaDon
             // 
@@ -317,6 +318,7 @@ namespace QLKTX
             this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.iconPictureBox1.TabIndex = 0;
             this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
             // 
             // rjDropdownMenuQLP
             // 
@@ -525,7 +527,7 @@ namespace QLKTX
         private FontAwesome.Sharp.IconButton icbtQLP;
         private FontAwesome.Sharp.IconButton icbtGioiThieu;
         private FontAwesome.Sharp.IconButton icbtTongQuan;
-        private FontAwesome.Sharp.IconButton icbtTimKiem;
+        private FontAwesome.Sharp.IconButton icbtPhieuBaoCao;
         private FontAwesome.Sharp.IconButton icbtHoaDon;
         private FontAwesome.Sharp.IconButton icbtQLSV;
         private FontAwesome.Sharp.IconButton icbtInDanhSach;

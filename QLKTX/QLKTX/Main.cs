@@ -261,7 +261,7 @@ namespace QLKTX
                 menuButton.ImageAlign = ContentAlignment.MiddleLeft;
                 menuButton.Padding = new Padding(10, 0, 0, 0);
             }
-            Open_DropdownMenu(rjDropdownMenuQLP, sender);
+           // Open_DropdownMenu(rjDropdownMenuQLP, sender);
 
         }
         private void icbtQLSV_Click(object sender, EventArgs e)
@@ -299,7 +299,7 @@ namespace QLKTX
                 menuButton.ImageAlign = ContentAlignment.MiddleLeft;
                 menuButton.Padding = new Padding(10, 0, 0, 0);
             }
-            Open_DropdownMenu(rjDropdownMenuQLSV, sender);
+            //Open_DropdownMenu(rjDropdownMenuQLSV, sender);
         }
         private void icbtHoaDon_Click(object sender, EventArgs e)
         {
@@ -336,8 +336,12 @@ namespace QLKTX
                 menuButton.ImageAlign = ContentAlignment.MiddleLeft;
                 menuButton.Padding = new Padding(10, 0, 0, 0);
             }
-            Open_DropdownMenu(rjDropdownMenuHoaDon, sender);
+           // Open_DropdownMenu(rjDropdownMenuHoaDon, sender);
         }
 
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+            this.panelDesktop.Controls.Clear();
+        }
     }
 }
