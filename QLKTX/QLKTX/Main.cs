@@ -21,6 +21,7 @@ namespace QLKTX
             InitializeComponent();
             CollapseMenu();
             this.Padding = new Padding(borderSize);
+            this.panelDesktop.Controls.Add(new UC_QLPhong());
             this.BackColor = Color.FromArgb(98,102,244);
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -212,6 +213,11 @@ namespace QLKTX
 
         private void icbtQLP_Click(object sender, EventArgs e)
         {
+            UC_QLPhong qlPhong = new UC_QLPhong();
+            panelDesktop.Controls.Clear();
+            panelDesktop.Controls.Add(qlPhong);
+            qlPhong.Dock = DockStyle.Left;
+            
             this.icbtMenu.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
             panelMenu.Width = 230;
             iconPictureBox1.Visible = true;
@@ -240,6 +246,11 @@ namespace QLKTX
         private void icbtQLSV_Click(object sender, EventArgs e)
         {
             this.icbtMenu.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            UC_QLSV QL = new UC_QLSV();
+            panelDesktop.Controls.Clear();
+            panelDesktop.Controls.Add(QL);
+            QL.Dock = DockStyle.Left;
+            
             panelMenu.Width = 230;
             iconPictureBox1.Visible = true;
             icbtMenu.Dock = DockStyle.None;
@@ -254,6 +265,11 @@ namespace QLKTX
 
         private void icbtHoaDon_Click(object sender, EventArgs e)
         {
+            UC_QLHoaDon QL = new UC_QLHoaDon();
+            panelDesktop.Controls.Clear();
+            panelDesktop.Controls.Add(QL);
+            QL.Dock = DockStyle.Left;
+            
             this.icbtMenu.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
             panelMenu.Width = 230;
             iconPictureBox1.Visible = true;
