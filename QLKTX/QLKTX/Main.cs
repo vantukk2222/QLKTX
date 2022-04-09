@@ -169,7 +169,9 @@ namespace QLKTX
             {
                 this.icbtMenu.IconChar = FontAwesome.Sharp.IconChar.Bars;
                 panelMenu.Width = 100;
-                iconPictureBox1.Visible = false;
+                iconPictureBox1.IconSize = 60;
+                iconPictureBox1.Dock = DockStyle.None;
+                iconPictureBox1.Location = new Point(23, 55);
                 icbtMenu.Dock = DockStyle.Top;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
                 {
@@ -182,7 +184,9 @@ namespace QLKTX
             { //Expand menu
                 this.icbtMenu.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
                 panelMenu.Width = 230;
-                iconPictureBox1.Visible = true;
+                iconPictureBox1.IconSize = 95;
+                iconPictureBox1.Dock = DockStyle.Bottom;
+                iconPictureBox1.Location = new Point(0, 19);
                 icbtMenu.Dock = DockStyle.None;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
                 {

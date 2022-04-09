@@ -22,25 +22,37 @@ namespace QLKTX
 
 		private void butlogin_Click(object sender, EventArgs e)
 		{
-            string ConnectionString = ConfigurationManager.ConnectionStrings["QLKTX.Properties.Settings.QLKTXConnectionString"].ConnectionString;
-            SqlConnection sqlcon = new SqlConnection(ConnectionString);
-			
-			string query = "Select * from Account Where account = '" + txtUsername.Text.Trim() +"' and password = '" + txtPassword.Text.Trim() + "'";
-			SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
-			DataTable dtbl = new DataTable();
-			sda.Fill(dtbl);
-			if (dtbl.Rows.Count == 1)
+			string s = "";
+			if (cbbRole.SelectedIndex >= 0)
 			{
-				Main fmain = new Main();
-				fmain.Show();
-                this.Hide();
+				if (cbbRole.SelectedIndex == 0)
+					s = "Select* from AccCB Where UserName = '" + txtUsername.Text.Trim() + "' and PassWord = '" + txtPassword.Text.Trim() + "'";
+				else s = "Select * from AccSV Where UserName = '" + txtUsername.Text.Trim() + "' and PassWord = '" + txtPassword.Text.Trim() + "'";
+				string ConnectionString = ConfigurationManager.ConnectionStrings["QLKTX.Properties.Settings.QLKTXConnectionString"].ConnectionString;
+				SqlConnection sqlcon = new SqlConnection(ConnectionString);
+
+				string query = s;
+				SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
+				DataTable dtbl = new DataTable();
+				sda.Fill(dtbl);
+				if (dtbl.Rows.Count == 1)
+				{
+					Main fmain = new Main();
+					fmain.Show();
+					this.Hide();
 
 
 
-                MessageBox.Show("Welcome "+txtUsername.Text);
+					MessageBox.Show("Welcome " + txtUsername.Text);
+				}
+				else
+					MessageBox.Show("Check your username and password");
 			}
 			else
-				MessageBox.Show("Check your username and password");
+			{
+				MessageBox.Show("Lựa chọn quyền truy cập!!!");
+			}
+            
 		}
 
 		private void butexit_Click(object sender, EventArgs e)
