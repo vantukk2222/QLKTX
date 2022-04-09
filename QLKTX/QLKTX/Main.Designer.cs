@@ -42,28 +42,28 @@ namespace QLKTX
             this.panelLogo = new System.Windows.Forms.Panel();
             this.icbtMenu = new FontAwesome.Sharp.IconButton();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.guna2HtmlHOME = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.icbtMin = new FontAwesome.Sharp.IconButton();
-            this.icbtClose = new FontAwesome.Sharp.IconButton();
-            this.icbtMax = new FontAwesome.Sharp.IconButton();
-            this.panelDesktop = new System.Windows.Forms.Panel();
             this.rjDropdownMenuQLP = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
             this.danhSáchPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chỉnhSửaPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rjDropdownMenuQLSV = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
             this.hồSơSinhViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chỉnhSửaSinhViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rjDropdownMenuHoaDon = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
             this.nhậpChỉSốĐiệnNướcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inDanhSáchHoáĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rjDropdownMenuHoaDon = new RJCodeAdvance.RJControls.RJDropdownMenu(this.components);
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.icbtMin = new FontAwesome.Sharp.IconButton();
+            this.icbtClose = new FontAwesome.Sharp.IconButton();
+            this.icbtMax = new FontAwesome.Sharp.IconButton();
+            this.panelDesktop = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            this.panelTitleBar.SuspendLayout();
             this.rjDropdownMenuQLP.SuspendLayout();
             this.rjDropdownMenuQLSV.SuspendLayout();
             this.rjDropdownMenuHoaDon.SuspendLayout();
+            this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -82,7 +82,7 @@ namespace QLKTX
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(230, 587);
+            this.panelMenu.Size = new System.Drawing.Size(230, 578);
             this.panelMenu.TabIndex = 0;
             // 
             // icbtLogOut
@@ -98,7 +98,7 @@ namespace QLKTX
             this.icbtLogOut.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.icbtLogOut.IconSize = 30;
             this.icbtLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtLogOut.Location = new System.Drawing.Point(0, 532);
+            this.icbtLogOut.Location = new System.Drawing.Point(0, 523);
             this.icbtLogOut.Name = "icbtLogOut";
             this.icbtLogOut.Size = new System.Drawing.Size(230, 55);
             this.icbtLogOut.TabIndex = 9;
@@ -318,32 +318,106 @@ namespace QLKTX
             this.iconPictureBox1.TabIndex = 0;
             this.iconPictureBox1.TabStop = false;
             // 
+            // rjDropdownMenuQLP
+            // 
+            this.rjDropdownMenuQLP.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.rjDropdownMenuQLP.IsMainMenu = false;
+            this.rjDropdownMenuQLP.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.danhSáchPhòngToolStripMenuItem,
+            this.chỉnhSửaPhòngToolStripMenuItem});
+            this.rjDropdownMenuQLP.MenuItemHeight = 50;
+            this.rjDropdownMenuQLP.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.rjDropdownMenuQLP.Name = "rjDropdownMenuQLP";
+            this.rjDropdownMenuQLP.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(161)))), ((int)(((byte)(224)))));
+            this.rjDropdownMenuQLP.Size = new System.Drawing.Size(168, 48);
+            // 
+            // danhSáchPhòngToolStripMenuItem
+            // 
+            this.danhSáchPhòngToolStripMenuItem.Name = "danhSáchPhòngToolStripMenuItem";
+            this.danhSáchPhòngToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.danhSáchPhòngToolStripMenuItem.Text = "Danh sách phòng";
+            // 
+            // chỉnhSửaPhòngToolStripMenuItem
+            // 
+            this.chỉnhSửaPhòngToolStripMenuItem.Name = "chỉnhSửaPhòngToolStripMenuItem";
+            this.chỉnhSửaPhòngToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.chỉnhSửaPhòngToolStripMenuItem.Text = "Chỉnh sửa phòng";
+            // 
+            // rjDropdownMenuQLSV
+            // 
+            this.rjDropdownMenuQLSV.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.rjDropdownMenuQLSV.IsMainMenu = false;
+            this.rjDropdownMenuQLSV.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hồSơSinhViênToolStripMenuItem,
+            this.chỉnhSửaSinhViênToolStripMenuItem});
+            this.rjDropdownMenuQLSV.MenuItemHeight = 50;
+            this.rjDropdownMenuQLSV.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.rjDropdownMenuQLSV.Name = "rjDropdownMenuQLSV";
+            this.rjDropdownMenuQLSV.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(122)))), ((int)(((byte)(244)))));
+            this.rjDropdownMenuQLSV.Size = new System.Drawing.Size(178, 48);
+            // 
+            // hồSơSinhViênToolStripMenuItem
+            // 
+            this.hồSơSinhViênToolStripMenuItem.Name = "hồSơSinhViênToolStripMenuItem";
+            this.hồSơSinhViênToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.hồSơSinhViênToolStripMenuItem.Text = "Hồ sơ sinh viên";
+            // 
+            // chỉnhSửaSinhViênToolStripMenuItem
+            // 
+            this.chỉnhSửaSinhViênToolStripMenuItem.Name = "chỉnhSửaSinhViênToolStripMenuItem";
+            this.chỉnhSửaSinhViênToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.chỉnhSửaSinhViênToolStripMenuItem.Text = "Chỉnh sửa sinh viên";
+            // 
+            // nhậpChỉSốĐiệnNướcToolStripMenuItem
+            // 
+            this.nhậpChỉSốĐiệnNướcToolStripMenuItem.Name = "nhậpChỉSốĐiệnNướcToolStripMenuItem";
+            this.nhậpChỉSốĐiệnNướcToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.nhậpChỉSốĐiệnNướcToolStripMenuItem.Text = "Nhập chỉ số điện, nước";
+            // 
+            // inDanhSáchHoáĐơnToolStripMenuItem
+            // 
+            this.inDanhSáchHoáĐơnToolStripMenuItem.Name = "inDanhSáchHoáĐơnToolStripMenuItem";
+            this.inDanhSáchHoáĐơnToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.inDanhSáchHoáĐơnToolStripMenuItem.Text = "In danh sách hoá đơn";
+            // 
+            // rjDropdownMenuHoaDon
+            // 
+            this.rjDropdownMenuHoaDon.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.rjDropdownMenuHoaDon.IsMainMenu = false;
+            this.rjDropdownMenuHoaDon.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nhậpChỉSốĐiệnNướcToolStripMenuItem,
+            this.inDanhSáchHoáĐơnToolStripMenuItem});
+            this.rjDropdownMenuHoaDon.MenuItemHeight = 50;
+            this.rjDropdownMenuHoaDon.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.rjDropdownMenuHoaDon.Name = "rjDropdownMenuHoaDon";
+            this.rjDropdownMenuHoaDon.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(122)))), ((int)(((byte)(244)))));
+            this.rjDropdownMenuHoaDon.Size = new System.Drawing.Size(197, 48);
+            // 
             // panelTitleBar
             // 
-            this.panelTitleBar.AutoSize = true;
-            this.panelTitleBar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panelTitleBar.Controls.Add(this.guna2HtmlHOME);
+            this.panelTitleBar.BackColor = System.Drawing.Color.White;
+            this.panelTitleBar.Controls.Add(this.guna2HtmlLabel1);
             this.panelTitleBar.Controls.Add(this.icbtMin);
             this.panelTitleBar.Controls.Add(this.icbtClose);
             this.panelTitleBar.Controls.Add(this.icbtMax);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(230, 0);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(870, 63);
-            this.panelTitleBar.TabIndex = 1;
+            this.panelTitleBar.Size = new System.Drawing.Size(938, 49);
+            this.panelTitleBar.TabIndex = 5;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
-            // guna2HtmlHOME
+            // guna2HtmlLabel1
             // 
-            this.guna2HtmlHOME.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlHOME.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlHOME.Location = new System.Drawing.Point(19, 12);
-            this.guna2HtmlHOME.Name = "guna2HtmlHOME";
-            this.guna2HtmlHOME.Size = new System.Drawing.Size(101, 48);
-            this.guna2HtmlHOME.TabIndex = 6;
-            this.guna2HtmlHOME.Text = "HOME";
-            this.guna2HtmlHOME.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Enabled = false;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(276, 12);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(331, 20);
+            this.guna2HtmlLabel1.TabIndex = 9;
+            this.guna2HtmlLabel1.Text = "CHƯƠNG TRÌNH QUẢN LÝ KÝ TÚC XÁ";
             // 
             // icbtMin
             // 
@@ -357,10 +431,10 @@ namespace QLKTX
             this.icbtMin.IconColor = System.Drawing.Color.White;
             this.icbtMin.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.icbtMin.IconSize = 20;
-            this.icbtMin.Location = new System.Drawing.Point(741, 0);
+            this.icbtMin.Location = new System.Drawing.Point(808, 0);
             this.icbtMin.Name = "icbtMin";
             this.icbtMin.Size = new System.Drawing.Size(45, 25);
-            this.icbtMin.TabIndex = 5;
+            this.icbtMin.TabIndex = 8;
             this.icbtMin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.icbtMin.UseVisualStyleBackColor = false;
             this.icbtMin.Click += new System.EventHandler(this.icbtMin_Click);
@@ -377,10 +451,10 @@ namespace QLKTX
             this.icbtClose.IconColor = System.Drawing.Color.White;
             this.icbtClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icbtClose.IconSize = 20;
-            this.icbtClose.Location = new System.Drawing.Point(825, 0);
+            this.icbtClose.Location = new System.Drawing.Point(892, 0);
             this.icbtClose.Name = "icbtClose";
             this.icbtClose.Size = new System.Drawing.Size(45, 25);
-            this.icbtClose.TabIndex = 4;
+            this.icbtClose.TabIndex = 7;
             this.icbtClose.UseVisualStyleBackColor = false;
             this.icbtClose.Click += new System.EventHandler(this.icbtClose_Click);
             // 
@@ -388,7 +462,6 @@ namespace QLKTX
             // 
             this.icbtMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.icbtMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(224)))), ((int)(((byte)(223)))));
-            this.icbtMax.Enabled = false;
             this.icbtMax.FlatAppearance.BorderSize = 0;
             this.icbtMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.icbtMax.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -397,111 +470,37 @@ namespace QLKTX
             this.icbtMax.IconColor = System.Drawing.Color.White;
             this.icbtMax.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.icbtMax.IconSize = 20;
-            this.icbtMax.Location = new System.Drawing.Point(783, 0);
+            this.icbtMax.Location = new System.Drawing.Point(850, 0);
             this.icbtMax.Name = "icbtMax";
             this.icbtMax.Size = new System.Drawing.Size(45, 25);
-            this.icbtMax.TabIndex = 3;
+            this.icbtMax.TabIndex = 6;
             this.icbtMax.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.icbtMax.UseVisualStyleBackColor = false;
             this.icbtMax.Click += new System.EventHandler(this.icbtMax_Click);
             // 
             // panelDesktop
             // 
-            this.panelDesktop.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.panelDesktop.BackColor = System.Drawing.SystemColors.Control;
+            this.panelDesktop.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelDesktop.BackgroundImage = global::QLKTX.Properties.Resources.HOME;
+            this.panelDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(230, 63);
+            this.panelDesktop.Location = new System.Drawing.Point(230, 49);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(870, 524);
-            this.panelDesktop.TabIndex = 2;
-            // 
-            // rjDropdownMenuQLP
-            // 
-            this.rjDropdownMenuQLP.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.rjDropdownMenuQLP.IsMainMenu = false;
-            this.rjDropdownMenuQLP.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.danhSáchPhòngToolStripMenuItem,
-            this.chỉnhSửaPhòngToolStripMenuItem});
-            this.rjDropdownMenuQLP.MenuItemHeight = 50;
-            this.rjDropdownMenuQLP.MenuItemTextColor = System.Drawing.Color.Empty;
-            this.rjDropdownMenuQLP.Name = "rjDropdownMenuQLP";
-            this.rjDropdownMenuQLP.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(161)))), ((int)(((byte)(224)))));
-            this.rjDropdownMenuQLP.Size = new System.Drawing.Size(194, 52);
-            // 
-            // danhSáchPhòngToolStripMenuItem
-            // 
-            this.danhSáchPhòngToolStripMenuItem.Name = "danhSáchPhòngToolStripMenuItem";
-            this.danhSáchPhòngToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
-            this.danhSáchPhòngToolStripMenuItem.Text = "Danh sách phòng";
-            // 
-            // chỉnhSửaPhòngToolStripMenuItem
-            // 
-            this.chỉnhSửaPhòngToolStripMenuItem.Name = "chỉnhSửaPhòngToolStripMenuItem";
-            this.chỉnhSửaPhòngToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
-            this.chỉnhSửaPhòngToolStripMenuItem.Text = "Chỉnh sửa phòng";
-            // 
-            // rjDropdownMenuQLSV
-            // 
-            this.rjDropdownMenuQLSV.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.rjDropdownMenuQLSV.IsMainMenu = false;
-            this.rjDropdownMenuQLSV.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.hồSơSinhViênToolStripMenuItem,
-            this.chỉnhSửaSinhViênToolStripMenuItem});
-            this.rjDropdownMenuQLSV.MenuItemHeight = 50;
-            this.rjDropdownMenuQLSV.MenuItemTextColor = System.Drawing.Color.Empty;
-            this.rjDropdownMenuQLSV.Name = "rjDropdownMenuQLSV";
-            this.rjDropdownMenuQLSV.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(122)))), ((int)(((byte)(244)))));
-            this.rjDropdownMenuQLSV.Size = new System.Drawing.Size(204, 52);
-            // 
-            // hồSơSinhViênToolStripMenuItem
-            // 
-            this.hồSơSinhViênToolStripMenuItem.Name = "hồSơSinhViênToolStripMenuItem";
-            this.hồSơSinhViênToolStripMenuItem.Size = new System.Drawing.Size(203, 24);
-            this.hồSơSinhViênToolStripMenuItem.Text = "Hồ sơ sinh viên";
-            // 
-            // chỉnhSửaSinhViênToolStripMenuItem
-            // 
-            this.chỉnhSửaSinhViênToolStripMenuItem.Name = "chỉnhSửaSinhViênToolStripMenuItem";
-            this.chỉnhSửaSinhViênToolStripMenuItem.Size = new System.Drawing.Size(203, 24);
-            this.chỉnhSửaSinhViênToolStripMenuItem.Text = "Chỉnh sửa sinh viên";
-            // 
-            // rjDropdownMenuHoaDon
-            // 
-            this.rjDropdownMenuHoaDon.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.rjDropdownMenuHoaDon.IsMainMenu = false;
-            this.rjDropdownMenuHoaDon.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nhậpChỉSốĐiệnNướcToolStripMenuItem,
-            this.inDanhSáchHoáĐơnToolStripMenuItem});
-            this.rjDropdownMenuHoaDon.MenuItemHeight = 50;
-            this.rjDropdownMenuHoaDon.MenuItemTextColor = System.Drawing.Color.Empty;
-            this.rjDropdownMenuHoaDon.Name = "rjDropdownMenuHoaDon";
-            this.rjDropdownMenuHoaDon.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(122)))), ((int)(((byte)(244)))));
-            this.rjDropdownMenuHoaDon.Size = new System.Drawing.Size(230, 52);
-            // 
-            // nhậpChỉSốĐiệnNướcToolStripMenuItem
-            // 
-            this.nhậpChỉSốĐiệnNướcToolStripMenuItem.Name = "nhậpChỉSốĐiệnNướcToolStripMenuItem";
-            this.nhậpChỉSốĐiệnNướcToolStripMenuItem.Size = new System.Drawing.Size(229, 24);
-            this.nhậpChỉSốĐiệnNướcToolStripMenuItem.Text = "Nhập chỉ số điện, nước";
-            // 
-            // inDanhSáchHoáĐơnToolStripMenuItem
-            // 
-            this.inDanhSáchHoáĐơnToolStripMenuItem.Name = "inDanhSáchHoáĐơnToolStripMenuItem";
-            this.inDanhSáchHoáĐơnToolStripMenuItem.Size = new System.Drawing.Size(229, 24);
-            this.inDanhSáchHoáĐơnToolStripMenuItem.Text = "In danh sách hoá đơn";
+            this.panelDesktop.Size = new System.Drawing.Size(938, 529);
+            this.panelDesktop.TabIndex = 6;
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
-            this.ClientSize = new System.Drawing.Size(1100, 587);
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.ClientSize = new System.Drawing.Size(1168, 578);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(700, 590);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
@@ -510,13 +509,12 @@ namespace QLKTX
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            this.panelTitleBar.ResumeLayout(false);
-            this.panelTitleBar.PerformLayout();
             this.rjDropdownMenuQLP.ResumeLayout(false);
             this.rjDropdownMenuQLSV.ResumeLayout(false);
             this.rjDropdownMenuHoaDon.ResumeLayout(false);
+            this.panelTitleBar.ResumeLayout(false);
+            this.panelTitleBar.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -533,12 +531,6 @@ namespace QLKTX
         private FontAwesome.Sharp.IconButton icbtInDanhSach;
         private FontAwesome.Sharp.IconButton icbtMenu;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
-        private System.Windows.Forms.Panel panelTitleBar;
-        private FontAwesome.Sharp.IconButton icbtMax;
-        private FontAwesome.Sharp.IconButton icbtClose;
-        private FontAwesome.Sharp.IconButton icbtMin;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlHOME;
-        private System.Windows.Forms.Panel panelDesktop;
         private RJCodeAdvance.RJControls.RJDropdownMenu rjDropdownMenuQLP;
         private FontAwesome.Sharp.IconButton icbtLogOut;
         private System.Windows.Forms.ToolStripMenuItem danhSáchPhòngToolStripMenuItem;
@@ -546,8 +538,14 @@ namespace QLKTX
         private RJCodeAdvance.RJControls.RJDropdownMenu rjDropdownMenuQLSV;
         private System.Windows.Forms.ToolStripMenuItem hồSơSinhViênToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chỉnhSửaSinhViênToolStripMenuItem;
-        private RJCodeAdvance.RJControls.RJDropdownMenu rjDropdownMenuHoaDon;
         private System.Windows.Forms.ToolStripMenuItem nhậpChỉSốĐiệnNướcToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inDanhSáchHoáĐơnToolStripMenuItem;
+        private RJCodeAdvance.RJControls.RJDropdownMenu rjDropdownMenuHoaDon;
+        private System.Windows.Forms.Panel panelTitleBar;
+        private FontAwesome.Sharp.IconButton icbtMin;
+        private FontAwesome.Sharp.IconButton icbtClose;
+        private FontAwesome.Sharp.IconButton icbtMax;
+        private System.Windows.Forms.Panel panelDesktop;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }

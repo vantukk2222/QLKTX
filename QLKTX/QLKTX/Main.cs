@@ -21,8 +21,6 @@ namespace QLKTX
             InitializeComponent();
             CollapseMenu();
             this.Padding = new Padding(borderSize);
-            this.panelDesktop.Controls.Add(new UC_QLPhong());
-            this.BackColor = Color.FromArgb(98,102,244);
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -144,13 +142,13 @@ namespace QLKTX
         {
             if (this.WindowState == FormWindowState.Normal)
             {
-               // formSize = this.ClientSize;
+               formSize = this.ClientSize;
                 this.WindowState = FormWindowState.Maximized;
             }
             else
             {
                 this.WindowState = FormWindowState.Normal;
-                //this.Size = formSize;
+                this.Size = formSize;
             }
 
         }
@@ -169,6 +167,7 @@ namespace QLKTX
             if (this.panelMenu.Width > 200) //Collapse menu
             {
                 this.icbtMenu.IconChar = FontAwesome.Sharp.IconChar.Bars;
+                this.Width -= 130;
                 panelMenu.Width = 100;
                 iconPictureBox1.IconSize = 60;
                 iconPictureBox1.Dock = DockStyle.None;
@@ -185,6 +184,7 @@ namespace QLKTX
             { //Expand menu
                 this.icbtMenu.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
                 panelMenu.Width = 230;
+                this.Width += 130;
                 iconPictureBox1.IconSize = 95;
                 iconPictureBox1.Dock = DockStyle.Bottom;
                 iconPictureBox1.Location = new Point(0, 19);
@@ -215,14 +215,43 @@ namespace QLKTX
             }
         }
 
-        private void icbtQLP_Click(object sender, EventArgs e)
+       
+        private void icbtLogOut_Click(object sender, EventArgs e)
         {
-            UC_QLPhong qlPhong = new UC_QLPhong();
+            var result = MessageBox.Show("Bạn có muốn đăng xuất không?", "Sign Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                Login log = new Login();
+                log.Show();
+            }
+        }
+
+         private void icbtQLP_Click(object sender, EventArgs e)
+        {
+
+            if (icbtMenu.IconChar == FontAwesome.Sharp.IconChar.Bars)
+            {
+                this.Width += 130;
+                iconPictureBox1.IconSize = 95;
+                iconPictureBox1.Dock = DockStyle.Bottom;
+                iconPictureBox1.Location = new Point(0, 19);
+                icbtMenu.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            }
+            else
+            {
+                iconPictureBox1.IconSize = 95;
+                iconPictureBox1.Dock = DockStyle.Bottom;
+                iconPictureBox1.Location = new Point(0, 19);
+            }
+            UC_QLPhong QL = new UC_QLPhong();
             panelDesktop.Controls.Clear();
-            panelDesktop.Controls.Add(qlPhong);
-            qlPhong.Dock = DockStyle.Left;
-            
-            this.icbtMenu.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            QL.BorderStyle = BorderStyle.None;
+            QL.Dock = DockStyle.Fill;
+            QL.BringToFront();
+            panelDesktop.Controls.Add(QL);
+
+
             panelMenu.Width = 230;
             iconPictureBox1.Visible = true;
             icbtMenu.Dock = DockStyle.None;
@@ -235,26 +264,32 @@ namespace QLKTX
             Open_DropdownMenu(rjDropdownMenuQLP, sender);
 
         }
-
-        private void icbtLogOut_Click(object sender, EventArgs e)
-        {
-            var result = MessageBox.Show("Bạn có muốn đăng xuất không?", "Sign Out", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                this.Hide();
-                Login log = new Login();
-                log.Show();
-            }
-        }
-
         private void icbtQLSV_Click(object sender, EventArgs e)
         {
+
+            if (icbtMenu.IconChar == FontAwesome.Sharp.IconChar.Bars)
+            {
+                this.Width += 130;
+                iconPictureBox1.IconSize = 95;
+                iconPictureBox1.Dock = DockStyle.Bottom;
+                iconPictureBox1.Location = new Point(0, 19);
+                icbtMenu.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            }
+            else
+            {
+                iconPictureBox1.IconSize = 95;
+                iconPictureBox1.Dock = DockStyle.Bottom;
+                iconPictureBox1.Location = new Point(0, 19);
+            }
             this.icbtMenu.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
             UC_QLSV QL = new UC_QLSV();
             panelDesktop.Controls.Clear();
+            QL.BorderStyle = BorderStyle.None;
+            QL.Dock = DockStyle.Fill;
+            QL.BringToFront();
             panelDesktop.Controls.Add(QL);
-            QL.Dock = DockStyle.Left;
-            
+
+
             panelMenu.Width = 230;
             iconPictureBox1.Visible = true;
             icbtMenu.Dock = DockStyle.None;
@@ -266,14 +301,31 @@ namespace QLKTX
             }
             Open_DropdownMenu(rjDropdownMenuQLSV, sender);
         }
-
         private void icbtHoaDon_Click(object sender, EventArgs e)
         {
+
+            if (icbtMenu.IconChar == FontAwesome.Sharp.IconChar.Bars)
+            {
+                this.Width += 130;
+                iconPictureBox1.IconSize = 95;
+                iconPictureBox1.Dock = DockStyle.Bottom;
+                iconPictureBox1.Location = new Point(0, 19);
+                icbtMenu.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            }
+            else
+            {
+                iconPictureBox1.IconSize = 95;
+                iconPictureBox1.Dock = DockStyle.Bottom;
+                iconPictureBox1.Location = new Point(0, 19);
+            }
             UC_QLHoaDon QL = new UC_QLHoaDon();
             panelDesktop.Controls.Clear();
+            QL.BorderStyle = BorderStyle.None;
+            QL.Dock = DockStyle.Fill;
+            QL.BringToFront();
             panelDesktop.Controls.Add(QL);
-            QL.Dock = DockStyle.Left;
-            
+
+
             this.icbtMenu.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
             panelMenu.Width = 230;
             iconPictureBox1.Visible = true;
@@ -286,5 +338,6 @@ namespace QLKTX
             }
             Open_DropdownMenu(rjDropdownMenuHoaDon, sender);
         }
+
     }
 }

@@ -178,6 +178,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\HOME.png" />
     <None Include="Resources\IconClose.ico" />
     <None Include="Resources\IconClose.bmp" />
     <None Include="Resources\building.png" />
