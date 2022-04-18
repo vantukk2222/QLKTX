@@ -29,38 +29,14 @@ namespace QLKTX
         /// </summary>
         private void InitializeComponent()
         {
-            this.rjTextBox1 = new CustomBox.RJControls.RJTextBox();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconTimKiem = new FontAwesome.Sharp.IconButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjTextBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.Orange;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(97)))), ((int)(((byte)(30)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(1008, 5);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(13, 9, 13, 9);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(144, 39);
-            this.rjTextBox1.TabIndex = 4;
-            this.rjTextBox1.Texts = "Type text here";
-            this.rjTextBox1.UnderlinedStyle = false;
             // 
             // iconButton3
             // 
@@ -145,6 +121,7 @@ namespace QLKTX
             this.iconTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconTimKiem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconTimKiem.UseVisualStyleBackColor = false;
+            this.iconTimKiem.Click += new System.EventHandler(this.iconTimKiem_Click);
             // 
             // dataGridView1
             // 
@@ -160,31 +137,44 @@ namespace QLKTX
             this.dataGridView1.Size = new System.Drawing.Size(1150, 571);
             this.dataGridView1.TabIndex = 20;
             // 
+            // txtName
+            // 
+            this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtName.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(932, 14);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(218, 34);
+            this.txtName.TabIndex = 21;
+            this.txtName.Text = "Nhập Tên";
+            this.txtName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtName_MouseClick);
+            // 
             // UC_QLSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.iconTimKiem);
-            this.Controls.Add(this.rjTextBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_QLSV";
             this.Size = new System.Drawing.Size(1292, 685);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private CustomBox.RJControls.RJTextBox rjTextBox1;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconTimKiem;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtName;
     }
 }

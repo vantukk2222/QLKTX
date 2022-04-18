@@ -21,9 +21,9 @@ namespace QLKTX
                 return _Instance;
             }
         }
-        public DbSet<Phong>  GetAllPhong()
+        public List<Phong>  GetAllPhong()
         {
-            return db.Phongs;
+            return db.Phongs.ToList();
         }
     }
 }

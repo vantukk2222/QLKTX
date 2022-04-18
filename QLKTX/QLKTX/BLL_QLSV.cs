@@ -21,9 +21,13 @@ namespace QLKTX
                 return _Instance;
             }
         }
-        public DbSet<SV>  GetAllSV()
+        public List<SV>  GetAllSV()
         {
-            return db.SVs;
+            return db.SVs.ToList();
+        }
+        public List<SV> GetAllContainName(string name)
+        {
+            return db.SVs.Where(sv=>sv.HoTen.Contains(name)).ToList();
         }
     }
 }
