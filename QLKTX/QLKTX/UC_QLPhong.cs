@@ -15,8 +15,12 @@ namespace QLKTX
         public UC_QLPhong()
         {
             InitializeComponent();
+            LoadData();
         }
 
-
+        public void LoadData()
+        {
+            guna2DataGridView1.DataSource = BLL_QLPhong.Instance.GetAllPhong().ToList();
+        }
     }
 }

@@ -331,18 +331,18 @@ namespace QLKTX
             this.rjDropdownMenuQLP.MenuItemTextColor = System.Drawing.Color.Empty;
             this.rjDropdownMenuQLP.Name = "rjDropdownMenuQLP";
             this.rjDropdownMenuQLP.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(161)))), ((int)(((byte)(224)))));
-            this.rjDropdownMenuQLP.Size = new System.Drawing.Size(168, 48);
+            this.rjDropdownMenuQLP.Size = new System.Drawing.Size(194, 52);
             // 
             // danhSáchPhòngToolStripMenuItem
             // 
             this.danhSáchPhòngToolStripMenuItem.Name = "danhSáchPhòngToolStripMenuItem";
-            this.danhSáchPhòngToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.danhSáchPhòngToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
             this.danhSáchPhòngToolStripMenuItem.Text = "Danh sách phòng";
             // 
             // chỉnhSửaPhòngToolStripMenuItem
             // 
             this.chỉnhSửaPhòngToolStripMenuItem.Name = "chỉnhSửaPhòngToolStripMenuItem";
-            this.chỉnhSửaPhòngToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.chỉnhSửaPhòngToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
             this.chỉnhSửaPhòngToolStripMenuItem.Text = "Chỉnh sửa phòng";
             // 
             // rjDropdownMenuQLSV
@@ -356,30 +356,30 @@ namespace QLKTX
             this.rjDropdownMenuQLSV.MenuItemTextColor = System.Drawing.Color.Empty;
             this.rjDropdownMenuQLSV.Name = "rjDropdownMenuQLSV";
             this.rjDropdownMenuQLSV.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(122)))), ((int)(((byte)(244)))));
-            this.rjDropdownMenuQLSV.Size = new System.Drawing.Size(178, 48);
+            this.rjDropdownMenuQLSV.Size = new System.Drawing.Size(204, 52);
             // 
             // hồSơSinhViênToolStripMenuItem
             // 
             this.hồSơSinhViênToolStripMenuItem.Name = "hồSơSinhViênToolStripMenuItem";
-            this.hồSơSinhViênToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.hồSơSinhViênToolStripMenuItem.Size = new System.Drawing.Size(203, 24);
             this.hồSơSinhViênToolStripMenuItem.Text = "Hồ sơ sinh viên";
             // 
             // chỉnhSửaSinhViênToolStripMenuItem
             // 
             this.chỉnhSửaSinhViênToolStripMenuItem.Name = "chỉnhSửaSinhViênToolStripMenuItem";
-            this.chỉnhSửaSinhViênToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.chỉnhSửaSinhViênToolStripMenuItem.Size = new System.Drawing.Size(203, 24);
             this.chỉnhSửaSinhViênToolStripMenuItem.Text = "Chỉnh sửa sinh viên";
             // 
             // nhậpChỉSốĐiệnNướcToolStripMenuItem
             // 
             this.nhậpChỉSốĐiệnNướcToolStripMenuItem.Name = "nhậpChỉSốĐiệnNướcToolStripMenuItem";
-            this.nhậpChỉSốĐiệnNướcToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.nhậpChỉSốĐiệnNướcToolStripMenuItem.Size = new System.Drawing.Size(229, 24);
             this.nhậpChỉSốĐiệnNướcToolStripMenuItem.Text = "Nhập chỉ số điện, nước";
             // 
             // inDanhSáchHoáĐơnToolStripMenuItem
             // 
             this.inDanhSáchHoáĐơnToolStripMenuItem.Name = "inDanhSáchHoáĐơnToolStripMenuItem";
-            this.inDanhSáchHoáĐơnToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.inDanhSáchHoáĐơnToolStripMenuItem.Size = new System.Drawing.Size(229, 24);
             this.inDanhSáchHoáĐơnToolStripMenuItem.Text = "In danh sách hoá đơn";
             // 
             // rjDropdownMenuHoaDon
@@ -393,7 +393,7 @@ namespace QLKTX
             this.rjDropdownMenuHoaDon.MenuItemTextColor = System.Drawing.Color.Empty;
             this.rjDropdownMenuHoaDon.Name = "rjDropdownMenuHoaDon";
             this.rjDropdownMenuHoaDon.PrimaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(122)))), ((int)(((byte)(244)))));
-            this.rjDropdownMenuHoaDon.Size = new System.Drawing.Size(197, 48);
+            this.rjDropdownMenuHoaDon.Size = new System.Drawing.Size(230, 52);
             // 
             // panelTitleBar
             // 
@@ -417,7 +417,7 @@ namespace QLKTX
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(276, 12);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(331, 20);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(418, 27);
             this.guna2HtmlLabel1.TabIndex = 9;
             this.guna2HtmlLabel1.Text = "CHƯƠNG TRÌNH QUẢN LÝ KÝ TÚC XÁ";
             // 
@@ -493,7 +493,7 @@ namespace QLKTX
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.Gainsboro;
@@ -506,6 +506,7 @@ namespace QLKTX
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Resize += new System.EventHandler(this.Main_Resize);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
