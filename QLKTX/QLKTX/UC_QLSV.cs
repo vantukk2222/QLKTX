@@ -21,8 +21,8 @@ namespace QLKTX
         }
         public void ShowDataGridView(List<SV> list)
         {
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = list.Select(p => new {
+            guna2DataGridView1.DataSource = null;
+            guna2DataGridView1.DataSource = list.Select(p => new {
                 p.MSSV,
                 p.MaHopDong,
                 p.HoTen,
@@ -35,17 +35,17 @@ namespace QLKTX
                 p.HeDaoTao,
                 p.SDT
             }).ToList();
-            dataGridView1.Columns[0].HeaderText = "MSSV";
-            dataGridView1.Columns[1].HeaderText = "Mã Hợp Đồng";
-            dataGridView1.Columns[2].HeaderText = "Họ Tên";
-            dataGridView1.Columns[3].HeaderText = "Mã Phòng";
-            dataGridView1.Columns[4].HeaderText = "Ngày Sinh";
-            dataGridView1.Columns[5].HeaderText = "Quê Quán";
-            dataGridView1.Columns[6].HeaderText = "Giới Tính";
-            dataGridView1.Columns[7].HeaderText = "Khóa Học";
-            dataGridView1.Columns[8].HeaderText = "Khoa";
-            dataGridView1.Columns[9].HeaderText = "Hệ Đào Tạo";
-            dataGridView1.Columns[10].HeaderText = "SĐT";
+            guna2DataGridView1.Columns[0].HeaderText = "MSSV";
+            guna2DataGridView1.Columns[1].HeaderText = "Mã Hợp Đồng";
+            guna2DataGridView1.Columns[2].HeaderText = "Họ Tên";
+            guna2DataGridView1.Columns[3].HeaderText = "Mã Phòng";
+            guna2DataGridView1.Columns[4].HeaderText = "Ngày Sinh";
+            guna2DataGridView1.Columns[5].HeaderText = "Quê Quán";
+            guna2DataGridView1.Columns[6].HeaderText = "Giới Tính";
+            guna2DataGridView1.Columns[7].HeaderText = "Khóa Học";
+            guna2DataGridView1.Columns[8].HeaderText = "Khoa";
+            guna2DataGridView1.Columns[9].HeaderText = "Hệ Đào Tạo";
+            guna2DataGridView1.Columns[10].HeaderText = "SĐT";
         }
         public void LoadData()
         {
@@ -58,12 +58,37 @@ namespace QLKTX
 
         private void iconTimKiem_Click(object sender, EventArgs e)
         {
-            ShowDataGridView(BLL_QLSV.Instance.GetAllContainName(txtName.Text.Trim()));
+            ShowDataGridView(BLL_QLSV.Instance.GetAllContainName(txtName.Texts.Trim()));
         }
 
         private void txtName_MouseClick(object sender, MouseEventArgs e)
         {
-            txtName.Clear();
+            txtName.Texts = string.Empty;
+        }
+
+        private void icbtDel_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView1.SelectedRows.Count > 0)
+            {
+                DialogResult dialogResult = MessageBox.Show("Bạn chắc chưa?", "Delete Students", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    foreach (DataGridViewRow i in guna2DataGridView1.SelectedRows)
+                    {
+                        BLL_QLSV.Instance.DeleteSV(i.Cells[0].FormattedValue.ToString());
+                        MessageBox.Show(i.Cells[0].FormattedValue.ToString());
+
+                    }
+
+                    LoadData();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    
+                }
+
+
+            }
         }
     }
 }

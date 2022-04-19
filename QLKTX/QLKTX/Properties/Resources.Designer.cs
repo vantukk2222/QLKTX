@@ -83,20 +83,10 @@ namespace QLKTX.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap HOME {
+        internal static System.Drawing.Bitmap hostel {
             get {
-                object obj = ResourceManager.GetObject("HOME", resourceCulture);
+                object obj = ResourceManager.GetObject("hostel", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        internal static System.Drawing.Icon IconClose {
-            get {
-                object obj = ResourceManager.GetObject("IconClose", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
             }
         }
     }

@@ -25,5 +25,11 @@ namespace QLKTX
         {
             return db.Phongs.ToList();
         }
+        public List<SV> ShowSVPhong(string Maphong)
+        {
+            return db.SVs.Where(sv => sv.MaPhong.Contains(Maphong)).ToList();
+
+
+        }
     }
 }
