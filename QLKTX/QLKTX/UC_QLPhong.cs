@@ -43,5 +43,15 @@ namespace QLKTX
         {
             ShowDataGridView( BLL_QLPhong.Instance.GetAllPhong());
         }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            if (guna2DataGridView1.SelectedRows.Count == 1)
+            {
+                Phong delete = BLL_QLPhong.Instance.GetPhongByMaPhong(guna2DataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+                BLL_QLPhong.Instance.deletePhong(delete);
+                ShowDataGridView(BLL_QLPhong.Instance.GetAllPhong());
+            }
+        }
     }
 }

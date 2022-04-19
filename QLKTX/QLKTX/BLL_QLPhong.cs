@@ -9,7 +9,7 @@ namespace QLKTX
 {
     internal class BLL_QLPhong
     {
-        public static QLKTXEntities1 db = new QLKTXEntities1();
+        //public static QLKTXEntities1 db = new QLKTXEntities1();
         
         private static BLL_QLPhong _Instance;
         public static BLL_QLPhong Instance
@@ -21,9 +21,27 @@ namespace QLKTX
                 return _Instance;
             }
         }
-        public List<Phong>  GetAllPhong()
+        public List<Phong>GetAllPhong()
         {
-            return db.Phongs.ToList();
+            return DataHelper.db.Phongs.ToList();
+        }
+        public Phong GetPhongByMaPhong(string MaPhong)
+        {
+            return DataHelper.db.Phongs.Where(p => p.MaPhong == MaPhong).FirstOrDefault();
+        }
+        public void deletePhong(Phong phong)
+        {
+            try
+            {
+                DataHelper.db.Phongs.Remove(phong);
+                DataHelper.db.SaveChanges();                
+            }
+            catch
+            {
+                
+            }
+            
+            
         }
     }
 }

@@ -9,7 +9,7 @@ namespace QLKTX
 {
     internal class BLL_QLSV
     {
-        public static QLKTXEntities1 db = new QLKTXEntities1();
+        //public static QLKTXEntities1 db = new QLKTXEntities1();
         
         private static BLL_QLSV _Instance;
         public static BLL_QLSV Instance
@@ -23,11 +23,31 @@ namespace QLKTX
         }
         public List<SV>  GetAllSV()
         {
-            return db.SVs.ToList();
+            return DataHelper.db.SVs.ToList();
         }
-        public List<SV> GetAllContainName(string name)
+        public List<SV> GetAllSVContainName(string name)
         {
-            return db.SVs.Where(sv=>sv.HoTen.Contains(name)).ToList();
+            return DataHelper.db.SVs.Where(sv=>sv.HoTen.Contains(name)).ToList();
+        }
+        public List<SV> GetListSVByMaPhong(string maphong)
+        {
+            return DataHelper.db.SVs.Where(sv => sv.MaPhong == maphong).ToList();
+        }
+        public void DeleteSV(string mssv)
+        {
+            SV sv = DataHelper.db.SVs.Find(mssv);
+
+            try
+            {
+                DataHelper.db.SVs.Remove(sv);
+                DataHelper.db.SaveChanges();
+            }
+            catch
+            {
+                
+            }
+            
+            
         }
     }
 }

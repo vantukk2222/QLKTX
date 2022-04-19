@@ -58,12 +58,24 @@ namespace QLKTX
 
         private void iconTimKiem_Click(object sender, EventArgs e)
         {
-            ShowDataGridView(BLL_QLSV.Instance.GetAllContainName(txtName.Text.Trim()));
+            ShowDataGridView(BLL_QLSV.Instance.GetAllSVContainName(txtName.Text.Trim()));
         }
 
         private void txtName_MouseClick(object sender, MouseEventArgs e)
         {
             txtName.Clear();
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                int index = dataGridView1.SelectedRows[0].Index;
+                string mssv = dataGridView1.Rows[index].Cells[0].Value.ToString();
+                
+                BLL_QLSV.Instance.DeleteSV(mssv);
+                ShowDataGridView(BLL_QLSV.Instance.GetAllSV());
+            }
         }
     }
 }
