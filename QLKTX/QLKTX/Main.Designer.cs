@@ -38,20 +38,20 @@ namespace QLKTX
             this.icbtHoaDon = new FontAwesome.Sharp.IconButton();
             this.icbtQLSV = new FontAwesome.Sharp.IconButton();
             this.icbtQLP = new FontAwesome.Sharp.IconButton();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.icbtMenu = new FontAwesome.Sharp.IconButton();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.panelTitleBar = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.icbtMin = new FontAwesome.Sharp.IconButton();
-            this.icbtClose = new FontAwesome.Sharp.IconButton();
-            this.icbtMax = new FontAwesome.Sharp.IconButton();
-            this.panelDesktop = new System.Windows.Forms.Panel();
+            this.panelTitleBar = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.icbtMenu = new FontAwesome.Sharp.IconButton();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.panelDesktop = new Guna.UI2.WinForms.Guna2Panel();
             this.panelMenu.SuspendLayout();
-            this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panelTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.panelLogo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -262,15 +262,123 @@ namespace QLKTX
             this.icbtQLP.UseVisualStyleBackColor = false;
             this.icbtQLP.Click += new System.EventHandler(this.icbtQLP_Click);
             // 
-            // panelLogo
+            // guna2HtmlLabel1
             // 
-            this.panelLogo.Controls.Add(this.icbtMenu);
-            this.panelLogo.Controls.Add(this.iconPictureBox1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(230, 114);
-            this.panelLogo.TabIndex = 0;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Enabled = false;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(276, 12);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(331, 20);
+            this.guna2HtmlLabel1.TabIndex = 9;
+            this.guna2HtmlLabel1.Text = "CHƯƠNG TRÌNH QUẢN LÝ KÝ TÚC XÁ";
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Enabled = false;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.DeepPink;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(349, 3);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(331, 20);
+            this.guna2HtmlLabel2.TabIndex = 13;
+            this.guna2HtmlLabel2.Text = "CHƯƠNG TRÌNH QUẢN LÝ KÝ TÚC XÁ";
+            this.guna2HtmlLabel2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.Gray;
+            this.panelTitleBar.Controls.Add(this.guna2HtmlLabel2);
+            this.panelTitleBar.Controls.Add(this.iconButton1);
+            this.panelTitleBar.Controls.Add(this.iconButton2);
+            this.panelTitleBar.Controls.Add(this.iconButton3);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.FillColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panelTitleBar.FillColor2 = System.Drawing.Color.Yellow;
+            this.panelTitleBar.FillColor3 = System.Drawing.Color.Wheat;
+            this.panelTitleBar.FillColor4 = System.Drawing.Color.LightSalmon;
+            this.panelTitleBar.Location = new System.Drawing.Point(230, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(1055, 40);
+            this.panelTitleBar.TabIndex = 3;
+            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(198)))), ((int)(((byte)(132)))));
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconButton1.IconSize = 20;
+            this.iconButton1.Location = new System.Drawing.Point(926, 0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(45, 25);
+            this.iconButton1.TabIndex = 15;
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.icbtMin_Click);
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(198)))), ((int)(((byte)(132)))));
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton2.ForeColor = System.Drawing.Color.White;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.iconButton2.IconColor = System.Drawing.Color.Black;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 20;
+            this.iconButton2.Location = new System.Drawing.Point(1010, 0);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(45, 25);
+            this.iconButton2.TabIndex = 14;
+            this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.icbtClose_Click);
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(198)))), ((int)(((byte)(132)))));
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton3.ForeColor = System.Drawing.Color.White;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Tv;
+            this.iconButton3.IconColor = System.Drawing.Color.Black;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconButton3.IconSize = 20;
+            this.iconButton3.Location = new System.Drawing.Point(968, 0);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(45, 25);
+            this.iconButton3.TabIndex = 13;
+            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.icbtMax_Click);
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.Cornsilk;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Hotel;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.Cornsilk;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 95;
+            this.iconPictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(95, 95);
+            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconPictureBox1.TabIndex = 0;
+            this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
             // 
             // icbtMenu
             // 
@@ -292,130 +400,25 @@ namespace QLKTX
             this.icbtMenu.UseVisualStyleBackColor = false;
             this.icbtMenu.Click += new System.EventHandler(this.icbtMenu_Click);
             // 
-            // iconPictureBox1
+            // panelLogo
             // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Hotel;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.Cornsilk;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 95;
-            this.iconPictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(95, 95);
-            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.iconPictureBox1.TabIndex = 0;
-            this.iconPictureBox1.TabStop = false;
-            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Enabled = false;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(276, 12);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(331, 20);
-            this.guna2HtmlLabel1.TabIndex = 9;
-            this.guna2HtmlLabel1.Text = "CHƯƠNG TRÌNH QUẢN LÝ KÝ TÚC XÁ";
-            // 
-            // panelTitleBar
-            // 
-            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(2)))));
-            this.panelTitleBar.Controls.Add(this.guna2HtmlLabel2);
-            this.panelTitleBar.Controls.Add(this.icbtMin);
-            this.panelTitleBar.Controls.Add(this.icbtClose);
-            this.panelTitleBar.Controls.Add(this.icbtMax);
-            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(230, 0);
-            this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1055, 51);
-            this.panelTitleBar.TabIndex = 1;
-            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Enabled = false;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.GhostWhite;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(367, 5);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(331, 20);
-            this.guna2HtmlLabel2.TabIndex = 13;
-            this.guna2HtmlLabel2.Text = "CHƯƠNG TRÌNH QUẢN LÝ KÝ TÚC XÁ";
-            // 
-            // icbtMin
-            // 
-            this.icbtMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.icbtMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(2)))));
-            this.icbtMin.FlatAppearance.BorderSize = 0;
-            this.icbtMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icbtMin.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.icbtMin.ForeColor = System.Drawing.Color.White;
-            this.icbtMin.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.icbtMin.IconColor = System.Drawing.Color.Black;
-            this.icbtMin.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.icbtMin.IconSize = 20;
-            this.icbtMin.Location = new System.Drawing.Point(923, 0);
-            this.icbtMin.Name = "icbtMin";
-            this.icbtMin.Size = new System.Drawing.Size(45, 25);
-            this.icbtMin.TabIndex = 12;
-            this.icbtMin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtMin.UseVisualStyleBackColor = false;
-            this.icbtMin.Click += new System.EventHandler(this.icbtMin_Click);
-            // 
-            // icbtClose
-            // 
-            this.icbtClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.icbtClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(2)))));
-            this.icbtClose.FlatAppearance.BorderSize = 0;
-            this.icbtClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icbtClose.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.icbtClose.ForeColor = System.Drawing.Color.White;
-            this.icbtClose.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.icbtClose.IconColor = System.Drawing.Color.Black;
-            this.icbtClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icbtClose.IconSize = 20;
-            this.icbtClose.Location = new System.Drawing.Point(1007, 0);
-            this.icbtClose.Name = "icbtClose";
-            this.icbtClose.Size = new System.Drawing.Size(45, 25);
-            this.icbtClose.TabIndex = 11;
-            this.icbtClose.UseVisualStyleBackColor = false;
-            this.icbtClose.Click += new System.EventHandler(this.icbtClose_Click);
-            // 
-            // icbtMax
-            // 
-            this.icbtMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.icbtMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(143)))), ((int)(((byte)(2)))));
-            this.icbtMax.FlatAppearance.BorderSize = 0;
-            this.icbtMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icbtMax.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.icbtMax.ForeColor = System.Drawing.Color.White;
-            this.icbtMax.IconChar = FontAwesome.Sharp.IconChar.Tv;
-            this.icbtMax.IconColor = System.Drawing.Color.Black;
-            this.icbtMax.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.icbtMax.IconSize = 20;
-            this.icbtMax.Location = new System.Drawing.Point(965, 0);
-            this.icbtMax.Name = "icbtMax";
-            this.icbtMax.Size = new System.Drawing.Size(45, 25);
-            this.icbtMax.TabIndex = 10;
-            this.icbtMax.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtMax.UseVisualStyleBackColor = false;
-            this.icbtMax.Click += new System.EventHandler(this.icbtMax_Click);
+            this.panelLogo.Controls.Add(this.icbtMenu);
+            this.panelLogo.Controls.Add(this.iconPictureBox1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(230, 114);
+            this.panelLogo.TabIndex = 0;
             // 
             // panelDesktop
             // 
             this.panelDesktop.BackgroundImage = global::QLKTX.Properties.Resources.hostel;
             this.panelDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(230, 51);
-            this.panelDesktop.MinimumSize = new System.Drawing.Size(1055, 671);
+            this.panelDesktop.Location = new System.Drawing.Point(230, 40);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1055, 671);
-            this.panelDesktop.TabIndex = 2;
+            this.panelDesktop.Size = new System.Drawing.Size(1055, 682);
+            this.panelDesktop.TabIndex = 4;
             // 
             // Main
             // 
@@ -436,11 +439,11 @@ namespace QLKTX
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Resize += new System.EventHandler(this.Main_Resize);
             this.panelMenu.ResumeLayout(false);
-            this.panelLogo.ResumeLayout(false);
-            this.panelLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            this.panelLogo.ResumeLayout(false);
+            this.panelLogo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -448,7 +451,6 @@ namespace QLKTX
         #endregion
 
         private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Panel panelLogo;
         private FontAwesome.Sharp.IconButton icbtQLP;
         private FontAwesome.Sharp.IconButton icbtGioiThieu;
         private FontAwesome.Sharp.IconButton icbtTongQuan;
@@ -456,15 +458,16 @@ namespace QLKTX
         private FontAwesome.Sharp.IconButton icbtHoaDon;
         private FontAwesome.Sharp.IconButton icbtQLSV;
         private FontAwesome.Sharp.IconButton icbtInDanhSach;
-        private FontAwesome.Sharp.IconButton icbtMenu;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconButton icbtLogOut;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private System.Windows.Forms.Panel panelTitleBar;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private FontAwesome.Sharp.IconButton icbtMin;
-        private FontAwesome.Sharp.IconButton icbtClose;
-        private FontAwesome.Sharp.IconButton icbtMax;
-        private System.Windows.Forms.Panel panelDesktop;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel panelTitleBar;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton iconButton3;
+        private System.Windows.Forms.Panel panelLogo;
+        private FontAwesome.Sharp.IconButton icbtMenu;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private Guna.UI2.WinForms.Guna2Panel panelDesktop;
     }
 }

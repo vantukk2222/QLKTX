@@ -13,7 +13,7 @@ namespace QLKTX
 {
     public partial class UC_QLSV : UserControl
     {
-        QLKTXEntities1 db = new QLKTXEntities1();
+       // QLKTXEntities1 db = new QLKTXEntities1();
         public UC_QLSV()
         {
             InitializeComponent();
@@ -58,7 +58,7 @@ namespace QLKTX
 
         private void iconTimKiem_Click(object sender, EventArgs e)
         {
-            ShowDataGridView(BLL_QLSV.Instance.GetAllContainName(txtName.Texts.Trim()));
+            ShowDataGridView(BLL_QLSV.Instance.GetAllSVContainName(txtName.Texts.Trim()));
         }
 
         private void txtName_MouseClick(object sender, MouseEventArgs e)
@@ -89,6 +89,22 @@ namespace QLKTX
 
 
             }
+        }
+
+        private void icbtAdd_Click(object sender, EventArgs e)
+        {
+            AEFSVForm add = new AEFSVForm();
+            add.AddSV = true;
+            add.ShowDialog();
+        }
+
+        private void icbtEdit_Click(object sender, EventArgs e)
+        {
+            AEFSVForm edit = new AEFSVForm();
+            edit.AddSV = false;
+            edit.MSSV = String.Concat(guna2DataGridView1.CurrentRow.Cells[0].FormattedValue.ToString().Where(c => !Char.IsWhiteSpace(c)));
+            edit.ShowDialog();
+            
         }
     }
 }

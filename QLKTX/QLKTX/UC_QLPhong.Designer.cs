@@ -259,7 +259,7 @@
             this.icbtDel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.icbtDel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.icbtDel.UseVisualStyleBackColor = false;
-            this.icbtDel.Click += new System.EventHandler(this.iconButton3_Click);
+           // this.icbtDel.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // icbtEdit
             // 

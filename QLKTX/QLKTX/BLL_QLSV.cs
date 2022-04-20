@@ -33,6 +33,18 @@ namespace QLKTX
         {
             return DataHelper.db.SVs.Where(sv => sv.MaPhong == maphong).ToList();
         }
+        public SV GetSVByMSSV(string mssv)
+        {
+            SV SVnew = new SV();
+            foreach (SV sv in GetAllSV())
+            {
+                if (sv.MSSV == mssv)
+                {
+                    SVnew = sv;
+                }
+            }
+            return SVnew;
+        }
         public void DeleteSV(string mssv)
         {
             SV sv = DataHelper.db.SVs.Find(mssv);
