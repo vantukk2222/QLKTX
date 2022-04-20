@@ -14,8 +14,15 @@ namespace QLKTX
     {
         public string MSSV { get; set; }
         public bool AddSV = true;
-        public AEFSVForm()
+        public AEFSVForm(string mssv="")
         {
+            if (mssv != "" )
+            {
+                AddSV = false;
+                MSSV = mssv;
+            }
+            
+            MSSV = mssv;
             InitializeComponent();
             GUI();
         }
@@ -35,7 +42,7 @@ namespace QLKTX
                 txtname.Texts = BLL_QLSV.Instance.GetSVByMSSV(MSSV).HoTen;
                 txtSDT.Texts = BLL_QLSV.Instance.GetSVByMSSV(MSSV).SDT;
                 txtQue.Texts = BLL_QLSV.Instance.GetSVByMSSV(MSSV).QueQuan;
-                rjDatePicker1.Value =  BLL_QLSV.Instance.GetSVByMSSV(MSSV).NgaySinh.Date;
+                rjDatePicker1.Value = Convert.ToDateTime( BLL_QLSV.Instance.GetSVByMSSV(MSSV).NgaySinh);
                 if (BLL_QLSV.Instance.GetSVByMSSV(MSSV).GioiTinh == true)
                 {
                     checkSex.Checked = true;

@@ -100,9 +100,8 @@ namespace QLKTX
 
         private void icbtEdit_Click(object sender, EventArgs e)
         {
-            AEFSVForm edit = new AEFSVForm();
-            edit.AddSV = false;
-            edit.MSSV = String.Concat(guna2DataGridView1.CurrentRow.Cells[0].FormattedValue.ToString().Where(c => !Char.IsWhiteSpace(c)));
+            AEFSVForm edit = new AEFSVForm(guna2DataGridView1.SelectedRows[0].Cells[0].FormattedValue.ToString());
+            
             edit.ShowDialog();
             
         }

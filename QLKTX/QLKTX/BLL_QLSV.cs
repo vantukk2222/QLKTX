@@ -35,15 +35,7 @@ namespace QLKTX
         }
         public SV GetSVByMSSV(string mssv)
         {
-            SV SVnew = new SV();
-            foreach (SV sv in GetAllSV())
-            {
-                if (sv.MSSV == mssv)
-                {
-                    SVnew = sv;
-                }
-            }
-            return SVnew;
+            return DataHelper.db.SVs.Find(mssv);
         }
         public void DeleteSV(string mssv)
         {
