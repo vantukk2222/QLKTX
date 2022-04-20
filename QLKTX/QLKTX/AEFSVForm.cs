@@ -30,17 +30,20 @@ namespace QLKTX
         {
             if (MSSV != "")
             {
+                this.Text = "Chỉnh sửa sinh viên";
+
                 txtmssv.Texts = BLL_QLSV.Instance.GetSVByMSSV(MSSV).MSSV;
-                if (AddSV)
+                if (AddSV == false)
                 {
                     txtmssv.Enabled = false;
                 }
-                txtHedaotao.Texts = BLL_QLSV.Instance.GetSVByMSSV(MSSV).HeDaoTao;
-                txtKhoa.Texts = BLL_QLSV.Instance.GetSVByMSSV(MSSV).Khoa;
-                txtKhoahoc.Texts = BLL_QLSV.Instance.GetSVByMSSV(MSSV).KhoaHoc;
-                txtLop.Texts = BLL_QLSV.Instance.GetSVByMSSV(MSSV).LopHoc;
+                
+                txtHedaotao.Texts = String.Concat(BLL_QLSV.Instance.GetSVByMSSV(MSSV).HeDaoTao.Where(c => !Char.IsWhiteSpace(c))); ;
+                txtKhoa.Texts = String.Concat(BLL_QLSV.Instance.GetSVByMSSV(MSSV).Khoa.Where(c => !Char.IsWhiteSpace(c))); ;
+                txtKhoahoc.Texts = String.Concat(BLL_QLSV.Instance.GetSVByMSSV(MSSV).KhoaHoc.Where(c => !Char.IsWhiteSpace(c))); ;
+                txtLop.Texts = String.Concat(BLL_QLSV.Instance.GetSVByMSSV(MSSV).LopHoc.Where(c => !Char.IsWhiteSpace(c))); ;
                 txtname.Texts = BLL_QLSV.Instance.GetSVByMSSV(MSSV).HoTen;
-                txtSDT.Texts = BLL_QLSV.Instance.GetSVByMSSV(MSSV).SDT;
+                txtSDT.Texts = String.Concat(BLL_QLSV.Instance.GetSVByMSSV(MSSV).SDT.Where(c => !Char.IsWhiteSpace(c))); ;
                 txtQue.Texts = BLL_QLSV.Instance.GetSVByMSSV(MSSV).QueQuan;
                 rjDatePicker1.Value = Convert.ToDateTime( BLL_QLSV.Instance.GetSVByMSSV(MSSV).NgaySinh);
                 if (BLL_QLSV.Instance.GetSVByMSSV(MSSV).GioiTinh == true)
@@ -61,8 +64,15 @@ namespace QLKTX
             if (AddSV)
             {
                 MessageBox.Show("Add thanh cong");
+                this.Close();
             }
-            else MessageBox.Show("Edit thanh cong");
+            else
+            {
+                
+
+                MessageBox.Show("Edit thanh cong");
+                this.Close();
+            }
         }
     }
 }

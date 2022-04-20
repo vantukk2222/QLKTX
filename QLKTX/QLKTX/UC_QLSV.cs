@@ -18,6 +18,12 @@ namespace QLKTX
         {
             InitializeComponent();
             LoadData();
+            cbbKhoa.Items.Add("All");
+            foreach (string s in BLL_QLSV.Instance.GetAllKhoa().Distinct())
+            {
+                string khoa = String.Concat(s.Where(c => !Char.IsWhiteSpace(c)));
+                cbbKhoa.Items.Add(khoa);
+            }
         }
         public void ShowDataGridView(List<SV> list)
         {
@@ -35,7 +41,7 @@ namespace QLKTX
                 p.HeDaoTao,
                 p.SDT
             }).ToList();
-            guna2DataGridView1.Columns[0].HeaderText = "MSSV";
+            guna2DataGridView1.Columns[0].HeaderText = "Mã Sinh Viên";
             guna2DataGridView1.Columns[1].HeaderText = "Mã Hợp Đồng";
             guna2DataGridView1.Columns[2].HeaderText = "Họ Tên";
             guna2DataGridView1.Columns[3].HeaderText = "Mã Phòng";
@@ -46,6 +52,7 @@ namespace QLKTX
             guna2DataGridView1.Columns[8].HeaderText = "Khoa";
             guna2DataGridView1.Columns[9].HeaderText = "Hệ Đào Tạo";
             guna2DataGridView1.Columns[10].HeaderText = "SĐT";
+            
         }
         public void LoadData()
         {
@@ -58,7 +65,13 @@ namespace QLKTX
 
         private void iconTimKiem_Click(object sender, EventArgs e)
         {
-            ShowDataGridView(BLL_QLSV.Instance.GetAllSVContainName(txtName.Texts.Trim()));
+            string s;
+            if (cbbKhoa.SelectedText != null)
+            {
+                s = cbbKhoa.SelectedText.Trim();
+            }
+            else s = "";
+            ShowDataGridView(BLL_QLSV.Instance.GetAllSVKhoaTen(s,txtName.Texts.Trim()));
         }
 
         private void txtName_MouseClick(object sender, MouseEventArgs e)
@@ -94,7 +107,6 @@ namespace QLKTX
         private void icbtAdd_Click(object sender, EventArgs e)
         {
             AEFSVForm add = new AEFSVForm();
-            add.AddSV = true;
             add.ShowDialog();
         }
 
@@ -104,6 +116,15 @@ namespace QLKTX
             
             edit.ShowDialog();
             
+        }
+
+        private void guna2DataGridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+
+                icbtDel_Click(sender, new EventArgs());
+            }
         }
     }
 }

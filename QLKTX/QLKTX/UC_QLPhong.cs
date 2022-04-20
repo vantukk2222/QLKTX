@@ -17,6 +17,11 @@ namespace QLKTX
         {
             InitializeComponent();
             LoadData();
+            cbbKhu.Items.Add("All");
+            foreach (string tenkhu in BLL_QLPhong.Instance.GetNameKhu().Distinct())
+            {
+                cbbKhu.Items.Add(String.Concat(tenkhu.Where(c => !Char.IsWhiteSpace(c))));
+            }
         }
         public void ShowDataGridView(List<Phong> list)
         {
@@ -84,6 +89,18 @@ namespace QLKTX
 
             }
             
+        }
+
+        private void icbtSearch_Click(object sender, EventArgs e)
+        {
+            string s;
+            if (cbbKhu.SelectedText == null)
+            {
+                s = "";
+            }
+            else s = cbbKhu.SelectedText;
+            ShowDataGridView(BLL_QLPhong.Instance.GetAllByKhuMa(s,txtSearch.Texts.Trim()));
+
         }
     }
 }

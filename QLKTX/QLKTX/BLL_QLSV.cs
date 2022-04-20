@@ -21,9 +21,26 @@ namespace QLKTX
                 return _Instance;
             }
         }
+        public List<string> GetAllKhoa()
+        {
+            List<string> KhoaHoc = new List<string>();
+            foreach (SV sv in GetAllSV())
+            {
+                KhoaHoc.Add(sv.KhoaHoc);
+            }
+            return KhoaHoc;
+        }
+
         public List<SV> GetAllSV()
         {
             return DataHelper.db.SVs.ToList();
+        }
+        public List<SV> GetAllSVKhoaTen(string khoa, string name)
+        {
+            List<SV> SinhVien = (from SV in DataHelper.db.SVs
+                                    where SV.KhoaHoc.Contains(khoa) & SV.HoTen.Contains(name)
+                                    select SV).ToList();
+            return SinhVien;
         }
         public List<SV> GetAllSVContainName(string name)
         {
@@ -36,6 +53,26 @@ namespace QLKTX
         public SV GetSVByMSSV(string mssv)
         {
             return DataHelper.db.SVs.Find(mssv);
+        }
+        public void EditSV(SV sv)
+        {
+            SV newSV = DataHelper.db.SVs.Find(sv.MSSV);
+            if (newSV != null)
+            {
+                newSV = sv;
+                DataHelper.db.SaveChanges();
+            }
+        }
+        public void AddSV(SV sv)
+        {
+            try
+            {
+                DataHelper.db.SVs.Add(sv);
+                DataHelper.db.SaveChanges();
+            }
+            catch
+            { }
+            
         }
         public void DeleteSV(string mssv)
         {

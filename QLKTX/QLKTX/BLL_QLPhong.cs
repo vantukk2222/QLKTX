@@ -10,7 +10,7 @@ namespace QLKTX
     internal class BLL_QLPhong
     {
         //public static QLKTXEntities1 db = new QLKTXEntities1();
-        
+
         private static BLL_QLPhong _Instance;
         public static BLL_QLPhong Instance
         {
@@ -21,9 +21,32 @@ namespace QLKTX
                 return _Instance;
             }
         }
+        public List<Khu> GetAllKhu()
+        {
+            return DataHelper.db.Khus.ToList();
+        }
+        public List<string> GetNameKhu()
+        {
+            List<string> KhuName = new List<string>();
+            foreach (Khu tenkhu in GetAllKhu())
+            {
+                KhuName.Add(tenkhu.MaKhu);
+            }
+
+            return KhuName;
+        }
         public List<Phong>GetAllPhong()
         {
             return DataHelper.db.Phongs.ToList();
+        }
+        public List<Phong> GetAllByKhuMa(string makhu, string maphong)
+        {
+            if (makhu == "All") makhu = "";
+            List<Phong> phong = (from p in DataHelper.db.Phongs
+                                 where (p.MaKhu.Contains(makhu) & p.MaPhong.Contains(maphong))
+                                 select p).ToList();
+            return phong;
+
         }
         public Phong GetPhongByMaPhong(string MaPhong)
         {
