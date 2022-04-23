@@ -65,28 +65,28 @@ namespace QLKTX
         }
         public void AddSV(SV sv)
         {
-            try
-            {
+            //try
+            //{
                 DataHelper.db.SVs.Add(sv);
                 DataHelper.db.SaveChanges();
-            }
-            catch
-            { }
+            //}
+            //catch
+            //{ }
             
         }
         public void DeleteSV(string mssv)
         {
             SV sv = DataHelper.db.SVs.Find(mssv);
 
-            try
-            {
+            //try
+            //{
                 DataHelper.db.SVs.Remove(sv);
                 DataHelper.db.SaveChanges();
-            }
-            catch
-            {
+            //}
+            //catch
+            //{
                 
-            }
+            //}
             
             
         }

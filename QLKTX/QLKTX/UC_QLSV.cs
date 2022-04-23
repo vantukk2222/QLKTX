@@ -107,13 +107,14 @@ namespace QLKTX
         private void icbtAdd_Click(object sender, EventArgs e)
         {
             AEFSVForm add = new AEFSVForm();
+            add.d = new AEFSVForm.mydel(ShowDataGridView);
             add.ShowDialog();
         }
 
         private void icbtEdit_Click(object sender, EventArgs e)
         {
             AEFSVForm edit = new AEFSVForm(guna2DataGridView1.SelectedRows[0].Cells[0].FormattedValue.ToString());
-            
+            edit.d = new AEFSVForm.mydel(ShowDataGridView);
             edit.ShowDialog();
             
         }
