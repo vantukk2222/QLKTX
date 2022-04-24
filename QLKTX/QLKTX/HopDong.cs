@@ -18,7 +18,7 @@ namespace QLKTX
         public HopDong()
         {
             this.PhieuGiaHanHDs = new HashSet<PhieuGiaHanHD>();
-            this.SVs = new HashSet<SV>();
+            this.Phongs = new HashSet<Phong>();
         }
     
         public string MaHopDong { get; set; }
@@ -29,6 +29,6 @@ namespace QLKTX
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuGiaHanHD> PhieuGiaHanHDs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SV> SVs { get; set; }
+        public virtual ICollection<Phong> Phongs { get; set; }
     }
 }
