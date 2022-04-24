@@ -102,6 +102,7 @@
     <Compile Include="AEFSVForm.Designer.cs">
       <DependentUpon>AEFSVForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BLL_HopDong.cs" />
     <Compile Include="BLL_QLPhong.cs" />
     <Compile Include="BLL_QLSV.cs" />
     <Compile Include="CanBoQuanLy.cs">

@@ -16,14 +16,15 @@ namespace QLKTX
         public mydel d;
         public string MSSV { get; set; }
         public bool AddSV = true;
-        public SV temp;
+        public SV tempSV;
+        public HopDong tempHD;
         public AEFSVForm(string mssv="")
         {
             if (mssv != "" )
             {
                 AddSV = false;
                 MSSV = mssv;
-                temp = BLL_QLSV.Instance.GetSVByMSSV(MSSV);
+                tempSV = BLL_QLSV.Instance.GetSVByMSSV(MSSV);
             }
             
             MSSV = mssv;
@@ -35,20 +36,20 @@ namespace QLKTX
             if (MSSV != "")
             {
                 this.Text = "Chỉnh sửa sinh viên";
-                txtmssv.Texts = temp.MSSV;
+                txtmssv.Texts = tempSV.MSSV;
                 if (AddSV == false)
                 {
                     txtmssv.Enabled = false;
                 }
-                txtHedaotao.Texts = String.Concat(temp.HeDaoTao.Where(c => !Char.IsWhiteSpace(c))); ;
-                txtKhoa.Texts = String.Concat(temp.Khoa.Where(c => !Char.IsWhiteSpace(c))); ;
-                txtKhoahoc.Texts = String.Concat(temp.KhoaHoc.Where(c => !Char.IsWhiteSpace(c))); ;
-                txtLop.Texts = String.Concat(temp.LopHoc.Where(c => !Char.IsWhiteSpace(c))); ;
-                txtname.Texts = temp.HoTen;
-                txtSDT.Texts = String.Concat(temp.SDT.Where(c => !Char.IsWhiteSpace(c))); ;
-                txtQue.Texts = temp.QueQuan;
-                rjDatePicker1.Value = Convert.ToDateTime( temp.NgaySinh);
-                if (temp.GioiTinh == true)
+                txtHedaotao.Texts = String.Concat(tempSV.HeDaoTao.Where(c => !Char.IsWhiteSpace(c))); ;
+                txtKhoa.Texts = String.Concat(tempSV.Khoa.Where(c => !Char.IsWhiteSpace(c))); ;
+                txtKhoahoc.Texts = String.Concat(tempSV.KhoaHoc.Where(c => !Char.IsWhiteSpace(c))); ;
+                txtLop.Texts = String.Concat(tempSV.LopHoc.Where(c => !Char.IsWhiteSpace(c))); ;
+                txtname.Texts = tempSV.HoTen;
+                txtSDT.Texts = String.Concat(tempSV.SDT.Where(c => !Char.IsWhiteSpace(c))); ;
+                txtQue.Texts = tempSV.QueQuan;
+                rjDatePicker1.Value = Convert.ToDateTime( tempSV.NgaySinh);
+                if (tempSV.GioiTinh == true)
                 {
                     checkSex.Checked = true;
                 }
@@ -70,7 +71,15 @@ namespace QLKTX
                 {
                     try
                     {
-                        temp = new SV
+                        tempHD = new HopDong
+                        {
+                            MaHopDong = "HD" + Convert.ToString(BLL_HopDong.Instance.GetLastMaHopDong()).PadLeft(4, '0'),
+                            NgayKy = DateTime.Now.Date,
+                            NgayHetHan = DateTime.Now.AddYears(1).Date,
+                            NgayNhanPhong = DateTime.Now.Date,
+                        };
+                        BLL_HopDong.Instance.AddHopDong(tempHD);
+                        tempSV = new SV
                         {
                             MSSV = txtmssv.Texts,
                             HoTen = txtname.Texts,
@@ -81,9 +90,10 @@ namespace QLKTX
                             HeDaoTao = txtHedaotao.Texts,
                             Khoa = txtKhoa.Texts,
                             KhoaHoc = txtKhoahoc.Texts,
-                            LopHoc = txtLop.Texts
+                            LopHoc = txtLop.Texts,
+                            MaHopDong=tempHD.MaHopDong,
                         };
-                        BLL_QLSV.Instance.AddSV(temp);
+                        BLL_QLSV.Instance.AddSV(tempSV);
 
                     }
                     catch (Exception)
@@ -97,16 +107,16 @@ namespace QLKTX
                 {
                     try
                     {
-                        temp.MSSV = txtmssv.Texts;
-                        temp.HoTen = txtname.Texts;
-                        temp.NgaySinh = rjDatePicker1.Value.Date;
-                        temp.GioiTinh = checkSex.Checked;
-                        temp.SDT = txtSDT.Texts;
-                        temp.QueQuan = txtQue.Texts;
-                        temp.HeDaoTao = txtHedaotao.Texts;
-                        temp.Khoa = txtKhoa.Texts;
-                        temp.KhoaHoc = txtKhoahoc.Texts;
-                        temp.LopHoc = txtLop.Texts;
+                        tempSV.MSSV = txtmssv.Texts;
+                        tempSV.HoTen = txtname.Texts;
+                        tempSV.NgaySinh = rjDatePicker1.Value.Date;
+                        tempSV.GioiTinh = checkSex.Checked;
+                        tempSV.SDT = txtSDT.Texts;
+                        tempSV.QueQuan = txtQue.Texts;
+                        tempSV.HeDaoTao = txtHedaotao.Texts;
+                        tempSV.Khoa = txtKhoa.Texts;
+                        tempSV.KhoaHoc = txtKhoahoc.Texts;
+                        tempSV.LopHoc = txtLop.Texts;
                         DataHelper.db.SaveChanges();
 
                     }
