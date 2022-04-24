@@ -38,20 +38,20 @@ namespace QLKTX
             this.icbtHoaDon = new FontAwesome.Sharp.IconButton();
             this.icbtQLSV = new FontAwesome.Sharp.IconButton();
             this.icbtQLP = new FontAwesome.Sharp.IconButton();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.icbtMenu = new FontAwesome.Sharp.IconButton();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panelTitleBar = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.icbtMenu = new FontAwesome.Sharp.IconButton();
-            this.panelLogo = new System.Windows.Forms.Panel();
             this.panelDesktop = new Guna.UI2.WinForms.Guna2Panel();
             this.panelMenu.SuspendLayout();
-            this.panelTitleBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -189,6 +189,7 @@ namespace QLKTX
             this.icbtPhieuBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.icbtPhieuBaoCao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.icbtPhieuBaoCao.UseVisualStyleBackColor = false;
+            this.icbtPhieuBaoCao.Click += new System.EventHandler(this.icbtPhieuBaoCao_Click);
             // 
             // icbtHoaDon
             // 
@@ -261,6 +262,52 @@ namespace QLKTX
             this.icbtQLP.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.icbtQLP.UseVisualStyleBackColor = false;
             this.icbtQLP.Click += new System.EventHandler(this.icbtQLP_Click);
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.Controls.Add(this.icbtMenu);
+            this.panelLogo.Controls.Add(this.iconPictureBox1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(230, 114);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // icbtMenu
+            // 
+            this.icbtMenu.AutoSize = true;
+            this.icbtMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.icbtMenu.FlatAppearance.BorderSize = 0;
+            this.icbtMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icbtMenu.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icbtMenu.ForeColor = System.Drawing.Color.White;
+            this.icbtMenu.IconChar = FontAwesome.Sharp.IconChar.Bars;
+            this.icbtMenu.IconColor = System.Drawing.Color.Cornsilk;
+            this.icbtMenu.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.icbtMenu.IconSize = 30;
+            this.icbtMenu.Location = new System.Drawing.Point(160, 0);
+            this.icbtMenu.Name = "icbtMenu";
+            this.icbtMenu.Size = new System.Drawing.Size(60, 60);
+            this.icbtMenu.TabIndex = 2;
+            this.icbtMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.icbtMenu.UseVisualStyleBackColor = false;
+            this.icbtMenu.Click += new System.EventHandler(this.icbtMenu_Click);
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.Cornsilk;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Hotel;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.Cornsilk;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 95;
+            this.iconPictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(95, 95);
+            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconPictureBox1.TabIndex = 0;
+            this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
             // 
             // guna2HtmlLabel1
             // 
@@ -364,52 +411,6 @@ namespace QLKTX
             this.iconButton3.UseVisualStyleBackColor = false;
             this.iconButton3.Click += new System.EventHandler(this.icbtMax_Click);
             // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Hotel;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.Cornsilk;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 95;
-            this.iconPictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(95, 95);
-            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.iconPictureBox1.TabIndex = 0;
-            this.iconPictureBox1.TabStop = false;
-            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
-            // 
-            // icbtMenu
-            // 
-            this.icbtMenu.AutoSize = true;
-            this.icbtMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.icbtMenu.FlatAppearance.BorderSize = 0;
-            this.icbtMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icbtMenu.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.icbtMenu.ForeColor = System.Drawing.Color.White;
-            this.icbtMenu.IconChar = FontAwesome.Sharp.IconChar.Bars;
-            this.icbtMenu.IconColor = System.Drawing.Color.Cornsilk;
-            this.icbtMenu.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.icbtMenu.IconSize = 30;
-            this.icbtMenu.Location = new System.Drawing.Point(160, 0);
-            this.icbtMenu.Name = "icbtMenu";
-            this.icbtMenu.Size = new System.Drawing.Size(60, 60);
-            this.icbtMenu.TabIndex = 2;
-            this.icbtMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtMenu.UseVisualStyleBackColor = false;
-            this.icbtMenu.Click += new System.EventHandler(this.icbtMenu_Click);
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.Controls.Add(this.icbtMenu);
-            this.panelLogo.Controls.Add(this.iconPictureBox1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(230, 114);
-            this.panelLogo.TabIndex = 0;
-            // 
             // panelDesktop
             // 
             this.panelDesktop.BackgroundImage = global::QLKTX.Properties.Resources.hostel;
@@ -439,11 +440,11 @@ namespace QLKTX
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Resize += new System.EventHandler(this.Main_Resize);
             this.panelMenu.ResumeLayout(false);
-            this.panelTitleBar.ResumeLayout(false);
-            this.panelTitleBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            this.panelTitleBar.ResumeLayout(false);
+            this.panelTitleBar.PerformLayout();
             this.ResumeLayout(false);
 
         }

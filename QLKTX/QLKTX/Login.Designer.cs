@@ -50,22 +50,23 @@ namespace QLKTX
             this.butcreate.FlatAppearance.BorderSize = 0;
             this.butcreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butcreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(86)))), ((int)(((byte)(174)))));
-            this.butcreate.Location = new System.Drawing.Point(79, 341);
+            this.butcreate.Location = new System.Drawing.Point(60, 341);
             this.butcreate.Name = "butcreate";
             this.butcreate.Size = new System.Drawing.Size(168, 33);
             this.butcreate.TabIndex = 4;
-            this.butcreate.Text = "CREATE ACCOUNT";
+            this.butcreate.Text = "JOIN HERE!!";
             this.butcreate.UseVisualStyleBackColor = false;
             this.butcreate.Click += new System.EventHandler(this.butcreate_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(68, 321);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(84, 319);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(152, 17);
+            this.label5.Size = new System.Drawing.Size(121, 18);
             this.label5.TabIndex = 99999999;
-            this.label5.Text = "Don\'t have an account?";
+            this.label5.Text = "Đăng ký ở KTX";
             // 
             // butlogin
             // 
@@ -176,7 +177,7 @@ namespace QLKTX
             "SINH VIÊN"});
             this.cbbRole.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.cbbRole.ListTextColor = System.Drawing.Color.DimGray;
-            this.cbbRole.Location = new System.Drawing.Point(36, 75);
+            this.cbbRole.Location = new System.Drawing.Point(44, 75);
             this.cbbRole.MinimumSize = new System.Drawing.Size(150, 30);
             this.cbbRole.Name = "cbbRole";
             this.cbbRole.Padding = new System.Windows.Forms.Padding(1);

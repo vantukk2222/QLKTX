@@ -102,6 +102,7 @@
     <Compile Include="AEFSVForm.Designer.cs">
       <DependentUpon>AEFSVForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BLL_QLPhieu.cs" />
     <Compile Include="BLL_QLPhong.cs" />
     <Compile Include="BLL_QLSV.cs" />
     <Compile Include="CanBoQuanLy.cs">
@@ -183,6 +184,12 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="UC_QLPhieu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_QLPhieu.Designer.cs">
+      <DependentUpon>UC_QLPhieu.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_QLPhong.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -217,6 +224,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_QLPhieu.resx">
+      <DependentUpon>UC_QLPhieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_QLPhong.resx">
       <DependentUpon>UC_QLPhong.cs</DependentUpon>
