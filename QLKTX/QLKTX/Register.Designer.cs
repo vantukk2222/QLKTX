@@ -41,7 +41,7 @@ namespace QLKTX
             this.txtQue = new CustomBox.RJControls.RJTextBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtLop = new CustomBox.RJControls.RJTextBox();
-            this.rjDatePicker1 = new RJCodeAdvance.RJControls.RJDatePicker();
+            this.dateNgaySinh = new RJCodeAdvance.RJControls.RJDatePicker();
             this.checkSex = new CustomBox.RJControls.RJToggleButton();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -52,7 +52,7 @@ namespace QLKTX
             this.butback = new System.Windows.Forms.Button();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,11 +60,11 @@ namespace QLKTX
             // 
             this.guna2HtmlLabel10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel10.Location = new System.Drawing.Point(808, 369);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(105, 27);
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(127, 32);
             this.guna2HtmlLabel10.TabIndex = 1187;
             this.guna2HtmlLabel10.Text = "Hệ đào tạo";
             // 
@@ -76,7 +76,7 @@ namespace QLKTX
             this.txtHedaotao.BorderFocusColor = System.Drawing.Color.Fuchsia;
             this.txtHedaotao.BorderRadius = 10;
             this.txtHedaotao.BorderSize = 2;
-            this.txtHedaotao.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHedaotao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHedaotao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtHedaotao.Location = new System.Drawing.Point(945, 353);
             this.txtHedaotao.Margin = new System.Windows.Forms.Padding(4);
@@ -86,7 +86,7 @@ namespace QLKTX
             this.txtHedaotao.PasswordChar = false;
             this.txtHedaotao.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtHedaotao.PlaceholderText = "";
-            this.txtHedaotao.Size = new System.Drawing.Size(194, 34);
+            this.txtHedaotao.Size = new System.Drawing.Size(194, 40);
             this.txtHedaotao.TabIndex = 1186;
             this.txtHedaotao.Texts = "";
             this.txtHedaotao.UnderlinedStyle = false;
@@ -95,11 +95,11 @@ namespace QLKTX
             // 
             this.guna2HtmlLabel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel9.Location = new System.Drawing.Point(452, 360);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(42, 27);
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(55, 32);
             this.guna2HtmlLabel9.TabIndex = 1185;
             this.guna2HtmlLabel9.Text = "SDT";
             // 
@@ -111,7 +111,7 @@ namespace QLKTX
             this.txtSDT.BorderFocusColor = System.Drawing.Color.Fuchsia;
             this.txtSDT.BorderRadius = 10;
             this.txtSDT.BorderSize = 2;
-            this.txtSDT.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSDT.Location = new System.Drawing.Point(552, 353);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
@@ -121,7 +121,7 @@ namespace QLKTX
             this.txtSDT.PasswordChar = false;
             this.txtSDT.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtSDT.PlaceholderText = "";
-            this.txtSDT.Size = new System.Drawing.Size(194, 34);
+            this.txtSDT.Size = new System.Drawing.Size(194, 40);
             this.txtSDT.TabIndex = 1184;
             this.txtSDT.Texts = "";
             this.txtSDT.UnderlinedStyle = false;
@@ -130,11 +130,11 @@ namespace QLKTX
             // 
             this.guna2HtmlLabel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel8.Location = new System.Drawing.Point(452, 288);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(51, 27);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(62, 32);
             this.guna2HtmlLabel8.TabIndex = 1183;
             this.guna2HtmlLabel8.Text = "Khoa";
             // 
@@ -146,7 +146,7 @@ namespace QLKTX
             this.txtKhoa.BorderFocusColor = System.Drawing.Color.Fuchsia;
             this.txtKhoa.BorderRadius = 10;
             this.txtKhoa.BorderSize = 2;
-            this.txtKhoa.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKhoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtKhoa.Location = new System.Drawing.Point(552, 281);
             this.txtKhoa.Margin = new System.Windows.Forms.Padding(4);
@@ -156,7 +156,7 @@ namespace QLKTX
             this.txtKhoa.PasswordChar = false;
             this.txtKhoa.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtKhoa.PlaceholderText = "";
-            this.txtKhoa.Size = new System.Drawing.Size(194, 34);
+            this.txtKhoa.Size = new System.Drawing.Size(194, 40);
             this.txtKhoa.TabIndex = 1182;
             this.txtKhoa.Texts = "";
             this.txtKhoa.UnderlinedStyle = false;
@@ -165,11 +165,11 @@ namespace QLKTX
             // 
             this.guna2HtmlLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(808, 288);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(91, 27);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(110, 32);
             this.guna2HtmlLabel7.TabIndex = 1181;
             this.guna2HtmlLabel7.Text = "Khóa học";
             // 
@@ -181,7 +181,7 @@ namespace QLKTX
             this.txtKhoahoc.BorderFocusColor = System.Drawing.Color.Fuchsia;
             this.txtKhoahoc.BorderRadius = 10;
             this.txtKhoahoc.BorderSize = 2;
-            this.txtKhoahoc.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKhoahoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKhoahoc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtKhoahoc.Location = new System.Drawing.Point(945, 281);
             this.txtKhoahoc.Margin = new System.Windows.Forms.Padding(4);
@@ -191,7 +191,7 @@ namespace QLKTX
             this.txtKhoahoc.PasswordChar = false;
             this.txtKhoahoc.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtKhoahoc.PlaceholderText = "";
-            this.txtKhoahoc.Size = new System.Drawing.Size(194, 34);
+            this.txtKhoahoc.Size = new System.Drawing.Size(194, 40);
             this.txtKhoahoc.TabIndex = 1180;
             this.txtKhoahoc.Texts = "";
             this.txtKhoahoc.UnderlinedStyle = false;
@@ -200,11 +200,11 @@ namespace QLKTX
             // 
             this.guna2HtmlLabel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(807, 216);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(92, 27);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(114, 32);
             this.guna2HtmlLabel6.TabIndex = 1179;
             this.guna2HtmlLabel6.Text = "Quê quán";
             // 
@@ -216,7 +216,7 @@ namespace QLKTX
             this.txtQue.BorderFocusColor = System.Drawing.Color.Fuchsia;
             this.txtQue.BorderRadius = 10;
             this.txtQue.BorderSize = 2;
-            this.txtQue.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtQue.Location = new System.Drawing.Point(945, 209);
             this.txtQue.Margin = new System.Windows.Forms.Padding(4);
@@ -226,7 +226,7 @@ namespace QLKTX
             this.txtQue.PasswordChar = false;
             this.txtQue.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtQue.PlaceholderText = "";
-            this.txtQue.Size = new System.Drawing.Size(194, 34);
+            this.txtQue.Size = new System.Drawing.Size(194, 40);
             this.txtQue.TabIndex = 1178;
             this.txtQue.Texts = "";
             this.txtQue.UnderlinedStyle = false;
@@ -235,11 +235,11 @@ namespace QLKTX
             // 
             this.guna2HtmlLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(454, 216);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(78, 27);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(93, 32);
             this.guna2HtmlLabel5.TabIndex = 1177;
             this.guna2HtmlLabel5.Text = "Lớp học";
             // 
@@ -251,7 +251,7 @@ namespace QLKTX
             this.txtLop.BorderFocusColor = System.Drawing.Color.Fuchsia;
             this.txtLop.BorderRadius = 10;
             this.txtLop.BorderSize = 2;
-            this.txtLop.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtLop.Location = new System.Drawing.Point(552, 209);
             this.txtLop.Margin = new System.Windows.Forms.Padding(4);
@@ -261,26 +261,26 @@ namespace QLKTX
             this.txtLop.PasswordChar = false;
             this.txtLop.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtLop.PlaceholderText = "";
-            this.txtLop.Size = new System.Drawing.Size(194, 34);
+            this.txtLop.Size = new System.Drawing.Size(194, 40);
             this.txtLop.TabIndex = 1176;
             this.txtLop.Texts = "";
             this.txtLop.UnderlinedStyle = false;
             // 
-            // rjDatePicker1
+            // dateNgaySinh
             // 
-            this.rjDatePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjDatePicker1.BorderColor = System.Drawing.Color.PaleGreen;
-            this.rjDatePicker1.BorderSize = 0;
-            this.rjDatePicker1.CustomFormat = "";
-            this.rjDatePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjDatePicker1.Location = new System.Drawing.Point(945, 126);
-            this.rjDatePicker1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.rjDatePicker1.Name = "rjDatePicker1";
-            this.rjDatePicker1.Size = new System.Drawing.Size(194, 35);
-            this.rjDatePicker1.SkinColor = System.Drawing.Color.MediumPurple;
-            this.rjDatePicker1.TabIndex = 1175;
-            this.rjDatePicker1.TextColor = System.Drawing.Color.WhiteSmoke;
-            this.rjDatePicker1.Value = new System.DateTime(2022, 4, 20, 17, 31, 31, 0);
+            this.dateNgaySinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateNgaySinh.BorderColor = System.Drawing.Color.PaleGreen;
+            this.dateNgaySinh.BorderSize = 0;
+            this.dateNgaySinh.CustomFormat = "";
+            this.dateNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateNgaySinh.Location = new System.Drawing.Point(945, 126);
+            this.dateNgaySinh.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dateNgaySinh.Name = "dateNgaySinh";
+            this.dateNgaySinh.Size = new System.Drawing.Size(194, 35);
+            this.dateNgaySinh.SkinColor = System.Drawing.Color.MediumPurple;
+            this.dateNgaySinh.TabIndex = 1175;
+            this.dateNgaySinh.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.dateNgaySinh.Value = new System.DateTime(2022, 4, 20, 17, 31, 31, 0);
             // 
             // checkSex
             // 
@@ -301,11 +301,11 @@ namespace QLKTX
             // 
             this.guna2HtmlLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(803, 134);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(96, 27);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(117, 32);
             this.guna2HtmlLabel4.TabIndex = 1173;
             this.guna2HtmlLabel4.Text = "Ngày sinh";
             // 
@@ -313,11 +313,11 @@ namespace QLKTX
             // 
             this.guna2HtmlLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(452, 134);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(80, 27);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(97, 32);
             this.guna2HtmlLabel3.TabIndex = 1172;
             this.guna2HtmlLabel3.Text = "Giới tính";
             // 
@@ -325,13 +325,14 @@ namespace QLKTX
             // 
             this.guna2HtmlLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(803, 66);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(788, 66);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(120, 27);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(147, 32);
             this.guna2HtmlLabel2.TabIndex = 1171;
             this.guna2HtmlLabel2.Text = "Mã sinh viên";
+            this.guna2HtmlLabel2.Click += new System.EventHandler(this.guna2HtmlLabel2_Click);
             // 
             // txtmssv
             // 
@@ -341,7 +342,7 @@ namespace QLKTX
             this.txtmssv.BorderFocusColor = System.Drawing.Color.Fuchsia;
             this.txtmssv.BorderRadius = 10;
             this.txtmssv.BorderSize = 2;
-            this.txtmssv.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmssv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmssv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtmssv.Location = new System.Drawing.Point(945, 59);
             this.txtmssv.Margin = new System.Windows.Forms.Padding(4);
@@ -351,7 +352,7 @@ namespace QLKTX
             this.txtmssv.PasswordChar = false;
             this.txtmssv.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtmssv.PlaceholderText = "";
-            this.txtmssv.Size = new System.Drawing.Size(194, 34);
+            this.txtmssv.Size = new System.Drawing.Size(194, 40);
             this.txtmssv.TabIndex = 1170;
             this.txtmssv.Texts = "";
             this.txtmssv.UnderlinedStyle = false;
@@ -360,11 +361,11 @@ namespace QLKTX
             // 
             this.guna2HtmlLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(452, 66);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(71, 27);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(87, 32);
             this.guna2HtmlLabel1.TabIndex = 1169;
             this.guna2HtmlLabel1.Text = "Họ Tên";
             // 
@@ -376,7 +377,7 @@ namespace QLKTX
             this.txtname.BorderFocusColor = System.Drawing.Color.Fuchsia;
             this.txtname.BorderRadius = 10;
             this.txtname.BorderSize = 2;
-            this.txtname.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtname.Location = new System.Drawing.Point(552, 59);
             this.txtname.Margin = new System.Windows.Forms.Padding(4);
@@ -386,7 +387,7 @@ namespace QLKTX
             this.txtname.PasswordChar = false;
             this.txtname.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtname.PlaceholderText = "";
-            this.txtname.Size = new System.Drawing.Size(194, 34);
+            this.txtname.Size = new System.Drawing.Size(194, 40);
             this.txtname.TabIndex = 1168;
             this.txtname.Texts = "";
             this.txtname.UnderlinedStyle = false;
@@ -425,34 +426,34 @@ namespace QLKTX
             this.guna2HtmlLabel11.ForeColor = System.Drawing.Color.MediumPurple;
             this.guna2HtmlLabel11.Location = new System.Drawing.Point(29, 13);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(186, 39);
+            this.guna2HtmlLabel11.Size = new System.Drawing.Size(233, 48);
             this.guna2HtmlLabel11.TabIndex = 1167;
             this.guna2HtmlLabel11.Text = "GET STARTED!";
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.MediumPurple;
-            this.button1.Location = new System.Drawing.Point(1031, 470);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 49);
-            this.button1.TabIndex = 1189;
-            this.button1.Text = "SAVE ";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.MediumPurple;
+            this.btnSave.Location = new System.Drawing.Point(1031, 470);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(119, 49);
+            this.btnSave.TabIndex = 1189;
+            this.btnSave.Text = "SAVE ";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // Register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1162, 531);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.butback);
             this.Controls.Add(this.guna2HtmlLabel10);
@@ -467,7 +468,7 @@ namespace QLKTX
             this.Controls.Add(this.txtQue);
             this.Controls.Add(this.guna2HtmlLabel5);
             this.Controls.Add(this.txtLop);
-            this.Controls.Add(this.rjDatePicker1);
+            this.Controls.Add(this.dateNgaySinh);
             this.Controls.Add(this.checkSex);
             this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.guna2HtmlLabel3);
@@ -502,7 +503,7 @@ namespace QLKTX
         private CustomBox.RJControls.RJTextBox txtQue;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private CustomBox.RJControls.RJTextBox txtLop;
-        private RJCodeAdvance.RJControls.RJDatePicker rjDatePicker1;
+        private RJCodeAdvance.RJControls.RJDatePicker dateNgaySinh;
         private CustomBox.RJControls.RJToggleButton checkSex;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
@@ -513,7 +514,7 @@ namespace QLKTX
         private System.Windows.Forms.Button butback;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSave;
     }
 }
 

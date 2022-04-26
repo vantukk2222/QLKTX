@@ -18,17 +18,17 @@ namespace QLKTX
         public HopDong()
         {
             this.PhieuGiaHanHDs = new HashSet<PhieuGiaHanHD>();
-            this.Phongs = new HashSet<Phong>();
+            this.SVs = new HashSet<SV>();
         }
     
         public string MaHopDong { get; set; }
-        public System.DateTime NgayKy { get; set; }
-        public System.DateTime NgayNhanPhong { get; set; }
-        public System.DateTime NgayHetHan { get; set; }
+        public Nullable<System.DateTime> NgayKy { get; set; }
+        public Nullable<System.DateTime> NgayNhanPhong { get; set; }
+        public Nullable<System.DateTime> NgayHetHan { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuGiaHanHD> PhieuGiaHanHDs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Phong> Phongs { get; set; }
+        public virtual ICollection<SV> SVs { get; set; }
     }
 }

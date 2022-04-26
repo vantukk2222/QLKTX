@@ -26,7 +26,7 @@ namespace QLKTX
         public string MaPhong { get; set; }
         public string HoTen { get; set; }
         public bool GioiTinh { get; set; }
-        public DateTime NgaySinh { get; set; }
+        public System.DateTime NgaySinh { get; set; }
         public string QueQuan { get; set; }
         public string LopHoc { get; set; }
         public string KhoaHoc { get; set; }

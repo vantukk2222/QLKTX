@@ -37,16 +37,36 @@ namespace QLKTX
         {
             if (Loai == "All") Loai = "";
             var phieu = (from p in DataHelper.db.Phieux
-                                 join sv in DataHelper.db.SVs on p.MSSV equals sv.MSSV
-                                 where (p.TenPhieu.Contains(Loai) & sv.HoTen.Contains(TenSV))
-                                 select p).ToList();
-            
-           // (from p in DataHelper.db.Phieux
-             //join sv in DataHelper.db.SVs on p.MSSV equals sv.MSSV
+                         join sv in DataHelper.db.SVs on p.MSSV equals sv.MSSV
+                         where (p.TenPhieu.Contains(Loai) & sv.HoTen.Contains(TenSV))
+                         select p).ToList();
+
+            // (from p in DataHelper.db.Phieux
+            //join sv in DataHelper.db.SVs on p.MSSV equals sv.MSSV
             // where (p.TenPhieu.Contains(Loai) & sv.HoTen.Contains(TenSV))
             // select new { p, sv }).ToList();
             return phieu;
 
+        }
+        public int GetLastMaPhieuDKOKTX()
+        {
+            int MaPhieu = 0;
+            if (DataHelper.db.PhieuDangKyOKTXes.Count() == 0)
+            {
+                MaPhieu = 1;
+            }
+            else
+            {
+                MaPhieu =Convert.ToInt32( DataHelper.db.PhieuDangKyOKTXes.Max(p => p.MaPhieu).Substring(2)) + 1;
+            }
+            return MaPhieu;
+        }
+        public void AddPhieuDKOKTX(PhieuDangKyOKTX p)
+        {
+            
+            DataHelper.db.PhieuDangKyOKTXes.Add(p);
+            DataHelper.db.Phieux.Add(new Phieu { MaPhieu = p.MaPhieu, TenPhieu = "Phiếu Đăng Ký OKTX", NgayLap = DateTime.Now.Date });
+            DataHelper.db.SaveChanges();
         }
     }
 }

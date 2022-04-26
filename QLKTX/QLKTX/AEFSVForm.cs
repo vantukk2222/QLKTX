@@ -64,6 +64,65 @@ namespace QLKTX
         private void btSave_Click(object sender, EventArgs e)
         {
             bool sex = checkSex.Checked;
+            try
+            {
+                Int32.Parse(txtmssv.Texts);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("MSSV không hợp lệ mời nhập lại");
+                return;
+            }
+            try
+            {
+                Int32.Parse(txtSDT.Texts);
+                if (txtSDT.Texts.Length < 9 || txtSDT.Texts.Length > 11)
+                {
+                    MessageBox.Show("Số điện thoại không hợp lệ mời nhập lại");
+                    return;
+                }
+            }
+            catch (Exception )
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ mời nhập lại");
+                return;
+            }
+            if (txtmssv.Texts == null || txtmssv.Texts == "")
+            {
+                MessageBox.Show("MSSV không hợp lệ mời nhập lại");
+                return;
+            }
+            if (txtname.Texts == null || txtname.Texts == "")
+            {
+                MessageBox.Show("Họ tên không hợp lệ mời nhập lại");
+                return;
+            }
+            if (txtQue.Texts == null || txtQue.Texts == "")
+            {
+                MessageBox.Show("Quê quán không hợp lệ mời nhập lại");
+                return;
+            }
+            if (txtKhoa.Texts == null || txtKhoa.Texts == "")
+            {
+                MessageBox.Show("Khoa không hợp lệ mời nhập lại");
+                return;
+            }
+            if (txtKhoahoc.Texts == null || txtKhoahoc.Texts == "")
+            {
+                MessageBox.Show("Khóa học không hợp lệ mời nhập lại");
+                return;
+            }
+            if (txtLop.Texts == null || txtLop.Texts == "")
+            {
+                MessageBox.Show("Lớp không hợp lệ mời nhập lại");
+                return;
+            }
+            if (txtHedaotao.Texts == null || txtHedaotao.Texts == "")
+            {
+                MessageBox.Show("Hệ đào tạo không hợp lệ mời nhập lại");
+                return;
+            }
+            
             bool flag=true;
             while (flag)
             {

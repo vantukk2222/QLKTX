@@ -19,9 +19,8 @@ namespace QLKTX
         public string MSSV { get; set; }
         public string MaCB { get; set; }
         public string MaPhong { get; set; }
-        public System.DateTime NgayLap { get; set; }
+        public Nullable<System.DateTime> NgayLap { get; set; }
     
-        public virtual CanBoQuanLy CanBoQuanLy { get; set; }
         public virtual Phong Phong { get; set; }
         public virtual SV SV { get; set; }
         public virtual PhieuDangKyOKTX PhieuDangKyOKTX { get; set; }

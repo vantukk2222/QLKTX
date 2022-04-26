@@ -18,7 +18,6 @@ namespace QLKTX
         public CanBoQuanLy()
         {
             this.Khus = new HashSet<Khu>();
-            this.Phieux = new HashSet<Phieu>();
         }
     
         public string MaCB { get; set; }
@@ -32,7 +31,5 @@ namespace QLKTX
         public virtual AccCB AccCB { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Khu> Khus { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Phieu> Phieux { get; set; }
     }
 }

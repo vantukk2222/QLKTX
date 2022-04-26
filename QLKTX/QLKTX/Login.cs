@@ -25,28 +25,38 @@ namespace QLKTX
 			string s = "";
 			if (cbbRole.SelectedIndex >= 0)
 			{
-				if (cbbRole.SelectedIndex == 0)
-					s = "Select* from AccCB Where UserName = '" + txtUsername.Text.Trim() + "' and PassWord = '" + txtPassword.Text.Trim() + "'";
-				else s = "Select * from AccSV Where UserName = '" + txtUsername.Text.Trim() + "' and PassWord = '" + txtPassword.Text.Trim() + "'";
-				string ConnectionString = ConfigurationManager.ConnectionStrings["QLKTX.Properties.Settings.QLKTXConnectionString"].ConnectionString;
-				SqlConnection sqlcon = new SqlConnection(ConnectionString);
+                switch (cbbRole.SelectedIndex)
+                {
+					case 0:
+						if (DataHelper.db.AccCBs.Where(cb => cb.UserName == txtUsername.Text.Trim() & cb.PassWord == txtPassword.Text.Trim()).Count() == 1)
+						{
+							Main fmain = new Main();
+							fmain.Show();
+							this.Hide();
+							MessageBox.Show("Welcome " + txtUsername.Text);
+						}
+						else
+							MessageBox.Show("Check your username and password");
+                        break;
+                    //Login SV
+                    case 1:
+						if (DataHelper.db.AccSVs.Where(sv => sv.UserName == txtUsername.Text.Trim() & sv.PassWord == txtPassword.Text.Trim()).Count() == 1)
+						{
+							Main fmain = new Main();
+							fmain.Show();
+							this.Hide();
 
-				string query = s;
-				SqlDataAdapter sda = new SqlDataAdapter(query, sqlcon);
-				DataTable dtbl = new DataTable();
-				sda.Fill(dtbl);
-				if (dtbl.Rows.Count == 1)
-				{
-					Main fmain = new Main();
-					fmain.Show();
-					this.Hide();
 
 
-
-					MessageBox.Show("Welcome " + txtUsername.Text);
-				}
-				else
-					MessageBox.Show("Check your username and password");
+							MessageBox.Show("Welcome " + txtUsername.Text);
+						}
+						else
+							MessageBox.Show("Check your username and password");
+						break;
+                    default:
+                        break;
+                }
+                
 			}
 			else
 			{

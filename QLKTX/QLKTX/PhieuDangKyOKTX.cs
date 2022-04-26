@@ -11,22 +11,21 @@ namespace QLKTX
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class PhieuDangKyOKTX
     {
         public string MaPhieu { get; set; }
+        public string MSSV { get; set; }
         public string HoTen { get; set; }
-        public DateTime NgaySinh { get; set; }
+        public Nullable<bool> GioiTinh { get; set; }
+        public Nullable<System.DateTime> NgaySinh { get; set; }
         public string QueQuan { get; set; }
         public string LopHoc { get; set; }
         public string KhoaHoc { get; set; }
         public string Khoa { get; set; }
         public string SDT { get; set; }
         public string HeDaoTao { get; set; }
-
-
-
-
+    
         public virtual Phieu Phieu { get; set; }
     }
 }
