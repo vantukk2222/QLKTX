@@ -96,20 +96,26 @@
     <Compile Include="AccSV.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="AEFSVForm.cs">
+    <Compile Include="View\FormView\Information.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AEFSVForm.Designer.cs">
+    <Compile Include="View\FormView\Information.Designer.cs">
+      <DependentUpon>Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormView\AEFSVForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormView\AEFSVForm.Designer.cs">
       <DependentUpon>AEFSVForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BLL_HopDong.cs" />
-    <Compile Include="BLL_QLPhieu.cs" />
-    <Compile Include="BLL_QLPhong.cs" />
-    <Compile Include="BLL_QLSV.cs" />
+    <Compile Include="BLL\BLL_HopDong.cs" />
+    <Compile Include="BLL\BLL_QLPhieu.cs" />
+    <Compile Include="BLL\BLL_QLPhong.cs" />
+    <Compile Include="BLL\BLL_QLSV.cs" />
     <Compile Include="CanBoQuanLy.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataHelper.cs" />
+    <Compile Include="DTA\DataHelper.cs" />
     <Compile Include="HoaDon.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -119,10 +125,10 @@
     <Compile Include="Khu.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
+    <Compile Include="View\FormView\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
+    <Compile Include="View\FormView\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
@@ -160,16 +166,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Register.cs">
+    <Compile Include="View\FormView\Register.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Register.Designer.cs">
+    <Compile Include="View\FormView\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="View\FormView\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="View\FormView\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -180,40 +186,49 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="UC_QLPhieu.cs">
+    <Compile Include="View\FormView\User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormView\User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UC_Control\UC_QLPhieu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_QLPhieu.Designer.cs">
+    <Compile Include="View\UC_Control\UC_QLPhieu.Designer.cs">
       <DependentUpon>UC_QLPhieu.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_QLPhong.cs">
+    <Compile Include="View\UC_Control\UC_QLPhong.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_QLPhong.Designer.cs">
+    <Compile Include="View\UC_Control\UC_QLPhong.Designer.cs">
       <DependentUpon>UC_QLPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_QLHoaDon.cs">
+    <Compile Include="View\UC_Control\UC_QLHoaDon.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_QLHoaDon.Designer.cs">
+    <Compile Include="View\UC_Control\UC_QLHoaDon.Designer.cs">
       <DependentUpon>UC_QLHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_QLSV.cs">
+    <Compile Include="View\UC_Control\UC_QLSV.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_QLSV.Designer.cs">
+    <Compile Include="View\UC_Control\UC_QLSV.Designer.cs">
       <DependentUpon>UC_QLSV.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AEFSVForm.resx">
+    <EmbeddedResource Include="View\FormView\Information.resx">
+      <DependentUpon>Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormView\AEFSVForm.resx">
       <DependentUpon>AEFSVForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="View\FormView\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
+    <EmbeddedResource Include="View\FormView\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Register.resx">
+    <EmbeddedResource Include="View\FormView\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -221,16 +236,19 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_QLPhieu.resx">
+    <EmbeddedResource Include="View\FormView\User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UC_Control\UC_QLPhieu.resx">
       <DependentUpon>UC_QLPhieu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_QLPhong.resx">
+    <EmbeddedResource Include="View\UC_Control\UC_QLPhong.resx">
       <DependentUpon>UC_QLPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_QLHoaDon.resx">
+    <EmbeddedResource Include="View\UC_Control\UC_QLHoaDon.resx">
       <DependentUpon>UC_QLHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_QLSV.resx">
+    <EmbeddedResource Include="View\UC_Control\UC_QLSV.resx">
       <DependentUpon>UC_QLSV.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">

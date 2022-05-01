@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
-namespace QLKTX
+using QLKTX.DTA;
+
+namespace QLKTX.View.FormView
 {
 	public partial class Login : Form
 	{
@@ -22,7 +24,6 @@ namespace QLKTX
 
 		private void butlogin_Click(object sender, EventArgs e)
 		{
-			string s = "";
 			if (cbbRole.SelectedIndex >= 0)
 			{
                 switch (cbbRole.SelectedIndex)
@@ -42,8 +43,8 @@ namespace QLKTX
                     case 1:
 						if (DataHelper.db.AccSVs.Where(sv => sv.UserName == txtUsername.Text.Trim() & sv.PassWord == txtPassword.Text.Trim()).Count() == 1)
 						{
-							Main fmain = new Main();
-							fmain.Show();
+							User fuser = new User();
+							fuser.Show();
 							this.Hide();
 
 

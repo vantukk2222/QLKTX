@@ -1,5 +1,5 @@
 ﻿
-namespace QLKTX
+namespace QLKTX.View.FormView
 {
     partial class AEFSVForm
     {

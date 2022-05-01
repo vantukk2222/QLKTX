@@ -1,4 +1,5 @@
-﻿using RJCodeAdvance.RJControls;
+﻿using QLKTX.View.UC_Control;
+using RJCodeAdvance.RJControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLKTX
+namespace QLKTX.View.FormView
 {
     public partial class Main : Form
     {
@@ -154,7 +155,11 @@ namespace QLKTX
         }
         private void icbtClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            var result = MessageBox.Show("Bạn có muốn thoát không?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void icbtMenu_Click(object sender, EventArgs e)
@@ -197,7 +202,7 @@ namespace QLKTX
                 }
             }
         }
-        private void Open_DropdownMenu(RJDropdownMenu dropdownMenu, object sender)
+       /* private void Open_DropdownMenu(RJDropdownMenu dropdownMenu, object sender)
         {
             Control control = (Control)sender;
             dropdownMenu.VisibleChanged += new EventHandler((sender2, ev)
@@ -213,7 +218,7 @@ namespace QLKTX
                     ctrl.BackColor = Color.FromArgb(159, 161, 224);
                 else ctrl.BackColor = Color.FromArgb(98, 102, 244);
             }
-        }
+        }*/
 
        
         private void icbtLogOut_Click(object sender, EventArgs e)

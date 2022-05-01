@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLKTX.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLKTX
+namespace QLKTX.View.UC_Control
 {
     public partial class UC_QLPhieu : UserControl
     {

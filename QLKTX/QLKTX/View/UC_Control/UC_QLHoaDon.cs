@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLKTX
+namespace QLKTX.View.UC_Control
 {
     public partial class UC_QLHoaDon : UserControl
     {

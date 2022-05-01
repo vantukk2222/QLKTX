@@ -1,10 +1,11 @@
-﻿using System;
+﻿using QLKTX.DTA;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QLKTX
+namespace QLKTX.BLL
 {
     internal class BLL_QLPhieu
     {

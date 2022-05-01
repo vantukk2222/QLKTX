@@ -1,5 +1,5 @@
 ﻿
-namespace QLKTX
+namespace QLKTX.View.FormView
 {
     partial class Main
     {
@@ -71,7 +71,7 @@ namespace QLKTX
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(230, 722);
+            this.panelMenu.Size = new System.Drawing.Size(230, 761);
             this.panelMenu.TabIndex = 0;
             // 
             // icbtLogOut
@@ -87,7 +87,7 @@ namespace QLKTX
             this.icbtLogOut.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.icbtLogOut.IconSize = 30;
             this.icbtLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtLogOut.Location = new System.Drawing.Point(0, 667);
+            this.icbtLogOut.Location = new System.Drawing.Point(0, 706);
             this.icbtLogOut.Name = "icbtLogOut";
             this.icbtLogOut.Size = new System.Drawing.Size(230, 55);
             this.icbtLogOut.TabIndex = 9;
@@ -348,7 +348,7 @@ namespace QLKTX
             this.panelTitleBar.FillColor4 = System.Drawing.Color.LightSalmon;
             this.panelTitleBar.Location = new System.Drawing.Point(230, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1055, 40);
+            this.panelTitleBar.Size = new System.Drawing.Size(1071, 40);
             this.panelTitleBar.TabIndex = 3;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -364,7 +364,7 @@ namespace QLKTX
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconButton1.IconSize = 20;
-            this.iconButton1.Location = new System.Drawing.Point(926, 0);
+            this.iconButton1.Location = new System.Drawing.Point(942, 0);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(45, 25);
             this.iconButton1.TabIndex = 15;
@@ -384,7 +384,7 @@ namespace QLKTX
             this.iconButton2.IconColor = System.Drawing.Color.Black;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 20;
-            this.iconButton2.Location = new System.Drawing.Point(1010, 0);
+            this.iconButton2.Location = new System.Drawing.Point(1026, 0);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(45, 25);
             this.iconButton2.TabIndex = 14;
@@ -403,7 +403,7 @@ namespace QLKTX
             this.iconButton3.IconColor = System.Drawing.Color.Black;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconButton3.IconSize = 20;
-            this.iconButton3.Location = new System.Drawing.Point(968, 0);
+            this.iconButton3.Location = new System.Drawing.Point(984, 0);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(45, 25);
             this.iconButton3.TabIndex = 13;
@@ -418,7 +418,7 @@ namespace QLKTX
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(230, 40);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1055, 682);
+            this.panelDesktop.Size = new System.Drawing.Size(1071, 721);
             this.panelDesktop.TabIndex = 4;
             // 
             // Main
@@ -432,12 +432,12 @@ namespace QLKTX
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1301, 761);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Resize += new System.EventHandler(this.Main_Resize);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);

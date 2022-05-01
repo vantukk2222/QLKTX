@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
+using QLKTX.BLL;
 
-namespace QLKTX
+namespace QLKTX.View.FormView
 {
 	public partial class Register : Form
 	{
