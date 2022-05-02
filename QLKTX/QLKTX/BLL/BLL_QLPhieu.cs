@@ -49,25 +49,6 @@ namespace QLKTX.BLL
             return phieu;
 
         }
-        public int GetLastMaPhieuDKOKTX()
-        {
-            int MaPhieu = 0;
-            if (DataHelper.db.PhieuDangKyOKTXes.Count() == 0)
-            {
-                MaPhieu = 1;
-            }
-            else
-            {
-                MaPhieu =Convert.ToInt32( DataHelper.db.PhieuDangKyOKTXes.Max(p => p.MaPhieu).Substring(2)) + 1;
-            }
-            return MaPhieu;
-        }
-        public void AddPhieuDKOKTX(PhieuDangKyOKTX p)
-        {
-            
-            DataHelper.db.PhieuDangKyOKTXes.Add(p);
-            DataHelper.db.Phieux.Add(new Phieu { MaPhieu = p.MaPhieu, TenPhieu = "Phiếu Đăng Ký OKTX", NgayLap = DateTime.Now.Date });
-            DataHelper.db.SaveChanges();
-        }
+        
     }
 }

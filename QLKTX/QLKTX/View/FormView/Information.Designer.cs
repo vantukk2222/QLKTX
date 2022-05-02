@@ -41,9 +41,8 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.rjComboBox2 = new CustomBox.RJControls.RJComboBox();
-            this.rjComboBox1 = new CustomBox.RJControls.RJComboBox();
-            this.btCancel = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.cbbPhong = new CustomBox.RJControls.RJComboBox();
+            this.cbbKhu = new CustomBox.RJControls.RJComboBox();
             this.btSave = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtHedaotao = new CustomBox.RJControls.RJTextBox();
             this.txtSDT = new CustomBox.RJControls.RJTextBox();
@@ -51,7 +50,7 @@
             this.txtKhoahoc = new CustomBox.RJControls.RJTextBox();
             this.txtQue = new CustomBox.RJControls.RJTextBox();
             this.txtLop = new CustomBox.RJControls.RJTextBox();
-            this.rjDatePicker1 = new RJCodeAdvance.RJControls.RJDatePicker();
+            this.dtNgaySinh = new RJCodeAdvance.RJControls.RJDatePicker();
             this.checkSex = new CustomBox.RJControls.RJToggleButton();
             this.txtmssv = new CustomBox.RJControls.RJTextBox();
             this.txtname = new CustomBox.RJControls.RJTextBox();
@@ -69,202 +68,185 @@
             // guna2HtmlLabel14
             // 
             this.guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel14.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel14.Location = new System.Drawing.Point(618, 440);
             this.guna2HtmlLabel14.Name = "guna2HtmlLabel14";
-            this.guna2HtmlLabel14.Size = new System.Drawing.Size(64, 27);
+            this.guna2HtmlLabel14.Size = new System.Drawing.Size(76, 32);
             this.guna2HtmlLabel14.TabIndex = 81;
             this.guna2HtmlLabel14.Text = "Phòng";
             // 
             // guna2HtmlLabel13
             // 
             this.guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel13.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel13.Location = new System.Drawing.Point(29, 440);
             this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
-            this.guna2HtmlLabel13.Size = new System.Drawing.Size(40, 27);
+            this.guna2HtmlLabel13.Size = new System.Drawing.Size(48, 32);
             this.guna2HtmlLabel13.TabIndex = 79;
             this.guna2HtmlLabel13.Text = "Khu";
             // 
             // guna2HtmlLabel12
             // 
             this.guna2HtmlLabel12.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel12.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel12.Location = new System.Drawing.Point(123, 188);
             this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            this.guna2HtmlLabel12.Size = new System.Drawing.Size(47, 27);
+            this.guna2HtmlLabel12.Size = new System.Drawing.Size(58, 32);
             this.guna2HtmlLabel12.TabIndex = 77;
             this.guna2HtmlLabel12.Text = "Nam";
             // 
             // guna2HtmlLabel10
             // 
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel10.Location = new System.Drawing.Point(618, 371);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(105, 27);
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(127, 32);
             this.guna2HtmlLabel10.TabIndex = 74;
             this.guna2HtmlLabel10.Text = "Hệ đào tạo";
             // 
             // guna2HtmlLabel9
             // 
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel9.Location = new System.Drawing.Point(29, 371);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(42, 27);
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(55, 32);
             this.guna2HtmlLabel9.TabIndex = 72;
             this.guna2HtmlLabel9.Text = "SDT";
             // 
             // guna2HtmlLabel8
             // 
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel8.Location = new System.Drawing.Point(29, 308);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(51, 27);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(62, 32);
             this.guna2HtmlLabel8.TabIndex = 70;
             this.guna2HtmlLabel8.Text = "Khoa";
             // 
             // guna2HtmlLabel7
             // 
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(618, 308);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(91, 27);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(110, 32);
             this.guna2HtmlLabel7.TabIndex = 68;
             this.guna2HtmlLabel7.Text = "Khóa học";
             // 
             // guna2HtmlLabel6
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(618, 249);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(92, 27);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(114, 32);
             this.guna2HtmlLabel6.TabIndex = 66;
             this.guna2HtmlLabel6.Text = "Quê quán";
             // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(29, 249);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(78, 27);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(93, 32);
             this.guna2HtmlLabel5.TabIndex = 64;
             this.guna2HtmlLabel5.Text = "Lớp học";
             // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(618, 188);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(96, 27);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(117, 32);
             this.guna2HtmlLabel4.TabIndex = 60;
             this.guna2HtmlLabel4.Text = "Ngày sinh";
             // 
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(29, 188);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(85, 27);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(104, 32);
             this.guna2HtmlLabel3.TabIndex = 59;
             this.guna2HtmlLabel3.Text = "Giới tính:";
             // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(671, 75);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(644, 75);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(120, 27);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(147, 32);
             this.guna2HtmlLabel2.TabIndex = 58;
             this.guna2HtmlLabel2.Text = "Mã sinh viên";
             // 
             // guna2HtmlLabel11
             // 
             this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel11.Location = new System.Drawing.Point(123, 75);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(71, 27);
+            this.guna2HtmlLabel11.Size = new System.Drawing.Size(87, 32);
             this.guna2HtmlLabel11.TabIndex = 56;
             this.guna2HtmlLabel11.Text = "Họ Tên";
             // 
-            // rjComboBox2
+            // cbbPhong
             // 
-            this.rjComboBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox2.BorderSize = 1;
-            this.rjComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rjComboBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox2.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox2.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox2.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox2.Location = new System.Drawing.Point(760, 437);
-            this.rjComboBox2.MinimumSize = new System.Drawing.Size(200, 30);
-            this.rjComboBox2.Name = "rjComboBox2";
-            this.rjComboBox2.Padding = new System.Windows.Forms.Padding(1);
-            this.rjComboBox2.Size = new System.Drawing.Size(200, 30);
-            this.rjComboBox2.TabIndex = 80;
-            this.rjComboBox2.Texts = "";
+            this.cbbPhong.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbbPhong.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbbPhong.BorderSize = 1;
+            this.cbbPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbbPhong.Enabled = false;
+            this.cbbPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbbPhong.ForeColor = System.Drawing.Color.DimGray;
+            this.cbbPhong.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbbPhong.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbbPhong.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbbPhong.Location = new System.Drawing.Point(760, 437);
+            this.cbbPhong.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbbPhong.Name = "cbbPhong";
+            this.cbbPhong.Padding = new System.Windows.Forms.Padding(1);
+            this.cbbPhong.Size = new System.Drawing.Size(200, 30);
+            this.cbbPhong.TabIndex = 80;
+            this.cbbPhong.Texts = "";
             // 
-            // rjComboBox1
+            // cbbKhu
             // 
-            this.rjComboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.rjComboBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox1.BorderSize = 1;
-            this.rjComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.rjComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.rjComboBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.rjComboBox1.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.rjComboBox1.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
-            this.rjComboBox1.ListTextColor = System.Drawing.Color.DimGray;
-            this.rjComboBox1.Location = new System.Drawing.Point(123, 437);
-            this.rjComboBox1.MinimumSize = new System.Drawing.Size(200, 30);
-            this.rjComboBox1.Name = "rjComboBox1";
-            this.rjComboBox1.Padding = new System.Windows.Forms.Padding(1);
-            this.rjComboBox1.Size = new System.Drawing.Size(200, 30);
-            this.rjComboBox1.TabIndex = 78;
-            this.rjComboBox1.Texts = "";
-            // 
-            // btCancel
-            // 
-            this.btCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btCancel.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btCancel.FillColor2 = System.Drawing.Color.Turquoise;
-            this.btCancel.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btCancel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCancel.ForeColor = System.Drawing.Color.LightYellow;
-            this.btCancel.Location = new System.Drawing.Point(123, 531);
-            this.btCancel.Name = "btCancel";
-            this.btCancel.Size = new System.Drawing.Size(121, 41);
-            this.btCancel.TabIndex = 76;
-            this.btCancel.Text = "CANCEL";
-            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
+            this.cbbKhu.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbbKhu.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbbKhu.BorderSize = 1;
+            this.cbbKhu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cbbKhu.Enabled = false;
+            this.cbbKhu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cbbKhu.ForeColor = System.Drawing.Color.DimGray;
+            this.cbbKhu.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cbbKhu.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
+            this.cbbKhu.ListTextColor = System.Drawing.Color.DimGray;
+            this.cbbKhu.Location = new System.Drawing.Point(123, 437);
+            this.cbbKhu.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cbbKhu.Name = "cbbKhu";
+            this.cbbKhu.Padding = new System.Windows.Forms.Padding(1);
+            this.cbbKhu.Size = new System.Drawing.Size(200, 30);
+            this.cbbKhu.TabIndex = 78;
+            this.cbbKhu.Texts = "";
             // 
             // btSave
             // 
@@ -292,7 +274,8 @@
             this.txtHedaotao.BorderFocusColor = System.Drawing.Color.Fuchsia;
             this.txtHedaotao.BorderRadius = 10;
             this.txtHedaotao.BorderSize = 2;
-            this.txtHedaotao.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHedaotao.Enabled = false;
+            this.txtHedaotao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHedaotao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtHedaotao.Location = new System.Drawing.Point(760, 364);
             this.txtHedaotao.Margin = new System.Windows.Forms.Padding(4);
@@ -302,7 +285,7 @@
             this.txtHedaotao.PasswordChar = false;
             this.txtHedaotao.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtHedaotao.PlaceholderText = "";
-            this.txtHedaotao.Size = new System.Drawing.Size(194, 34);
+            this.txtHedaotao.Size = new System.Drawing.Size(194, 40);
             this.txtHedaotao.TabIndex = 73;
             this.txtHedaotao.Texts = "";
             this.txtHedaotao.UnderlinedStyle = false;
@@ -314,7 +297,7 @@
             this.txtSDT.BorderFocusColor = System.Drawing.Color.Fuchsia;
             this.txtSDT.BorderRadius = 10;
             this.txtSDT.BorderSize = 2;
-            this.txtSDT.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtSDT.Location = new System.Drawing.Point(123, 364);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
@@ -324,7 +307,7 @@
             this.txtSDT.PasswordChar = false;
             this.txtSDT.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtSDT.PlaceholderText = "";
-            this.txtSDT.Size = new System.Drawing.Size(194, 34);
+            this.txtSDT.Size = new System.Drawing.Size(194, 40);
             this.txtSDT.TabIndex = 71;
             this.txtSDT.Texts = "";
             this.txtSDT.UnderlinedStyle = false;
@@ -336,7 +319,8 @@
             this.txtKhoa.BorderFocusColor = System.Drawing.Color.Fuchsia;
             this.txtKhoa.BorderRadius = 10;
             this.txtKhoa.BorderSize = 2;
-            this.txtKhoa.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKhoa.Enabled = false;
+            this.txtKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKhoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtKhoa.Location = new System.Drawing.Point(123, 301);
             this.txtKhoa.Margin = new System.Windows.Forms.Padding(4);
@@ -346,7 +330,7 @@
             this.txtKhoa.PasswordChar = false;
             this.txtKhoa.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtKhoa.PlaceholderText = "";
-            this.txtKhoa.Size = new System.Drawing.Size(194, 34);
+            this.txtKhoa.Size = new System.Drawing.Size(194, 40);
             this.txtKhoa.TabIndex = 69;
             this.txtKhoa.Texts = "";
             this.txtKhoa.UnderlinedStyle = false;
@@ -358,7 +342,8 @@
             this.txtKhoahoc.BorderFocusColor = System.Drawing.Color.Fuchsia;
             this.txtKhoahoc.BorderRadius = 10;
             this.txtKhoahoc.BorderSize = 2;
-            this.txtKhoahoc.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKhoahoc.Enabled = false;
+            this.txtKhoahoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtKhoahoc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtKhoahoc.Location = new System.Drawing.Point(760, 301);
             this.txtKhoahoc.Margin = new System.Windows.Forms.Padding(4);
@@ -368,7 +353,7 @@
             this.txtKhoahoc.PasswordChar = false;
             this.txtKhoahoc.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtKhoahoc.PlaceholderText = "";
-            this.txtKhoahoc.Size = new System.Drawing.Size(194, 34);
+            this.txtKhoahoc.Size = new System.Drawing.Size(194, 40);
             this.txtKhoahoc.TabIndex = 67;
             this.txtKhoahoc.Texts = "";
             this.txtKhoahoc.UnderlinedStyle = false;
@@ -380,7 +365,8 @@
             this.txtQue.BorderFocusColor = System.Drawing.Color.Fuchsia;
             this.txtQue.BorderRadius = 10;
             this.txtQue.BorderSize = 2;
-            this.txtQue.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQue.Enabled = false;
+            this.txtQue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtQue.Location = new System.Drawing.Point(760, 242);
             this.txtQue.Margin = new System.Windows.Forms.Padding(4);
@@ -390,7 +376,7 @@
             this.txtQue.PasswordChar = false;
             this.txtQue.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtQue.PlaceholderText = "";
-            this.txtQue.Size = new System.Drawing.Size(194, 34);
+            this.txtQue.Size = new System.Drawing.Size(194, 40);
             this.txtQue.TabIndex = 65;
             this.txtQue.Texts = "";
             this.txtQue.UnderlinedStyle = false;
@@ -402,7 +388,8 @@
             this.txtLop.BorderFocusColor = System.Drawing.Color.Fuchsia;
             this.txtLop.BorderRadius = 10;
             this.txtLop.BorderSize = 2;
-            this.txtLop.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLop.Enabled = false;
+            this.txtLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtLop.Location = new System.Drawing.Point(123, 242);
             this.txtLop.Margin = new System.Windows.Forms.Padding(4);
@@ -412,29 +399,31 @@
             this.txtLop.PasswordChar = false;
             this.txtLop.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtLop.PlaceholderText = "";
-            this.txtLop.Size = new System.Drawing.Size(194, 34);
+            this.txtLop.Size = new System.Drawing.Size(194, 40);
             this.txtLop.TabIndex = 63;
             this.txtLop.Texts = "";
             this.txtLop.UnderlinedStyle = false;
             // 
-            // rjDatePicker1
+            // dtNgaySinh
             // 
-            this.rjDatePicker1.BorderColor = System.Drawing.Color.PaleGreen;
-            this.rjDatePicker1.BorderSize = 0;
-            this.rjDatePicker1.CustomFormat = "";
-            this.rjDatePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjDatePicker1.Location = new System.Drawing.Point(760, 180);
-            this.rjDatePicker1.MinimumSize = new System.Drawing.Size(4, 35);
-            this.rjDatePicker1.Name = "rjDatePicker1";
-            this.rjDatePicker1.Size = new System.Drawing.Size(194, 35);
-            this.rjDatePicker1.SkinColor = System.Drawing.Color.MediumPurple;
-            this.rjDatePicker1.TabIndex = 62;
-            this.rjDatePicker1.TextColor = System.Drawing.Color.WhiteSmoke;
-            this.rjDatePicker1.Value = new System.DateTime(2022, 4, 20, 17, 31, 31, 0);
+            this.dtNgaySinh.BorderColor = System.Drawing.Color.PaleGreen;
+            this.dtNgaySinh.BorderSize = 0;
+            this.dtNgaySinh.CustomFormat = "";
+            this.dtNgaySinh.Enabled = false;
+            this.dtNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNgaySinh.Location = new System.Drawing.Point(760, 180);
+            this.dtNgaySinh.MinimumSize = new System.Drawing.Size(4, 35);
+            this.dtNgaySinh.Name = "dtNgaySinh";
+            this.dtNgaySinh.Size = new System.Drawing.Size(194, 35);
+            this.dtNgaySinh.SkinColor = System.Drawing.Color.MediumPurple;
+            this.dtNgaySinh.TabIndex = 62;
+            this.dtNgaySinh.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.dtNgaySinh.Value = new System.DateTime(2022, 4, 20, 17, 31, 31, 0);
             // 
             // checkSex
             // 
             this.checkSex.AutoSize = true;
+            this.checkSex.Enabled = false;
             this.checkSex.Location = new System.Drawing.Point(176, 193);
             this.checkSex.MinimumSize = new System.Drawing.Size(45, 22);
             this.checkSex.Name = "checkSex";
@@ -453,7 +442,8 @@
             this.txtmssv.BorderFocusColor = System.Drawing.Color.Fuchsia;
             this.txtmssv.BorderRadius = 10;
             this.txtmssv.BorderSize = 2;
-            this.txtmssv.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmssv.Enabled = false;
+            this.txtmssv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmssv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtmssv.Location = new System.Drawing.Point(798, 68);
             this.txtmssv.Margin = new System.Windows.Forms.Padding(4);
@@ -463,7 +453,7 @@
             this.txtmssv.PasswordChar = false;
             this.txtmssv.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtmssv.PlaceholderText = "";
-            this.txtmssv.Size = new System.Drawing.Size(194, 34);
+            this.txtmssv.Size = new System.Drawing.Size(194, 40);
             this.txtmssv.TabIndex = 57;
             this.txtmssv.Texts = "";
             this.txtmssv.UnderlinedStyle = false;
@@ -475,7 +465,8 @@
             this.txtname.BorderFocusColor = System.Drawing.Color.Fuchsia;
             this.txtname.BorderRadius = 10;
             this.txtname.BorderSize = 2;
-            this.txtname.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtname.Enabled = false;
+            this.txtname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtname.Location = new System.Drawing.Point(217, 68);
             this.txtname.Margin = new System.Windows.Forms.Padding(4);
@@ -485,7 +476,7 @@
             this.txtname.PasswordChar = false;
             this.txtname.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtname.PlaceholderText = "";
-            this.txtname.Size = new System.Drawing.Size(194, 34);
+            this.txtname.Size = new System.Drawing.Size(194, 40);
             this.txtname.TabIndex = 55;
             this.txtname.Texts = "";
             this.txtname.UnderlinedStyle = false;
@@ -535,7 +526,7 @@
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(41, 2);
             this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(295, 31);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(368, 38);
             this.guna2HtmlLabel1.TabIndex = 27;
             this.guna2HtmlLabel1.Text = "Quản lý thông tin cá nhân";
             // 
@@ -555,9 +546,8 @@
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel3);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel2);
             this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel11);
-            this.guna2GroupBox1.Controls.Add(this.rjComboBox2);
-            this.guna2GroupBox1.Controls.Add(this.rjComboBox1);
-            this.guna2GroupBox1.Controls.Add(this.btCancel);
+            this.guna2GroupBox1.Controls.Add(this.cbbPhong);
+            this.guna2GroupBox1.Controls.Add(this.cbbKhu);
             this.guna2GroupBox1.Controls.Add(this.btSave);
             this.guna2GroupBox1.Controls.Add(this.txtHedaotao);
             this.guna2GroupBox1.Controls.Add(this.txtSDT);
@@ -565,7 +555,7 @@
             this.guna2GroupBox1.Controls.Add(this.txtKhoahoc);
             this.guna2GroupBox1.Controls.Add(this.txtQue);
             this.guna2GroupBox1.Controls.Add(this.txtLop);
-            this.guna2GroupBox1.Controls.Add(this.rjDatePicker1);
+            this.guna2GroupBox1.Controls.Add(this.dtNgaySinh);
             this.guna2GroupBox1.Controls.Add(this.checkSex);
             this.guna2GroupBox1.Controls.Add(this.txtmssv);
             this.guna2GroupBox1.Controls.Add(this.txtname);
@@ -596,16 +586,14 @@
             // 
             // Information
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1036, 712);
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.guna2Panel1);
             this.Font = new System.Drawing.Font("Verdana", 10F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Information";
-            this.Text = "Information";
+            this.Size = new System.Drawing.Size(1036, 712);
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.guna2GroupBox1.ResumeLayout(false);
@@ -631,9 +619,8 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
-        private CustomBox.RJControls.RJComboBox rjComboBox2;
-        private CustomBox.RJControls.RJComboBox rjComboBox1;
-        private Guna.UI2.WinForms.Guna2GradientButton btCancel;
+        private CustomBox.RJControls.RJComboBox cbbPhong;
+        private CustomBox.RJControls.RJComboBox cbbKhu;
         private Guna.UI2.WinForms.Guna2GradientButton btSave;
         private CustomBox.RJControls.RJTextBox txtHedaotao;
         private CustomBox.RJControls.RJTextBox txtSDT;
@@ -641,7 +628,7 @@
         private CustomBox.RJControls.RJTextBox txtKhoahoc;
         private CustomBox.RJControls.RJTextBox txtQue;
         private CustomBox.RJControls.RJTextBox txtLop;
-        private RJCodeAdvance.RJControls.RJDatePicker rjDatePicker1;
+        private RJCodeAdvance.RJControls.RJDatePicker dtNgaySinh;
         private CustomBox.RJControls.RJToggleButton checkSex;
         private CustomBox.RJControls.RJTextBox txtmssv;
         private CustomBox.RJControls.RJTextBox txtname;

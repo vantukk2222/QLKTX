@@ -96,8 +96,10 @@
     <Compile Include="AccSV.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="BLL\BLL_AccSV.cs" />
+    <Compile Include="BLL\BLL_PhieuDKOKTX.cs" />
     <Compile Include="View\FormView\Information.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\FormView\Information.Designer.cs">
       <DependentUpon>Information.cs</DependentUpon>
@@ -192,6 +194,12 @@
     <Compile Include="View\FormView\User.Designer.cs">
       <DependentUpon>User.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UC_Control\ChangePassword.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC_Control\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UC_Control\UC_QLPhieu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -238,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormView\User.resx">
       <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UC_Control\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UC_Control\UC_QLPhieu.resx">
       <DependentUpon>UC_QLPhieu.cs</DependentUpon>

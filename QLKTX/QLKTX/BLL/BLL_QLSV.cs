@@ -64,32 +64,40 @@ namespace QLKTX.BLL
                 DataHelper.db.SaveChanges();
             }
         }
+        public bool checkSV(string mssv)
+        {
+            return DataHelper.db.SVs.Find(mssv) != null;
+        }
         public void AddSV(SV sv)
         {
-            //try
-            //{
+            try
+            {
                 DataHelper.db.SVs.Add(sv);
+                BLL_AccSV.Instance.CreateAccSV(sv.MSSV);
                 DataHelper.db.SaveChanges();
-            //}
-            //catch
-            //{ }
-            
+            }
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Thêm không thành công");
+            }
+
         }
         public void DeleteSV(string mssv)
         {
             SV sv = DataHelper.db.SVs.Find(mssv);
 
-            //try
-            //{
+            try
+            {
+                sv.Phong.SoNguoiHienTai--;
                 DataHelper.db.SVs.Remove(sv);
                 DataHelper.db.SaveChanges();
-            //}
-            //catch
-            //{
-                
-            //}
-            
-            
+            }
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Xóa Không thành công");
+            }
+
+
         }
     }
 }

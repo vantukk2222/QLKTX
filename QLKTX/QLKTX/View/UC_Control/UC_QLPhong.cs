@@ -43,6 +43,7 @@ namespace QLKTX.View.UC_Control
             guna2DataGridView1.Columns[3].HeaderText = "Mã Khu";
             guna2DataGridView1.Columns[4].HeaderText = "Số Người Hiện Tại";
             guna2DataGridView1.Columns[5].HeaderText = "Số Người Tối Đa";
+            guna2DataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
         }
         public void ShowDataDetail(List<SV> list)
@@ -86,6 +87,7 @@ namespace QLKTX.View.UC_Control
                 MessageBox.Show(guna2DataGridView1.CurrentRow.Cells["MaPhong"].FormattedValue.ToString());
                 string Maphong = String.Concat(guna2DataGridView1.CurrentRow.Cells[0].FormattedValue.ToString().Where(c => !Char.IsWhiteSpace(c)));
                 ShowDataDetail(BLL_QLPhong.Instance.ShowSVPhong(Maphong));
+                tabcontrol1.SelectTab(1);
 
 
             }

@@ -405,7 +405,7 @@ namespace QLKTX.View.FormView
             this.butback.Name = "butback";
             this.butback.Size = new System.Drawing.Size(185, 49);
             this.butback.TabIndex = 1166;
-            this.butback.Text = "BACK TO LOGIN";
+            this.butback.Text = "BACK ";
             this.butback.UseVisualStyleBackColor = false;
             this.butback.Click += new System.EventHandler(this.butback_Click);
             // 
@@ -439,11 +439,11 @@ namespace QLKTX.View.FormView
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.MediumPurple;
-            this.btnSave.Location = new System.Drawing.Point(1031, 470);
+            this.btnSave.Location = new System.Drawing.Point(997, 470);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(119, 49);
+            this.btnSave.Size = new System.Drawing.Size(153, 49);
             this.btnSave.TabIndex = 1189;
-            this.btnSave.Text = "SAVE ";
+            this.btnSave.Text = "REGISTER";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 

@@ -68,6 +68,20 @@ namespace QLKTX.BLL
             
             
         }
+        public Phong getPhongNotFull()
+        {
+            return DataHelper.db.Phongs.Where(p => p.SoNguoiHienTai < p.SoNguoiToiDa).FirstOrDefault();
+        }
+        public void AddSVIntoPhong(Phong phong, SV sv)
+        {
+            phong.SVs.Add(sv);
+            phong.SoNguoiHienTai++;
+            if (phong.SoNguoiHienTai >= phong.SoNguoiToiDa)
+            {
+                phong.Status = true;
+            }
+            DataHelper.db.SaveChanges();
+        }
         public List<SV> ShowSVPhong(string Maphong)
         {
             return DataHelper.db.SVs.Where(sv => sv.MaPhong.Contains(Maphong)).ToList();

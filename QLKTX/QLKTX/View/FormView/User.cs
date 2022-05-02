@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLKTX.View.UC_Control;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,16 +14,18 @@ namespace QLKTX.View.FormView
 {
     public partial class User : Form
     {
+        private SV temp;
         private int borderSize = 2;
         private Size formSize;
-        public User()
+        public User(SV sv)
         {
+            temp = sv;
             InitializeComponent();
         }
 
         private void icbtThongTin_Click(object sender, EventArgs e)
         {
-
+            panelDesktop.Controls.Clear();
             if (icbtMenu.IconChar == FontAwesome.Sharp.IconChar.Bars)
             {
                 this.Width += 130;
@@ -43,8 +46,7 @@ namespace QLKTX.View.FormView
             //QL.BringToFront();
             //panelDesktop.Controls.Add(QL);
 
-            Information in4 = new Information() { Dock = DockStyle.Fill, TopMost = true};
-            in4.TopLevel = false;
+            Information in4 = new Information(temp) { Dock = DockStyle.Fill, };
             in4.AutoScroll = true;
             this.panelDesktop.Controls.Add(in4);
             in4.Show();
@@ -254,6 +256,12 @@ namespace QLKTX.View.FormView
             }
         }
 
-        
+        private void btnChangePass_Click(object sender, EventArgs e)
+        {
+            ChangePassword changepass = new ChangePassword (temp);
+            changepass.Dock = DockStyle.Fill;
+            panelDesktop.Controls.Clear();
+            panelDesktop.Controls.Add(changepass);
+        }
     }
 }

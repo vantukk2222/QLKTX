@@ -20,6 +20,7 @@ namespace QLKTX
         public string MaCB { get; set; }
         public string MaPhong { get; set; }
         public Nullable<System.DateTime> NgayLap { get; set; }
+        public Nullable<bool> status { get; set; }
     
         public virtual Phong Phong { get; set; }
         public virtual SV SV { get; set; }
