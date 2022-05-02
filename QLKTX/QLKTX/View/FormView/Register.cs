@@ -93,7 +93,7 @@ namespace QLKTX.View.FormView
                 MessageBox.Show("Hệ đào tạo không hợp lệ mời nhập lại");
                 return;
             }
-            string _MaPhieu = "DK" + Convert.ToString(BLL_QLPhieu.Instance.GetLastMaPhieuDKOKTX()).PadLeft(5, '0');
+            string _MaPhieu = "DK" + Convert.ToString(BLL_PhieuDKOKTX.Instance.GetLastMaPhieuDKOKTX()).PadLeft(5, '0');
             pdk = new PhieuDangKyOKTX
             {
                 MaPhieu = _MaPhieu,
@@ -108,7 +108,7 @@ namespace QLKTX.View.FormView
                 HeDaoTao = txtHedaotao.Texts,
                 SDT = txtSDT.Texts,
             };
-            BLL_QLPhieu.Instance.AddPhieuDKOKTX(pdk);
+            BLL_PhieuDKOKTX.Instance.AddPhieuDKOKTX(pdk);
 
         }
     }

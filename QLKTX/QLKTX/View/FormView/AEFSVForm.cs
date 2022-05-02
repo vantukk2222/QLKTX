@@ -19,7 +19,7 @@ namespace QLKTX.View.FormView
         public string MSSV { get; set; }
         public bool AddSV = true;
         public SV tempSV;
-        public HopDong tempHD;
+        
         public AEFSVForm(string mssv="")
         {
             if (mssv != "" )
@@ -132,14 +132,13 @@ namespace QLKTX.View.FormView
                 {
                     try
                     {
-                        tempHD = new HopDong
+                        if (BLL_QLSV.Instance.checkSV(txtmssv.Texts))
                         {
-                            MaHopDong = "HD" + Convert.ToString(BLL_HopDong.Instance.GetLastMaHopDong()).PadLeft(4, '0'),
-                            NgayKy = DateTime.Now.Date,
-                            NgayHetHan = DateTime.Now.AddYears(1).Date,
-                            NgayNhanPhong = DateTime.Now.Date,
-                        };
-                        BLL_HopDong.Instance.AddHopDong(tempHD);
+                            MessageBox.Show("MSSV đã tồn tại mời nhập lại");
+                            return;
+                        }
+                        
+                        BLL_HopDong.Instance.AddHopDong();
                         tempSV = new SV
                         {
                             MSSV = txtmssv.Texts,
@@ -152,7 +151,7 @@ namespace QLKTX.View.FormView
                             Khoa = txtKhoa.Texts,
                             KhoaHoc = txtKhoahoc.Texts,
                             LopHoc = txtLop.Texts,
-                            MaHopDong=tempHD.MaHopDong,
+                            MaHopDong= "HD" + Convert.ToString(BLL_HopDong.Instance.GetLastMaHopDong()).PadLeft(4, '0'),
                         };
                         BLL_QLSV.Instance.AddSV(tempSV);
 
@@ -178,7 +177,7 @@ namespace QLKTX.View.FormView
                         tempSV.Khoa = txtKhoa.Texts;
                         tempSV.KhoaHoc = txtKhoahoc.Texts;
                         tempSV.LopHoc = txtLop.Texts;
-                        DataHelper.db.SaveChanges();
+                        BLL_QLSV.Instance.EditSV(tempSV);
 
                     }
                     catch

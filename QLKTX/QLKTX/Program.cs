@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLKTX.View.FormView;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace QLKTX
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new User());
+			Application.Run(new Main());
 		}
 	}
 }

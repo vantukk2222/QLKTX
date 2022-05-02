@@ -43,8 +43,9 @@ namespace QLKTX.View.FormView
                     case 1:
 						if (DataHelper.db.AccSVs.Where(sv => sv.UserName == txtUsername.Text.Trim() & sv.PassWord == txtPassword.Text.Trim()).Count() == 1)
 						{
-							User fuser = new User();
-							fuser.Show();
+                            AccSV temp = DataHelper.db.AccSVs.Where(sv => sv.UserName == txtUsername.Text.Trim() & sv.PassWord == txtPassword.Text.Trim()).First();
+                            User fuser = new User(DataHelper.db.SVs.Find(temp.MSSV));
+                            fuser.Show();
 							this.Hide();
 
 

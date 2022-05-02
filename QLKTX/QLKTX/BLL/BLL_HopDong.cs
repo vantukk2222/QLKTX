@@ -21,20 +21,27 @@ namespace QLKTX.BLL
             }
         }
         
-        public void AddHopDong(HopDong hd)
+        public void AddHopDong()
         {
-            DataHelper.db.HopDongs.Add(hd);
+            HopDong tempHD = new HopDong
+            {
+                MaHopDong = "HD" + Convert.ToString(BLL_HopDong.Instance.GetLastMaHopDong()+1).PadLeft(4, '0'),
+                NgayKy = DateTime.Now.Date,
+                NgayHetHan = DateTime.Now.AddYears(1).Date,
+                NgayNhanPhong = DateTime.Now.Date,
+            };
+            DataHelper.db.HopDongs.Add(tempHD);
             DataHelper.db.SaveChanges();
         }
         public int GetLastMaHopDong()
         {
             var hd = DataHelper.db.HopDongs.OrderByDescending(p => p.MaHopDong).FirstOrDefault();
             if (hd == null)
-                return 1;
+                return 0;
             else
             {
                 string ma = hd.MaHopDong;
-                int i = int.Parse(ma.Substring(2)) + 1;
+                int i = int.Parse(ma.Substring(2)) ;
                 return i;
             }
             

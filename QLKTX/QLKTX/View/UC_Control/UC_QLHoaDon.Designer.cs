@@ -29,9 +29,9 @@ namespace QLKTX.View.UC_Control
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.icbtDel = new FontAwesome.Sharp.IconButton();
@@ -66,10 +66,10 @@ namespace QLKTX.View.UC_Control
             this.tabPage1.Controls.Add(this.cbbLoai);
             this.tabPage1.Controls.Add(this.guna2HtmlLabel2);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1063, 643);
+            this.tabPage1.Size = new System.Drawing.Size(1063, 638);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Hoá đơn";
             // 
@@ -88,7 +88,7 @@ namespace QLKTX.View.UC_Control
             this.icbtDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(98)))), ((int)(((byte)(101)))));
             this.icbtDel.FlatAppearance.BorderSize = 0;
             this.icbtDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icbtDel.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold);
+            this.icbtDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.icbtDel.ForeColor = System.Drawing.Color.White;
             this.icbtDel.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
             this.icbtDel.IconColor = System.Drawing.Color.White;
@@ -110,7 +110,7 @@ namespace QLKTX.View.UC_Control
             this.icbtEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(149)))), ((int)(((byte)(236)))));
             this.icbtEdit.FlatAppearance.BorderSize = 0;
             this.icbtEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icbtEdit.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold);
+            this.icbtEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.icbtEdit.ForeColor = System.Drawing.Color.White;
             this.icbtEdit.IconChar = FontAwesome.Sharp.IconChar.Pen;
             this.icbtEdit.IconColor = System.Drawing.SystemColors.ButtonFace;
@@ -132,7 +132,7 @@ namespace QLKTX.View.UC_Control
             this.icbtAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(163)))), ((int)(((byte)(116)))));
             this.icbtAdd.FlatAppearance.BorderSize = 0;
             this.icbtAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icbtAdd.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold);
+            this.icbtAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.icbtAdd.ForeColor = System.Drawing.Color.White;
             this.icbtAdd.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.icbtAdd.IconColor = System.Drawing.Color.AntiqueWhite;
@@ -154,7 +154,7 @@ namespace QLKTX.View.UC_Control
             this.icbtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(165)))), ((int)(((byte)(1)))));
             this.icbtSearch.FlatAppearance.BorderSize = 0;
             this.icbtSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icbtSearch.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold);
+            this.icbtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.icbtSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.icbtSearch.IconColor = System.Drawing.Color.Brown;
             this.icbtSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -162,7 +162,7 @@ namespace QLKTX.View.UC_Control
             this.icbtSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.icbtSearch.Location = new System.Drawing.Point(802, 60);
             this.icbtSearch.Name = "icbtSearch";
-            this.icbtSearch.Size = new System.Drawing.Size(107, 35);
+            this.icbtSearch.Size = new System.Drawing.Size(117, 35);
             this.icbtSearch.TabIndex = 3;
             this.icbtSearch.Text = "Search";
             this.icbtSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -189,7 +189,7 @@ namespace QLKTX.View.UC_Control
             this.txtName.PasswordChar = false;
             this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtName.PlaceholderText = "";
-            this.txtName.Size = new System.Drawing.Size(776, 35);
+            this.txtName.Size = new System.Drawing.Size(776, 40);
             this.txtName.TabIndex = 2;
             this.txtName.Texts = "";
             this.txtName.UnderlinedStyle = false;
@@ -198,8 +198,8 @@ namespace QLKTX.View.UC_Control
             // 
             this.guna2DataGridView1.AllowUserToAddRows = false;
             this.guna2DataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.guna2DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -208,23 +208,23 @@ namespace QLKTX.View.UC_Control
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.guna2DataGridView1.ColumnHeadersHeight = 50;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(220)))), ((int)(((byte)(242)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(3, 101);
@@ -262,7 +262,7 @@ namespace QLKTX.View.UC_Control
             // 
             this.cbbLoai.Location = new System.Drawing.Point(60, 26);
             this.cbbLoai.Name = "cbbLoai";
-            this.cbbLoai.Size = new System.Drawing.Size(98, 28);
+            this.cbbLoai.Size = new System.Drawing.Size(98, 33);
             this.cbbLoai.TabIndex = 1;
             // 
             // guna2HtmlLabel2
@@ -272,7 +272,7 @@ namespace QLKTX.View.UC_Control
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(10, 27);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(37, 22);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(44, 27);
             this.guna2HtmlLabel2.TabIndex = 8;
             this.guna2HtmlLabel2.Text = "Loại";
             // 
@@ -295,7 +295,7 @@ namespace QLKTX.View.UC_Control
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(51, 3);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(234, 31);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(285, 38);
             this.guna2HtmlLabel1.TabIndex = 27;
             this.guna2HtmlLabel1.Text = "Thống kê điện nước";
             // 
@@ -329,7 +329,7 @@ namespace QLKTX.View.UC_Control
             // 
             // UC_QLHoaDon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.Controls.Add(this.tabcontrol1);

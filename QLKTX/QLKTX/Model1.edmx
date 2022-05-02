@@ -72,6 +72,7 @@
           <Property Name="MaCB" Type="nchar" MaxLength="10" />
           <Property Name="MaPhong" Type="nchar" MaxLength="10" />
           <Property Name="NgayLap" Type="date" />
+          <Property Name="status" Type="bit" />
         </EntityType>
         <EntityType Name="PhieuDangKyOKTX">
           <Key>
@@ -127,7 +128,7 @@
           <Property Name="MaPhong" Type="nchar" MaxLength="10" />
           <Property Name="HoTen" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="GioiTinh" Type="bit" Nullable="false" />
-          <Property Name="NgaySinh" Type="datetime" Nullable="false" />
+          <Property Name="NgaySinh" Type="date" Nullable="false" />
           <Property Name="QueQuan" Type="nvarchar" MaxLength="50" />
           <Property Name="LopHoc" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="KhoaHoc" Type="nchar" MaxLength="10" Nullable="false" />
@@ -530,6 +531,7 @@
           <NavigationProperty Name="PhieuDangKyOKTX" Relationship="QLKTXModel.FK_PhieuDangKyOKTX_Phieu" FromRole="Phieu" ToRole="PhieuDangKyOKTX" />
           <NavigationProperty Name="PhieuGiaHanHD" Relationship="QLKTXModel.FK_PhieuGiaHanHD_Phieu" FromRole="Phieu" ToRole="PhieuGiaHanHD" />
           <NavigationProperty Name="PhieuKyLuat" Relationship="QLKTXModel.FK_PhieuKyLuat_Phieu" FromRole="Phieu" ToRole="PhieuKyLuat" />
+          <Property Name="status" Type="Boolean" />
         </EntityType>
         <EntityType Name="PhieuDangKyOKTX">
           <Key>
@@ -592,7 +594,7 @@
           <Property Name="MaPhong" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="HoTen" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="GioiTinh" Type="Boolean" Nullable="false" />
-          <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="QueQuan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="LopHoc" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="KhoaHoc" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
@@ -853,6 +855,7 @@
           <EntitySetMapping Name="Phieux">
             <EntityTypeMapping TypeName="QLKTXModel.Phieu">
               <MappingFragment StoreEntitySet="Phieu">
+                <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
                 <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
                 <ScalarProperty Name="MaCB" ColumnName="MaCB" />
