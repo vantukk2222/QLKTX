@@ -80,11 +80,12 @@
             this.txtPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPass.Location = new System.Drawing.Point(321, 106);
             this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '\0';
+            this.txtPass.PasswordChar = '●';
             this.txtPass.PlaceholderText = "";
             this.txtPass.SelectedText = "";
             this.txtPass.Size = new System.Drawing.Size(249, 30);
             this.txtPass.TabIndex = 3;
+            this.txtPass.UseSystemPasswordChar = true;
             // 
             // txtNewPass
             // 
@@ -99,11 +100,12 @@
             this.txtNewPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewPass.Location = new System.Drawing.Point(321, 155);
             this.txtNewPass.Name = "txtNewPass";
-            this.txtNewPass.PasswordChar = '\0';
+            this.txtNewPass.PasswordChar = '●';
             this.txtNewPass.PlaceholderText = "";
             this.txtNewPass.SelectedText = "";
             this.txtNewPass.Size = new System.Drawing.Size(249, 30);
             this.txtNewPass.TabIndex = 4;
+            this.txtNewPass.UseSystemPasswordChar = true;
             // 
             // txtComfirmNewPass
             // 
@@ -118,11 +120,12 @@
             this.txtComfirmNewPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtComfirmNewPass.Location = new System.Drawing.Point(321, 201);
             this.txtComfirmNewPass.Name = "txtComfirmNewPass";
-            this.txtComfirmNewPass.PasswordChar = '\0';
+            this.txtComfirmNewPass.PasswordChar = '●';
             this.txtComfirmNewPass.PlaceholderText = "";
             this.txtComfirmNewPass.SelectedText = "";
             this.txtComfirmNewPass.Size = new System.Drawing.Size(249, 30);
             this.txtComfirmNewPass.TabIndex = 5;
+            this.txtComfirmNewPass.UseSystemPasswordChar = true;
             // 
             // btnApply
             // 

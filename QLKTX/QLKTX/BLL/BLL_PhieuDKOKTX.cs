@@ -55,8 +55,8 @@ namespace QLKTX.BLL
                 {
                     MSSV = p.MSSV,
                     HoTen = p.HoTen,
-                    NgaySinh = p.NgaySinh.Value,
-                    GioiTinh = p.GioiTinh.Value,
+                    NgaySinh = p.NgaySinh,
+                    GioiTinh = p.GioiTinh,
                     QueQuan = p.QueQuan,
                     Khoa = p.Khoa,
                     KhoaHoc = p.KhoaHoc,

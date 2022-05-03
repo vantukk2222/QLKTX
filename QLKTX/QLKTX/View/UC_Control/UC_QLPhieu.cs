@@ -1,4 +1,5 @@
 ﻿using QLKTX.BLL;
+using QLKTX.View.FormView;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,7 +26,7 @@ namespace QLKTX.View.UC_Control
         }
         public void ShowDataGridView(List<Phieu> list)
         {
-            guna2DataGridView1.DataSource = null;
+            dgvBaoCao.DataSource = null;
             dgvDKOKTX.DataSource = null;
             dgvDKOKTX.DataSource = BLL_PhieuDKOKTX.Instance.GetAllPhieuDKOKTX().Select(p => new {
                 p.MaPhieu,
@@ -52,7 +53,7 @@ namespace QLKTX.View.UC_Control
             dgvDKOKTX.Columns[9].HeaderText = "Hệ đào tạo";
             dgvDKOKTX.Columns[10].HeaderText = "SĐT";
             dgvDKOKTX.Columns[10].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            guna2DataGridView1.DataSource = list.Select(p => new
+            dgvBaoCao.DataSource = list.Select(p => new
             {
                 MaPhieu = p.MaPhieu,
                 TenPhieu = p.TenPhieu,
@@ -63,17 +64,17 @@ namespace QLKTX.View.UC_Control
                 status = p.status
 
             }).ToList();
-            guna2DataGridView1.Columns[0].HeaderText = "Mã Phiếu";
-            guna2DataGridView1.Columns[1].HeaderText = "Tên Phiếu";
-            guna2DataGridView1.Columns[2].HeaderText = "MSSV";
-            guna2DataGridView1.Columns[3].HeaderText = "Mã Cán Bộ";
-            guna2DataGridView1.Columns[4].HeaderText = "Mã Phòng";
-            guna2DataGridView1.Columns[5].HeaderText = "Ngày Lập";
-            guna2DataGridView1.Columns[6].HeaderText = "Trạng Thái";
-            guna2DataGridView1.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvBaoCao.Columns[0].HeaderText = "Mã Phiếu";
+            dgvBaoCao.Columns[1].HeaderText = "Tên Phiếu";
+            dgvBaoCao.Columns[2].HeaderText = "MSSV";
+            dgvBaoCao.Columns[3].HeaderText = "Mã Cán Bộ";
+            dgvBaoCao.Columns[4].HeaderText = "Mã Phòng";
+            dgvBaoCao.Columns[5].HeaderText = "Ngày Lập";
+            dgvBaoCao.Columns[6].HeaderText = "Trạng Thái";
+            dgvBaoCao.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
         }
-        private void LoadData()
+        public void LoadData()
         {
             ShowDataGridView(BLL_QLPhieu.Instance.GetAllPhieu());
         }
@@ -90,17 +91,14 @@ namespace QLKTX.View.UC_Control
             ShowDataGridView(BLL_QLPhieu.Instance.GetAllLoaiTen(s, txtName.Texts.Trim()));
         }
 
-        private void icbtEdit_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void guna2DataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (Convert.ToBoolean(guna2DataGridView1.Rows[e.RowIndex].Cells[6].Value))
+            if (Convert.ToBoolean(dgvBaoCao.Rows[e.RowIndex].Cells[6].Value))
                 return;
-            guna2DataGridView1.Rows[e.RowIndex].Selected = true;
-            string ma = guna2DataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            dgvBaoCao.Rows[e.RowIndex].Selected = true;
+            string ma = dgvBaoCao.Rows[e.RowIndex].Cells[0].Value.ToString();
             BLL_PhieuDKOKTX.Instance.DuyetPhieuDKOKTX(BLL_PhieuDKOKTX.Instance.SearchPhieuDK(ma));
             ShowDataGridView(BLL_QLPhieu.Instance.GetAllPhieu());
         }
@@ -112,6 +110,7 @@ namespace QLKTX.View.UC_Control
                 string ma = row.Cells[0].Value.ToString();
                 BLL_PhieuDKOKTX.Instance.DuyetPhieuDKOKTX(BLL_PhieuDKOKTX.Instance.SearchPhieuDK(ma));
             }
+            LoadData();
         }
 
         private void btnAcceptAll_Click(object sender, EventArgs e)
@@ -121,6 +120,7 @@ namespace QLKTX.View.UC_Control
                 string ma = row.Cells[0].Value.ToString();
                 BLL_PhieuDKOKTX.Instance.DuyetPhieuDKOKTX(BLL_PhieuDKOKTX.Instance.SearchPhieuDK(ma));
             }
+            LoadData();
         }
 
         private void btnDelDKO_Click(object sender, EventArgs e)
@@ -132,6 +132,7 @@ namespace QLKTX.View.UC_Control
                     string ma = row.Cells[0].Value.ToString();
                     BLL_PhieuDKOKTX.Instance.DeletePhieuDKOKTX(BLL_PhieuDKOKTX.Instance.SearchPhieuDK(ma));
                 }
+                LoadData();
             }
         }
 
@@ -144,6 +145,37 @@ namespace QLKTX.View.UC_Control
                     string ma = row.Cells[0].Value.ToString();
                     BLL_PhieuDKOKTX.Instance.DeletePhieuDKOKTX(BLL_PhieuDKOKTX.Instance.SearchPhieuDK(ma));
                 }
+            }
+            LoadData();
+        }
+
+        private void btnViewDKO_Click(object sender, EventArgs e)
+        {
+            string ma = dgvDKOKTX.Rows[dgvBaoCao.CurrentRow.Index].Cells[0].Value.ToString();
+            ApproveSVForm form = new ApproveSVForm(BLL_PhieuDKOKTX.Instance.SearchPhieuDK(ma));
+            form.d = new ApproveSVForm.mydel(LoadData);
+            form.ShowDialog();
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            if (dgvBaoCao.SelectedRows.Count == 1)
+            {
+                string ma = dgvBaoCao.Rows[dgvBaoCao.CurrentRow.Index].Cells[0].Value.ToString();
+                string LoaiPhieu = ma.Substring(0, 2);
+                switch (LoaiPhieu)
+                {
+                    case "DK":
+                        {
+                            ApproveSVForm form = new ApproveSVForm(BLL_PhieuDKOKTX.Instance.SearchPhieuDK(ma));
+                            form.d = new ApproveSVForm.mydel(LoadData);
+                            form.ShowDialog();
+                            break;
+                        }
+                    default:
+                        break;
+                }
+
             }
         }
     }

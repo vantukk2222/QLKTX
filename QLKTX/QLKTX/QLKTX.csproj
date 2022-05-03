@@ -98,6 +98,12 @@
     </Compile>
     <Compile Include="BLL\BLL_AccSV.cs" />
     <Compile Include="BLL\BLL_PhieuDKOKTX.cs" />
+    <Compile Include="View\FormView\ApproveSVForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormView\ApproveSVForm.Designer.cs">
+      <DependentUpon>ApproveSVForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormView\Information.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -224,6 +230,9 @@
     <Compile Include="View\UC_Control\UC_QLSV.Designer.cs">
       <DependentUpon>UC_QLSV.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\FormView\ApproveSVForm.resx">
+      <DependentUpon>ApproveSVForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormView\Information.resx">
       <DependentUpon>Information.cs</DependentUpon>
     </EmbeddedResource>

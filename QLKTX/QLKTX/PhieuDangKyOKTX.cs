@@ -17,8 +17,8 @@ namespace QLKTX
         public string MaPhieu { get; set; }
         public string MSSV { get; set; }
         public string HoTen { get; set; }
-        public Nullable<bool> GioiTinh { get; set; }
-        public Nullable<System.DateTime> NgaySinh { get; set; }
+        public bool GioiTinh { get; set; }
+        public System.DateTime NgaySinh { get; set; }
         public string QueQuan { get; set; }
         public string LopHoc { get; set; }
         public string KhoaHoc { get; set; }

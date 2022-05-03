@@ -44,6 +44,7 @@
           <Property Name="TongTien" Type="float" Nullable="false" />
           <Property Name="NgayThu" Type="date" Nullable="false" />
           <Property Name="MSSV" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="status" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="HopDong">
           <Key>
@@ -72,23 +73,23 @@
           <Property Name="MaCB" Type="nchar" MaxLength="10" />
           <Property Name="MaPhong" Type="nchar" MaxLength="10" />
           <Property Name="NgayLap" Type="date" />
-          <Property Name="status" Type="bit" />
+          <Property Name="status" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="PhieuDangKyOKTX">
           <Key>
             <PropertyRef Name="MaPhieu" />
           </Key>
           <Property Name="MaPhieu" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="MSSV" Type="nchar" MaxLength="10" />
-          <Property Name="HoTen" Type="nvarchar" MaxLength="50" />
-          <Property Name="GioiTinh" Type="bit" />
-          <Property Name="NgaySinh" Type="date" />
-          <Property Name="QueQuan" Type="nvarchar" MaxLength="50" />
-          <Property Name="LopHoc" Type="nchar" MaxLength="10" />
-          <Property Name="KhoaHoc" Type="nchar" MaxLength="10" />
-          <Property Name="Khoa" Type="nchar" MaxLength="10" />
-          <Property Name="SDT" Type="nchar" MaxLength="10" />
-          <Property Name="HeDaoTao" Type="nchar" MaxLength="10" />
+          <Property Name="MSSV" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="HoTen" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="GioiTinh" Type="bit" Nullable="false" />
+          <Property Name="NgaySinh" Type="date" Nullable="false" />
+          <Property Name="QueQuan" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LopHoc" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="KhoaHoc" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Khoa" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="SDT" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="HeDaoTao" Type="nchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="PhieuGiaHanHD">
           <Key>
@@ -494,6 +495,7 @@
           <Property Name="NgayThu" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="MSSV" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="SV" Relationship="QLKTXModel.FK_HoaDon_SV" FromRole="HoaDon" ToRole="SV" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="HopDong">
           <Key>
@@ -531,23 +533,23 @@
           <NavigationProperty Name="PhieuDangKyOKTX" Relationship="QLKTXModel.FK_PhieuDangKyOKTX_Phieu" FromRole="Phieu" ToRole="PhieuDangKyOKTX" />
           <NavigationProperty Name="PhieuGiaHanHD" Relationship="QLKTXModel.FK_PhieuGiaHanHD_Phieu" FromRole="Phieu" ToRole="PhieuGiaHanHD" />
           <NavigationProperty Name="PhieuKyLuat" Relationship="QLKTXModel.FK_PhieuKyLuat_Phieu" FromRole="Phieu" ToRole="PhieuKyLuat" />
-          <Property Name="status" Type="Boolean" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="PhieuDangKyOKTX">
           <Key>
             <PropertyRef Name="MaPhieu" />
           </Key>
           <Property Name="MaPhieu" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="MSSV" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="GioiTinh" Type="Boolean" />
-          <Property Name="NgaySinh" Type="DateTime" Precision="0" />
-          <Property Name="QueQuan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="LopHoc" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="KhoaHoc" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="Khoa" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="HeDaoTao" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="MSSV" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GioiTinh" Type="Boolean" Nullable="false" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="0" Nullable="false" />
+          <Property Name="QueQuan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LopHoc" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="KhoaHoc" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Khoa" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="HeDaoTao" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Phieu" Relationship="QLKTXModel.FK_PhieuDangKyOKTX_Phieu" FromRole="PhieuDangKyOKTX" ToRole="Phieu" />
         </EntityType>
         <EntityType Name="PhieuGiaHanHD">
@@ -823,6 +825,7 @@
           <EntitySetMapping Name="HoaDons">
             <EntityTypeMapping TypeName="QLKTXModel.HoaDon">
               <MappingFragment StoreEntitySet="HoaDon">
+                <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="MSSV" ColumnName="MSSV" />
                 <ScalarProperty Name="NgayThu" ColumnName="NgayThu" />
                 <ScalarProperty Name="TongTien" ColumnName="TongTien" />

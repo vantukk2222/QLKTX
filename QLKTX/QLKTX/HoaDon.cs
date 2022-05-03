@@ -21,6 +21,7 @@ namespace QLKTX
         public double TongTien { get; set; }
         public System.DateTime NgayThu { get; set; }
         public string MSSV { get; set; }
+        public bool status { get; set; }
     
         public virtual SV SV { get; set; }
     }

@@ -58,37 +58,37 @@ namespace QLKTX.View.FormView
                 MessageBox.Show("Số điện thoại không hợp lệ mời nhập lại");
                 return;
             }
-            if (txtmssv.Texts == null || txtmssv.Texts == "")
+            if (txtmssv.Texts == null || txtmssv.Texts == ""|| txtmssv.Texts.Length>10)
             {
                 MessageBox.Show("MSSV không hợp lệ mời nhập lại");
                 return;
             }
-            if (txtname.Texts == null || txtname.Texts == "")
+            if (txtname.Texts == null || txtname.Texts == ""||Int32.TryParse(txtname.Texts,out int k)||txtname.Texts.Length>50)
             {
                 MessageBox.Show("Họ tên không hợp lệ mời nhập lại");
                 return;
             }
-            if (txtQue.Texts == null || txtQue.Texts == "")
+            if (txtQue.Texts == null || txtQue.Texts == "" || Int32.TryParse(txtQue.Texts, out k) || txtQue.Texts.Length>10)
             {
                 MessageBox.Show("Quê quán không hợp lệ mời nhập lại");
                 return;
             }
-            if (txtKhoa.Texts == null || txtKhoa.Texts == "")
+            if (txtKhoa.Texts == null || txtKhoa.Texts == "" || Int32.TryParse(txtKhoa.Texts, out k) || txtKhoa.Texts.Length > 10)
             {
                 MessageBox.Show("Khoa không hợp lệ mời nhập lại");
                 return;
             }
-            if (txtKhoahoc.Texts == null || txtKhoahoc.Texts == "")
+            if (txtKhoahoc.Texts == null || txtKhoahoc.Texts == "" || Int32.TryParse(txtKhoahoc.Texts, out k)==false || txtKhoahoc.Texts.Length > 10)
             {
                 MessageBox.Show("Khóa học không hợp lệ mời nhập lại");
                 return;
             }
-            if (txtLop.Texts == null || txtLop.Texts == "")
+            if (txtLop.Texts == null || txtLop.Texts == "" || Int32.TryParse(txtLop.Texts, out k) || txtLop.Texts.Length > 10)
             {
                 MessageBox.Show("Lớp không hợp lệ mời nhập lại");
                 return;
             }
-            if (txtHedaotao.Texts == null || txtHedaotao.Texts == "")
+            if (txtHedaotao.Texts == null || txtHedaotao.Texts == "" || Int32.TryParse(txtHedaotao.Texts, out k) || txtHedaotao.Texts.Length > 10)
             {
                 MessageBox.Show("Hệ đào tạo không hợp lệ mời nhập lại");
                 return;
@@ -109,7 +109,10 @@ namespace QLKTX.View.FormView
                 SDT = txtSDT.Texts,
             };
             BLL_PhieuDKOKTX.Instance.AddPhieuDKOKTX(pdk);
-
+            MessageBox.Show("đăng ký thành công");
+            this.Hide();
+            Login flog = new Login();
+            flog.Show();
         }
     }
 }
