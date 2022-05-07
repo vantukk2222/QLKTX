@@ -34,7 +34,8 @@ namespace QLKTX.View.UC_Control
                 LoaiPhong=p.LoaiPhong,
                 MaKhu=p.MaKhu,
                 SoNguoiHienTai = p.SoNguoiHienTai,
-                SoNguoiToiDa=p.SoNguoiToiDa
+                SoNguoiToiDa=p.SoNguoiToiDa,
+                TinhTrang = p.Status
 
             }).ToList();
             guna2DataGridView1.Columns[0].HeaderText = "Mã Phòng";
@@ -43,7 +44,8 @@ namespace QLKTX.View.UC_Control
             guna2DataGridView1.Columns[3].HeaderText = "Mã Khu";
             guna2DataGridView1.Columns[4].HeaderText = "Số Người Hiện Tại";
             guna2DataGridView1.Columns[5].HeaderText = "Số Người Tối Đa";
-            guna2DataGridView1.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            guna2DataGridView1.Columns[6].HeaderText = "Tình Trạng";
+            guna2DataGridView1.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
         }
         public void ShowDataDetail(List<SV> list)

@@ -37,6 +37,5 @@ namespace QLKTX
         public virtual DbSet<PhieuKyLuat> PhieuKyLuats { get; set; }
         public virtual DbSet<Phong> Phongs { get; set; }
         public virtual DbSet<SV> SVs { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

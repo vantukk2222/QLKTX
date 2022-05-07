@@ -29,15 +29,15 @@ namespace QLKTX.View.UC_Control
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabBC = new System.Windows.Forms.TabPage();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.icbtDel = new FontAwesome.Sharp.IconButton();
@@ -58,10 +58,13 @@ namespace QLKTX.View.UC_Control
             this.btnViewDKO = new FontAwesome.Sharp.IconButton();
             this.btnSearchDKO = new FontAwesome.Sharp.IconButton();
             this.tabGiaHan = new System.Windows.Forms.TabPage();
+            this.btnDelAllGH = new FontAwesome.Sharp.IconButton();
+            this.btnAcceptAllGH = new FontAwesome.Sharp.IconButton();
+            this.btnAcceptGH = new FontAwesome.Sharp.IconButton();
+            this.btnDelGH = new FontAwesome.Sharp.IconButton();
+            this.btnViewGH = new FontAwesome.Sharp.IconButton();
             this.rjTextBox2 = new CustomBox.RJControls.RJTextBox();
             this.dgvGiaHan = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -126,6 +129,7 @@ namespace QLKTX.View.UC_Control
             this.icbtDel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.icbtDel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.icbtDel.UseVisualStyleBackColor = false;
+            this.icbtDel.Click += new System.EventHandler(this.icbtDel_Click);
             // 
             // btnView
             // 
@@ -201,8 +205,8 @@ namespace QLKTX.View.UC_Control
             // 
             this.dgvBaoCao.AllowUserToAddRows = false;
             this.dgvBaoCao.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
-            this.dgvBaoCao.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
+            this.dgvBaoCao.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle37;
             this.dgvBaoCao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -211,23 +215,23 @@ namespace QLKTX.View.UC_Control
             this.dgvBaoCao.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBaoCao.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvBaoCao.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBaoCao.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBaoCao.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle38;
             this.dgvBaoCao.ColumnHeadersHeight = 50;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBaoCao.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBaoCao.DefaultCellStyle = dataGridViewCellStyle39;
             this.dgvBaoCao.EnableHeadersVisualStyles = false;
             this.dgvBaoCao.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(220)))), ((int)(((byte)(242)))));
             this.dgvBaoCao.Location = new System.Drawing.Point(3, 101);
@@ -408,8 +412,8 @@ namespace QLKTX.View.UC_Control
             // 
             // dgvDKOKTX
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvDKOKTX.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle43.BackColor = System.Drawing.Color.White;
+            this.dgvDKOKTX.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle43;
             this.dgvDKOKTX.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -418,23 +422,23 @@ namespace QLKTX.View.UC_Control
             this.dgvDKOKTX.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDKOKTX.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDKOKTX.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDKOKTX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle44.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDKOKTX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle44;
             this.dgvDKOKTX.ColumnHeadersHeight = 50;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDKOKTX.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle45.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle45.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDKOKTX.DefaultCellStyle = dataGridViewCellStyle45;
             this.dgvDKOKTX.EnableHeadersVisualStyles = false;
             this.dgvDKOKTX.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDKOKTX.Location = new System.Drawing.Point(6, 111);
@@ -537,10 +541,13 @@ namespace QLKTX.View.UC_Control
             // tabGiaHan
             // 
             this.tabGiaHan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.tabGiaHan.Controls.Add(this.btnDelAllGH);
+            this.tabGiaHan.Controls.Add(this.btnAcceptAllGH);
+            this.tabGiaHan.Controls.Add(this.btnAcceptGH);
+            this.tabGiaHan.Controls.Add(this.btnDelGH);
+            this.tabGiaHan.Controls.Add(this.btnViewGH);
             this.tabGiaHan.Controls.Add(this.rjTextBox2);
             this.tabGiaHan.Controls.Add(this.dgvGiaHan);
-            this.tabGiaHan.Controls.Add(this.iconButton1);
-            this.tabGiaHan.Controls.Add(this.iconButton2);
             this.tabGiaHan.Controls.Add(this.iconButton3);
             this.tabGiaHan.Location = new System.Drawing.Point(4, 34);
             this.tabGiaHan.Name = "tabGiaHan";
@@ -548,6 +555,120 @@ namespace QLKTX.View.UC_Control
             this.tabGiaHan.Size = new System.Drawing.Size(1063, 638);
             this.tabGiaHan.TabIndex = 2;
             this.tabGiaHan.Text = "Phiếu gia hạn";
+            // 
+            // btnDelAllGH
+            // 
+            this.btnDelAllGH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelAllGH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(98)))), ((int)(((byte)(101)))));
+            this.btnDelAllGH.FlatAppearance.BorderSize = 0;
+            this.btnDelAllGH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelAllGH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDelAllGH.ForeColor = System.Drawing.Color.White;
+            this.btnDelAllGH.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnDelAllGH.IconColor = System.Drawing.Color.White;
+            this.btnDelAllGH.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDelAllGH.IconSize = 25;
+            this.btnDelAllGH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelAllGH.Location = new System.Drawing.Point(916, 353);
+            this.btnDelAllGH.Name = "btnDelAllGH";
+            this.btnDelAllGH.Size = new System.Drawing.Size(141, 37);
+            this.btnDelAllGH.TabIndex = 19;
+            this.btnDelAllGH.Text = "Delete all";
+            this.btnDelAllGH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelAllGH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDelAllGH.UseVisualStyleBackColor = false;
+            this.btnDelAllGH.Click += new System.EventHandler(this.btnDelAllGH_Click);
+            // 
+            // btnAcceptAllGH
+            // 
+            this.btnAcceptAllGH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAcceptAllGH.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnAcceptAllGH.FlatAppearance.BorderSize = 0;
+            this.btnAcceptAllGH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAcceptAllGH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAcceptAllGH.ForeColor = System.Drawing.Color.White;
+            this.btnAcceptAllGH.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.btnAcceptAllGH.IconColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAcceptAllGH.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAcceptAllGH.IconSize = 25;
+            this.btnAcceptAllGH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAcceptAllGH.Location = new System.Drawing.Point(916, 172);
+            this.btnAcceptAllGH.Name = "btnAcceptAllGH";
+            this.btnAcceptAllGH.Size = new System.Drawing.Size(141, 41);
+            this.btnAcceptAllGH.TabIndex = 18;
+            this.btnAcceptAllGH.Text = "Accept all";
+            this.btnAcceptAllGH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAcceptAllGH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAcceptAllGH.UseVisualStyleBackColor = false;
+            this.btnAcceptAllGH.Click += new System.EventHandler(this.btnAcceptAllGH_Click);
+            // 
+            // btnAcceptGH
+            // 
+            this.btnAcceptGH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAcceptGH.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnAcceptGH.FlatAppearance.BorderSize = 0;
+            this.btnAcceptGH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAcceptGH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAcceptGH.ForeColor = System.Drawing.Color.White;
+            this.btnAcceptGH.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.btnAcceptGH.IconColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAcceptGH.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAcceptGH.IconSize = 25;
+            this.btnAcceptGH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAcceptGH.Location = new System.Drawing.Point(916, 111);
+            this.btnAcceptGH.Name = "btnAcceptGH";
+            this.btnAcceptGH.Size = new System.Drawing.Size(141, 37);
+            this.btnAcceptGH.TabIndex = 17;
+            this.btnAcceptGH.Text = "Accept";
+            this.btnAcceptGH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAcceptGH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAcceptGH.UseVisualStyleBackColor = false;
+            this.btnAcceptGH.Click += new System.EventHandler(this.btnAcceptGH_Click);
+            // 
+            // btnDelGH
+            // 
+            this.btnDelGH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelGH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(98)))), ((int)(((byte)(101)))));
+            this.btnDelGH.FlatAppearance.BorderSize = 0;
+            this.btnDelGH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelGH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDelGH.ForeColor = System.Drawing.Color.White;
+            this.btnDelGH.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnDelGH.IconColor = System.Drawing.Color.White;
+            this.btnDelGH.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDelGH.IconSize = 25;
+            this.btnDelGH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelGH.Location = new System.Drawing.Point(916, 297);
+            this.btnDelGH.Name = "btnDelGH";
+            this.btnDelGH.Size = new System.Drawing.Size(141, 37);
+            this.btnDelGH.TabIndex = 16;
+            this.btnDelGH.Text = "Delete";
+            this.btnDelGH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelGH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDelGH.UseVisualStyleBackColor = false;
+            this.btnDelGH.Click += new System.EventHandler(this.btnDelGH_Click);
+            // 
+            // btnViewGH
+            // 
+            this.btnViewGH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnViewGH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(149)))), ((int)(((byte)(236)))));
+            this.btnViewGH.FlatAppearance.BorderSize = 0;
+            this.btnViewGH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewGH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnViewGH.ForeColor = System.Drawing.Color.White;
+            this.btnViewGH.IconChar = FontAwesome.Sharp.IconChar.Pen;
+            this.btnViewGH.IconColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnViewGH.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnViewGH.IconSize = 25;
+            this.btnViewGH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewGH.Location = new System.Drawing.Point(916, 239);
+            this.btnViewGH.Name = "btnViewGH";
+            this.btnViewGH.Size = new System.Drawing.Size(141, 37);
+            this.btnViewGH.TabIndex = 15;
+            this.btnViewGH.Text = "View";
+            this.btnViewGH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewGH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnViewGH.UseVisualStyleBackColor = false;
             // 
             // rjTextBox2
             // 
@@ -576,8 +697,8 @@ namespace QLKTX.View.UC_Control
             // 
             // dgvGiaHan
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dgvGiaHan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle40.BackColor = System.Drawing.Color.White;
+            this.dgvGiaHan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle40;
             this.dgvGiaHan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -586,23 +707,23 @@ namespace QLKTX.View.UC_Control
             this.dgvGiaHan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvGiaHan.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvGiaHan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGiaHan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle41.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGiaHan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle41;
             this.dgvGiaHan.ColumnHeadersHeight = 50;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvGiaHan.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle42.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvGiaHan.DefaultCellStyle = dataGridViewCellStyle42;
             this.dgvGiaHan.EnableHeadersVisualStyles = false;
             this.dgvGiaHan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvGiaHan.Location = new System.Drawing.Point(6, 111);
@@ -634,50 +755,6 @@ namespace QLKTX.View.UC_Control
             this.dgvGiaHan.ThemeStyle.RowsStyle.Height = 24;
             this.dgvGiaHan.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvGiaHan.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(98)))), ((int)(((byte)(101)))));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 25;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(920, 167);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(130, 37);
-            this.iconButton1.TabIndex = 13;
-            this.iconButton1.Text = "Delete";
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(149)))), ((int)(((byte)(236)))));
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.iconButton2.ForeColor = System.Drawing.Color.White;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Pen;
-            this.iconButton2.IconColor = System.Drawing.SystemColors.ButtonFace;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 25;
-            this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(920, 111);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(130, 37);
-            this.iconButton2.TabIndex = 12;
-            this.iconButton2.Text = "View";
-            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton2.UseVisualStyleBackColor = false;
             // 
             // iconButton3
             // 
@@ -788,12 +865,15 @@ namespace QLKTX.View.UC_Control
         private CustomBox.RJControls.RJTextBox rjTextBox1;
         private System.Windows.Forms.TabPage tabGiaHan;
         private CustomBox.RJControls.RJTextBox rjTextBox2;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton3;
         private Guna.UI2.WinForms.Guna2DataGridView dgvGiaHan;
         private FontAwesome.Sharp.IconButton btnAccept;
         private FontAwesome.Sharp.IconButton btnAcceptAll;
         private FontAwesome.Sharp.IconButton btnDeleteAll;
+        private FontAwesome.Sharp.IconButton btnDelAllGH;
+        private FontAwesome.Sharp.IconButton btnAcceptAllGH;
+        private FontAwesome.Sharp.IconButton btnAcceptGH;
+        private FontAwesome.Sharp.IconButton btnDelGH;
+        private FontAwesome.Sharp.IconButton btnViewGH;
     }
 }

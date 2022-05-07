@@ -38,11 +38,11 @@
             <PropertyRef Name="MaHoaDon" />
           </Key>
           <Property Name="MaHoaDon" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="TenHoaDon" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="TienNuoc" Type="float" Nullable="false" />
+          <Property Name="TenHoaDon" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DienNuoc" Type="bit" Nullable="false" />
           <Property Name="TienPhong" Type="float" Nullable="false" />
-          <Property Name="TongTien" Type="float" Nullable="false" />
-          <Property Name="NgayThu" Type="date" Nullable="false" />
+          <Property Name="NgayLap" Type="date" Nullable="false" />
+          <Property Name="NgayThu" Type="date" />
           <Property Name="MSSV" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="status" Type="bit" Nullable="false" />
         </EntityType>
@@ -97,7 +97,7 @@
           </Key>
           <Property Name="MaPhieu" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="MaHopDong" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="ThoiGianGiaHan" Type="date" Nullable="false" />
+          <Property Name="SoNamGiaHan" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="PhieuKyLuat">
           <Key>
@@ -119,6 +119,7 @@
           <Property Name="SoNguoiHienTai" Type="int" Nullable="false" />
           <Property Name="SoNguoiToiDa" Type="int" Nullable="false" />
           <Property Name="Status" Type="bit" />
+          <Property Name="GiaPhong" Type="float" />
         </EntityType>
         <EntityType Name="SV">
           <Key>
@@ -136,16 +137,6 @@
           <Property Name="Khoa" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="SDT" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="HeDaoTao" Type="nchar" MaxLength="10" Nullable="false" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <Association Name="FK_AccCB_CanBoQuanLy">
           <End Role="CanBoQuanLy" Type="Self.CanBoQuanLy" Multiplicity="1">
@@ -266,7 +257,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PhieuKyLuat_Phieu">
-          <End Role="Phieu" Type="Self.Phieu" Multiplicity="1" />
+          <End Role="Phieu" Type="Self.Phieu" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="PhieuKyLuat" Type="Self.PhieuKyLuat" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="Phieu">
@@ -326,7 +319,6 @@
           <EntitySet Name="PhieuKyLuat" EntityType="Self.PhieuKyLuat" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Phong" EntityType="Self.Phong" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SV" EntityType="Self.SV" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_AccCB_CanBoQuanLy" Association="Self.FK_AccCB_CanBoQuanLy">
             <End Role="CanBoQuanLy" EntitySet="CanBoQuanLy" />
             <End Role="AccCB" EntitySet="AccCB" />
@@ -397,7 +389,6 @@
           <EntitySet Name="PhieuKyLuats" EntityType="QLKTXModel.PhieuKyLuat" />
           <EntitySet Name="Phongs" EntityType="QLKTXModel.Phong" />
           <EntitySet Name="SVs" EntityType="QLKTXModel.SV" />
-          <EntitySet Name="sysdiagrams" EntityType="QLKTXModel.sysdiagram" />
           <AssociationSet Name="FK_AccCB_CanBoQuanLy" Association="QLKTXModel.FK_AccCB_CanBoQuanLy">
             <End Role="CanBoQuanLy" EntitySet="CanBoQuanLies" />
             <End Role="AccCB" EntitySet="AccCBs" />
@@ -488,14 +479,14 @@
             <PropertyRef Name="MaHoaDon" />
           </Key>
           <Property Name="MaHoaDon" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="TenHoaDon" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="TienNuoc" Type="Double" Nullable="false" />
+          <Property Name="TenHoaDon" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DienNuoc" Type="Boolean" Nullable="false" />
           <Property Name="TienPhong" Type="Double" Nullable="false" />
-          <Property Name="TongTien" Type="Double" Nullable="false" />
-          <Property Name="NgayThu" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="NgayThu" Type="DateTime" Precision="0" />
           <Property Name="MSSV" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-          <NavigationProperty Name="SV" Relationship="QLKTXModel.FK_HoaDon_SV" FromRole="HoaDon" ToRole="SV" />
           <Property Name="status" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="SV" Relationship="QLKTXModel.FK_HoaDon_SV" FromRole="HoaDon" ToRole="SV" />
         </EntityType>
         <EntityType Name="HopDong">
           <Key>
@@ -528,28 +519,28 @@
           <Property Name="MaCB" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="MaPhong" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="NgayLap" Type="DateTime" Precision="0" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Phong" Relationship="QLKTXModel.FK_Phieu_Phong" FromRole="Phieu" ToRole="Phong" />
           <NavigationProperty Name="SV" Relationship="QLKTXModel.FK_Phieu_SV" FromRole="Phieu" ToRole="SV" />
           <NavigationProperty Name="PhieuDangKyOKTX" Relationship="QLKTXModel.FK_PhieuDangKyOKTX_Phieu" FromRole="Phieu" ToRole="PhieuDangKyOKTX" />
           <NavigationProperty Name="PhieuGiaHanHD" Relationship="QLKTXModel.FK_PhieuGiaHanHD_Phieu" FromRole="Phieu" ToRole="PhieuGiaHanHD" />
           <NavigationProperty Name="PhieuKyLuat" Relationship="QLKTXModel.FK_PhieuKyLuat_Phieu" FromRole="Phieu" ToRole="PhieuKyLuat" />
-          <Property Name="status" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="PhieuDangKyOKTX">
           <Key>
             <PropertyRef Name="MaPhieu" />
           </Key>
           <Property Name="MaPhieu" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="MSSV" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="HoTen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MSSV" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="HoTen" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="GioiTinh" Type="Boolean" Nullable="false" />
-          <Property Name="NgaySinh" Type="DateTime" Precision="0" Nullable="false" />
-          <Property Name="QueQuan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="LopHoc" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="KhoaHoc" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="Khoa" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="HeDaoTao" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="QueQuan" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LopHoc" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="KhoaHoc" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Khoa" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="SDT" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="HeDaoTao" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="Phieu" Relationship="QLKTXModel.FK_PhieuDangKyOKTX_Phieu" FromRole="PhieuDangKyOKTX" ToRole="Phieu" />
         </EntityType>
         <EntityType Name="PhieuGiaHanHD">
@@ -558,7 +549,7 @@
           </Key>
           <Property Name="MaPhieu" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="MaHopDong" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="ThoiGianGiaHan" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="SoNamGiaHan" Type="Int32" Nullable="false" />
           <NavigationProperty Name="HopDong" Relationship="QLKTXModel.FK_PhieuGiaHanHD_HopDong" FromRole="PhieuGiaHanHD" ToRole="HopDong" />
           <NavigationProperty Name="Phieu" Relationship="QLKTXModel.FK_PhieuGiaHanHD_Phieu" FromRole="PhieuGiaHanHD" ToRole="Phieu" />
         </EntityType>
@@ -586,6 +577,7 @@
           <NavigationProperty Name="Khu" Relationship="QLKTXModel.FK_Phong_Khu" FromRole="Phong" ToRole="Khu" />
           <NavigationProperty Name="Phieux" Relationship="QLKTXModel.FK_Phieu_Phong" FromRole="Phong" ToRole="Phieu" />
           <NavigationProperty Name="SVs" Relationship="QLKTXModel.FK_SV_Phong" FromRole="Phong" ToRole="SV" />
+          <Property Name="GiaPhong" Type="Double" />
         </EntityType>
         <EntityType Name="SV">
           <Key>
@@ -608,16 +600,6 @@
           <NavigationProperty Name="HopDong" Relationship="QLKTXModel.FK_SV_HopDong" FromRole="SV" ToRole="HopDong" />
           <NavigationProperty Name="Phieux" Relationship="QLKTXModel.FK_Phieu_SV" FromRole="SV" ToRole="Phieu" />
           <NavigationProperty Name="Phong" Relationship="QLKTXModel.FK_SV_Phong" FromRole="SV" ToRole="Phong" />
-        </EntityType>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <Association Name="FK_AccCB_CanBoQuanLy">
           <End Type="QLKTXModel.CanBoQuanLy" Role="CanBoQuanLy" Multiplicity="1">
@@ -828,9 +810,9 @@
                 <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="MSSV" ColumnName="MSSV" />
                 <ScalarProperty Name="NgayThu" ColumnName="NgayThu" />
-                <ScalarProperty Name="TongTien" ColumnName="TongTien" />
+                <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
                 <ScalarProperty Name="TienPhong" ColumnName="TienPhong" />
-                <ScalarProperty Name="TienNuoc" ColumnName="TienNuoc" />
+                <ScalarProperty Name="DienNuoc" ColumnName="DienNuoc" />
                 <ScalarProperty Name="TenHoaDon" ColumnName="TenHoaDon" />
                 <ScalarProperty Name="MaHoaDon" ColumnName="MaHoaDon" />
               </MappingFragment>
@@ -888,7 +870,7 @@
           <EntitySetMapping Name="PhieuGiaHanHDs">
             <EntityTypeMapping TypeName="QLKTXModel.PhieuGiaHanHD">
               <MappingFragment StoreEntitySet="PhieuGiaHanHD">
-                <ScalarProperty Name="ThoiGianGiaHan" ColumnName="ThoiGianGiaHan" />
+                <ScalarProperty Name="SoNamGiaHan" ColumnName="SoNamGiaHan" />
                 <ScalarProperty Name="MaHopDong" ColumnName="MaHopDong" />
                 <ScalarProperty Name="MaPhieu" ColumnName="MaPhieu" />
               </MappingFragment>
@@ -907,6 +889,7 @@
           <EntitySetMapping Name="Phongs">
             <EntityTypeMapping TypeName="QLKTXModel.Phong">
               <MappingFragment StoreEntitySet="Phong">
+                <ScalarProperty Name="GiaPhong" ColumnName="GiaPhong" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="SoNguoiToiDa" ColumnName="SoNguoiToiDa" />
                 <ScalarProperty Name="SoNguoiHienTai" ColumnName="SoNguoiHienTai" />
@@ -932,17 +915,6 @@
                 <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
                 <ScalarProperty Name="MaHopDong" ColumnName="MaHopDong" />
                 <ScalarProperty Name="MSSV" ColumnName="MSSV" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="QLKTXModel.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="definition" ColumnName="definition" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

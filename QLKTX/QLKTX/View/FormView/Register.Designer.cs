@@ -332,7 +332,6 @@ namespace QLKTX.View.FormView
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(147, 32);
             this.guna2HtmlLabel2.TabIndex = 1171;
             this.guna2HtmlLabel2.Text = "Mã sinh viên";
-            this.guna2HtmlLabel2.Click += new System.EventHandler(this.guna2HtmlLabel2_Click);
             // 
             // txtmssv
             // 

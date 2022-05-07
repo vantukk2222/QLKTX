@@ -46,5 +46,10 @@ namespace QLKTX.BLL
             }
             
         }
+        public void GiaHan(HopDong temp,int ThoiGian)
+        {
+            temp.NgayHetHan = temp.NgayHetHan.Value.AddYears(ThoiGian);
+            DataHelper.db.SaveChanges();
+        }
     }
 }

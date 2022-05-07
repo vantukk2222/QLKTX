@@ -486,7 +486,7 @@ namespace QLKTX.View.FormView
             this.MinimumSize = new System.Drawing.Size(827, 557);
             this.Name = "ApproveSVForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Thêm sinh viên";
+            this.Text = "Duyệt sinh viên";
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rjCircularPictureBox1)).EndInit();

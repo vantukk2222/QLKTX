@@ -15,7 +15,8 @@ namespace QLKTX.View.FormView
 {
 	public partial class Login : Form
 	{
-		
+		AccCB tempCB;
+		AccSV tempSV;
 		
 		public Login()
 		{
@@ -29,28 +30,30 @@ namespace QLKTX.View.FormView
                 switch (cbbRole.SelectedIndex)
                 {
 					case 0:
-						if (DataHelper.db.AccCBs.Where(cb => cb.UserName == txtUsername.Text.Trim() & cb.PassWord == txtPassword.Text.Trim()).Count() == 1)
+                        tempCB = DataHelper.db.AccCBs.Where(cb => cb.UserName == txtUsername.Text.Trim() & cb.PassWord == txtPassword.Text.Trim()).FirstOrDefault();
+                        if (tempCB!=null)
 						{
 							Main fmain = new Main();
 							fmain.Show();
 							this.Hide();
-							MessageBox.Show("Welcome " + txtUsername.Text);
+							MessageBox.Show("Welcome cán bộ " + tempCB.CanBoQuanLy.HoTen);
 						}
 						else
 							MessageBox.Show("Check your username and password");
                         break;
                     //Login SV
                     case 1:
-						if (DataHelper.db.AccSVs.Where(sv => sv.UserName == txtUsername.Text.Trim() & sv.PassWord == txtPassword.Text.Trim()).Count() == 1)
+                        tempSV = DataHelper.db.AccSVs.Where(sv => sv.UserName == txtUsername.Text.Trim() & sv.PassWord == txtPassword.Text.Trim()).FirstOrDefault();
+                        if (tempSV!=null)
 						{
                             AccSV temp = DataHelper.db.AccSVs.Where(sv => sv.UserName == txtUsername.Text.Trim() & sv.PassWord == txtPassword.Text.Trim()).First();
-                            User fuser = new User(DataHelper.db.SVs.Find(temp.MSSV));
+                            User fuser = new User(tempSV.SV);
                             fuser.Show();
 							this.Hide();
 
 
 
-							MessageBox.Show("Welcome " + txtUsername.Text);
+							MessageBox.Show("Welcome " + tempSV.SV.HoTen);
 						}
 						else
 							MessageBox.Show("Check your username and password");

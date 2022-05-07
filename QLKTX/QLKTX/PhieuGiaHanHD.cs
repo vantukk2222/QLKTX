@@ -16,7 +16,7 @@ namespace QLKTX
     {
         public string MaPhieu { get; set; }
         public string MaHopDong { get; set; }
-        public System.DateTime ThoiGianGiaHan { get; set; }
+        public int SoNamGiaHan { get; set; }
     
         public virtual HopDong HopDong { get; set; }
         public virtual Phieu Phieu { get; set; }

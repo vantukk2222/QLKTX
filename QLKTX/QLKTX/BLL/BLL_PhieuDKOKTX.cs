@@ -34,7 +34,7 @@ namespace QLKTX.BLL
             return MaPhieu;
         }
 
-        internal List<PhieuDangKyOKTX> GetAllPhieuDKOKTX()
+        public List<PhieuDangKyOKTX> GetAllPhieuDKOKTX()
         {
             return DataHelper.db.PhieuDangKyOKTXes.ToList();
         }

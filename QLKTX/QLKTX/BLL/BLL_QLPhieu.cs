@@ -49,6 +49,15 @@ namespace QLKTX.BLL
             return phieu;
 
         }
-        
+        public void DeletePhieu(string MaPhieu)
+        {
+            Phieu phieu = DataHelper.db.Phieux.Where(p => p.MaPhieu == MaPhieu).FirstOrDefault();
+            if (phieu != null)
+            {
+                DataHelper.db.Phieux.Remove(phieu);
+                DataHelper.db.SaveChanges();
+            }
+
+        }
     }
 }

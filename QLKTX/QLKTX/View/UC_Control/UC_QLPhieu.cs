@@ -28,6 +28,7 @@ namespace QLKTX.View.UC_Control
         {
             dgvBaoCao.DataSource = null;
             dgvDKOKTX.DataSource = null;
+            dgvGiaHan.DataSource = null;
             dgvDKOKTX.DataSource = BLL_PhieuDKOKTX.Instance.GetAllPhieuDKOKTX().Select(p => new {
                 p.MaPhieu,
                 p.MSSV,
@@ -39,7 +40,8 @@ namespace QLKTX.View.UC_Control
                 p.KhoaHoc,
                 p.Khoa,
                 p.HeDaoTao,
-                p.SDT
+                p.SDT,
+                p.Phieu.status
             }).ToList();
             dgvDKOKTX.Columns[0].HeaderText = "Mã phiếu";
             dgvDKOKTX.Columns[1].HeaderText = "MSSV";
@@ -52,7 +54,8 @@ namespace QLKTX.View.UC_Control
             dgvDKOKTX.Columns[8].HeaderText = "Khoa";
             dgvDKOKTX.Columns[9].HeaderText = "Hệ đào tạo";
             dgvDKOKTX.Columns[10].HeaderText = "SĐT";
-            dgvDKOKTX.Columns[10].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvDKOKTX.Columns[11].HeaderText = "Trạng thái";
+            dgvDKOKTX.Columns[11].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvBaoCao.DataSource = list.Select(p => new
             {
                 MaPhieu = p.MaPhieu,
@@ -64,15 +67,30 @@ namespace QLKTX.View.UC_Control
                 status = p.status
 
             }).ToList();
-            dgvBaoCao.Columns[0].HeaderText = "Mã Phiếu";
-            dgvBaoCao.Columns[1].HeaderText = "Tên Phiếu";
+            dgvBaoCao.Columns[0].HeaderText = "Mã phiếu";
+            dgvBaoCao.Columns[1].HeaderText = "Tên phiếu";
             dgvBaoCao.Columns[2].HeaderText = "MSSV";
-            dgvBaoCao.Columns[3].HeaderText = "Mã Cán Bộ";
-            dgvBaoCao.Columns[4].HeaderText = "Mã Phòng";
-            dgvBaoCao.Columns[5].HeaderText = "Ngày Lập";
-            dgvBaoCao.Columns[6].HeaderText = "Trạng Thái";
+            dgvBaoCao.Columns[3].HeaderText = "Mã cán bộ";
+            dgvBaoCao.Columns[4].HeaderText = "Mã phòng";
+            dgvBaoCao.Columns[5].HeaderText = "Ngày lập";
+            dgvBaoCao.Columns[6].HeaderText = "Trạng thái";
             dgvBaoCao.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
+            dgvGiaHan.DataSource = BLL_PhieuGiaHanHD.Instance.getAllPhieu().Select(p => new
+            {
+                MaPhieu = p.MaPhieu,
+                MaHD = p.MaHopDong,
+                Hoten = p.HopDong.SVs.FirstOrDefault().HoTen,
+                MSSV = p.HopDong.SVs.FirstOrDefault().MSSV,
+                time=p.SoNamGiaHan,
+                status = p.Phieu.status
+            }).ToList();
+            dgvGiaHan.Columns[0].HeaderText = "Mã phiếu";
+            dgvGiaHan.Columns[1].HeaderText = "Mã hợp đồng";
+            dgvGiaHan.Columns[2].HeaderText = "Họ tên";
+            dgvGiaHan.Columns[3].HeaderText = "MSSV";
+            dgvGiaHan.Columns[4].HeaderText = "Số năm gia hạn";
+            dgvGiaHan.Columns[5].HeaderText = "Trạng thái";
+            dgvGiaHan.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
         public void LoadData()
         {
@@ -107,6 +125,7 @@ namespace QLKTX.View.UC_Control
         {
             foreach (DataGridViewRow row in dgvDKOKTX.SelectedRows)
             {
+                if (Convert.ToBoolean(row.Cells["status"].Value) == true) continue;
                 string ma = row.Cells[0].Value.ToString();
                 BLL_PhieuDKOKTX.Instance.DuyetPhieuDKOKTX(BLL_PhieuDKOKTX.Instance.SearchPhieuDK(ma));
             }
@@ -117,6 +136,7 @@ namespace QLKTX.View.UC_Control
         {
             foreach (DataGridViewRow row in dgvDKOKTX.Rows)
             {
+                if (Convert.ToBoolean(row.Cells["status"].Value) == true) continue;
                 string ma = row.Cells[0].Value.ToString();
                 BLL_PhieuDKOKTX.Instance.DuyetPhieuDKOKTX(BLL_PhieuDKOKTX.Instance.SearchPhieuDK(ma));
             }
@@ -161,7 +181,7 @@ namespace QLKTX.View.UC_Control
         {
             if (dgvBaoCao.SelectedRows.Count == 1)
             {
-                string ma = dgvBaoCao.Rows[dgvBaoCao.CurrentRow.Index].Cells[0].Value.ToString();
+                string ma = dgvBaoCao.SelectedRows[0].Cells[0].Value.ToString();
                 string LoaiPhieu = ma.Substring(0, 2);
                 switch (LoaiPhieu)
                 {
@@ -177,6 +197,64 @@ namespace QLKTX.View.UC_Control
                 }
 
             }
+        }
+
+        private void icbtDel_Click(object sender, EventArgs e)
+        {
+            if (dgvBaoCao.SelectedRows.Count >= 1)
+            {
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa phiếu này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    foreach (DataGridViewRow row in dgvBaoCao.SelectedRows)
+                    {
+                        string ma = row.Cells[0].Value.ToString();
+                        BLL_QLPhieu.Instance.DeletePhieu(ma);
+                    }
+                }
+            }
+            LoadData();
+        }
+
+        private void btnAcceptGH_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvGiaHan.SelectedRows)
+            {
+                if (Convert.ToBoolean(row.Cells["status"].Value) == true) continue;
+                string ma = row.Cells[0].Value.ToString();
+                BLL_PhieuGiaHanHD.Instance.DuyetPhieuGiaHan(BLL_PhieuGiaHanHD.Instance.SearchPhieuGH(ma));
+            }
+            LoadData();
+        }
+
+        private void btnAcceptAllGH_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvGiaHan.Rows)
+            {
+                if (Convert.ToBoolean(row.Cells["status"].Value) == true) continue;
+                string ma = row.Cells[0].Value.ToString();
+                BLL_PhieuGiaHanHD.Instance.DuyetPhieuGiaHan(BLL_PhieuGiaHanHD.Instance.SearchPhieuGH(ma));
+            }
+            LoadData();
+        }
+
+        private void btnDelGH_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvGiaHan.SelectedRows)
+            {
+                string ma = row.Cells[0].Value.ToString();
+                BLL_PhieuGiaHanHD.Instance.DeletePhieuGH(BLL_PhieuGiaHanHD.Instance.SearchPhieuGH(ma));
+            }
+            LoadData();
+        }
+
+        private void btnDelAllGH_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgvGiaHan.Rows)
+            {
+                string ma = row.Cells[0].Value.ToString();
+                BLL_PhieuGiaHanHD.Instance.DeletePhieuGH(BLL_PhieuGiaHanHD.Instance.SearchPhieuGH(ma));
+            }
+            LoadData();
         }
     }
 }
