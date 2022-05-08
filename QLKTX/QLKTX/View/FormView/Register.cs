@@ -28,7 +28,7 @@ namespace QLKTX.View.FormView
 			flog.Show();
         }
 
-        
+
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -55,17 +55,17 @@ namespace QLKTX.View.FormView
                 MessageBox.Show("Số điện thoại không hợp lệ mời nhập lại");
                 return;
             }
-            if (txtmssv.Texts == null || txtmssv.Texts == ""|| txtmssv.Texts.Length>10)
+            if (txtmssv.Texts == null || txtmssv.Texts == "" || txtmssv.Texts.Length > 10)
             {
                 MessageBox.Show("MSSV không hợp lệ mời nhập lại");
                 return;
             }
-            if (txtname.Texts == null || txtname.Texts == ""||Int32.TryParse(txtname.Texts,out int k)||txtname.Texts.Length>50)
+            if (txtname.Texts == null || txtname.Texts == "" || Int32.TryParse(txtname.Texts, out int k) || txtname.Texts.Length > 50)
             {
                 MessageBox.Show("Họ tên không hợp lệ mời nhập lại");
                 return;
             }
-            if (txtQue.Texts == null || txtQue.Texts == "" || Int32.TryParse(txtQue.Texts, out k) || txtQue.Texts.Length>10)
+            if (txtQue.Texts == null || txtQue.Texts == "" || Int32.TryParse(txtQue.Texts, out k) || txtQue.Texts.Length > 10)
             {
                 MessageBox.Show("Quê quán không hợp lệ mời nhập lại");
                 return;
@@ -75,7 +75,7 @@ namespace QLKTX.View.FormView
                 MessageBox.Show("Khoa không hợp lệ mời nhập lại");
                 return;
             }
-            if (txtKhoahoc.Texts == null || txtKhoahoc.Texts == "" || Int32.TryParse(txtKhoahoc.Texts, out k)==false || txtKhoahoc.Texts.Length > 10)
+            if (txtKhoahoc.Texts == null || txtKhoahoc.Texts == "" || Int32.TryParse(txtKhoahoc.Texts, out k) == false || txtKhoahoc.Texts.Length > 10)
             {
                 MessageBox.Show("Khóa học không hợp lệ mời nhập lại");
                 return;
@@ -90,26 +90,34 @@ namespace QLKTX.View.FormView
                 MessageBox.Show("Hệ đào tạo không hợp lệ mời nhập lại");
                 return;
             }
-            string _MaPhieu = "DK" + Convert.ToString(BLL_PhieuDKOKTX.Instance.GetLastMaPhieuDKOKTX()).PadLeft(5, '0');
-            pdk = new PhieuDangKyOKTX
+            bool isSV = BLL_QLSV.Instance.checkSV(txtmssv.Texts);
+            if (isSV)
             {
-                MaPhieu = _MaPhieu,
-                MSSV = txtmssv.Texts,
-                HoTen = txtname.Texts,
-                NgaySinh = dateNgaySinh.Value.Date,
-                GioiTinh = checkSex.Checked,
-                QueQuan = txtQue.Texts,
-                LopHoc = txtLop.Texts,
-                Khoa = txtKhoa.Texts,
-                KhoaHoc = txtKhoahoc.Texts,
-                HeDaoTao = txtHedaotao.Texts,
-                SDT = txtSDT.Texts,
-            };
-            BLL_PhieuDKOKTX.Instance.AddPhieuDKOKTX(pdk);
-            MessageBox.Show("đăng ký thành công");
-            this.Hide();
-            Login flog = new Login();
-            flog.Show();
+                MessageBox.Show("Trùng MSV");
+            }
+            else
+            {
+                string _MaPhieu = "DK" + Convert.ToString(BLL_PhieuDKOKTX.Instance.GetLastMaPhieuDKOKTX()).PadLeft(5, '0') + 1;
+                pdk = new PhieuDangKyOKTX
+                {
+                    MaPhieu = _MaPhieu,
+                    MSSV = txtmssv.Texts,
+                    HoTen = txtname.Texts,
+                    NgaySinh = dateNgaySinh.Value.Date,
+                    GioiTinh = checkSex.Checked,
+                    QueQuan = txtQue.Texts,
+                    LopHoc = txtLop.Texts,
+                    Khoa = txtKhoa.Texts,
+                    KhoaHoc = txtKhoahoc.Texts,
+                    HeDaoTao = txtHedaotao.Texts,
+                    SDT = txtSDT.Texts,
+                };
+                BLL_PhieuDKOKTX.Instance.AddPhieuDKOKTX(pdk);
+                MessageBox.Show("đăng ký thành công");
+                this.Hide();
+                Login flog = new Login();
+                flog.Show();
+            }
         }
     }
 }

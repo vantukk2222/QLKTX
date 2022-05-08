@@ -16,7 +16,7 @@ namespace QLKTX.View.UC_Control
         public UC_QLHoaDon()
         {
             InitializeComponent();
-            BLL_HoaDon.Instance.CreateHoaDonMonthly();
+          //  BLL_HoaDon.Instance.CreateHoaDonMonthly();
             loadData();
         }
 

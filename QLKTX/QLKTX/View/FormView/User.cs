@@ -40,16 +40,12 @@ namespace QLKTX.View.FormView
                 iconPictureBox1.Dock = DockStyle.Bottom;
                 iconPictureBox1.Location = new Point(0, 19);
             }
-            // UC_Information QL = new UC_Information();
-            //panelDesktop.Controls.Clear();
-            //QL.Dock = DockStyle.Fill;
-            //QL.BringToFront();
-            //panelDesktop.Controls.Add(QL);
-
-            Information in4 = new Information(temp) { Dock = DockStyle.Fill, };
-            in4.AutoScroll = true;
-            this.panelDesktop.Controls.Add(in4);
-            in4.Show();
+            Information QL = new Information(temp);
+            panelDesktop.Controls.Clear();
+            QL.BorderStyle = BorderStyle.None;
+            QL.Dock = DockStyle.Fill;
+            QL.BringToFront();
+            panelDesktop.Controls.Add(QL);
 
             panelMenu.Width = 230;
             iconPictureBox1.Visible = true;
@@ -63,6 +59,37 @@ namespace QLKTX.View.FormView
         }
         private void icbtHoaDon_Click(object sender, EventArgs e)
         {
+            panelDesktop.Controls.Clear();
+            if (icbtMenu.IconChar == FontAwesome.Sharp.IconChar.Bars)
+            {
+                this.Width += 130;
+                iconPictureBox1.IconSize = 95;
+                iconPictureBox1.Dock = DockStyle.Bottom;
+                iconPictureBox1.Location = new Point(0, 19);
+                icbtMenu.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            }
+            else
+            {
+                iconPictureBox1.IconSize = 95;
+                iconPictureBox1.Dock = DockStyle.Bottom;
+                iconPictureBox1.Location = new Point(0, 19);
+            }
+            UC_HoaDonSV QL = new UC_HoaDonSV(temp);
+            panelDesktop.Controls.Clear();
+            QL.BorderStyle = BorderStyle.None;
+            QL.Dock = DockStyle.Fill;
+            QL.BringToFront();
+            panelDesktop.Controls.Add(QL);
+
+            panelMenu.Width = 230;
+            iconPictureBox1.Visible = true;
+            icbtMenu.Dock = DockStyle.None;
+            foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
+            {
+                menuButton.Text = "   " + menuButton.Tag.ToString();
+                menuButton.ImageAlign = ContentAlignment.MiddleLeft;
+                menuButton.Padding = new Padding(10, 0, 0, 0);
+            }
 
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

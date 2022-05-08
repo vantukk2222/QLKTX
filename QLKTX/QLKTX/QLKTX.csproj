@@ -205,6 +205,12 @@
     <Compile Include="View\UC_Control\ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UC_Control\UC_HoaDonSV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC_Control\UC_HoaDonSV.Designer.cs">
+      <DependentUpon>UC_HoaDonSV.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UC_Control\UC_QLPhieu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -257,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UC_Control\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UC_Control\UC_HoaDonSV.resx">
+      <DependentUpon>UC_HoaDonSV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UC_Control\UC_QLPhieu.resx">
       <DependentUpon>UC_QLPhieu.cs</DependentUpon>

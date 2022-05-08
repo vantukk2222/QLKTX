@@ -125,7 +125,7 @@ namespace QLKTX.View.UC_Control
         {
             foreach (DataGridViewRow row in dgvDKOKTX.SelectedRows)
             {
-                if (Convert.ToBoolean(row.Cells["status"].Value) == true) continue;
+                if (Convert.ToBoolean(row.Cells["status"].Value) == true) MessageBox.Show("Đã duyệt");
                 string ma = row.Cells[0].Value.ToString();
                 BLL_PhieuDKOKTX.Instance.DuyetPhieuDKOKTX(BLL_PhieuDKOKTX.Instance.SearchPhieuDK(ma));
             }

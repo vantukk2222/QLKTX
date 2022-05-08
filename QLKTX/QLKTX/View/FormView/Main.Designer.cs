@@ -317,7 +317,7 @@ namespace QLKTX.View.FormView
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(276, 12);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(418, 27);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(331, 20);
             this.guna2HtmlLabel1.TabIndex = 9;
             this.guna2HtmlLabel1.Text = "CHƯƠNG TRÌNH QUẢN LÝ KÝ TÚC XÁ";
             // 
@@ -329,7 +329,7 @@ namespace QLKTX.View.FormView
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.DeepPink;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(349, 3);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(418, 27);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(331, 20);
             this.guna2HtmlLabel2.TabIndex = 13;
             this.guna2HtmlLabel2.Text = "CHƯƠNG TRÌNH QUẢN LÝ KÝ TÚC XÁ";
             this.guna2HtmlLabel2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -423,7 +423,7 @@ namespace QLKTX.View.FormView
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.Gainsboro;
@@ -432,7 +432,6 @@ namespace QLKTX.View.FormView
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1301, 761);
             this.Name = "Main";

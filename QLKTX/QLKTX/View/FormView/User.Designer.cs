@@ -30,24 +30,24 @@
         {
             this.panelTitleBar = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.panelDesktop = new Guna.UI2.WinForms.Guna2Panel();
             this.icbtMin = new FontAwesome.Sharp.IconButton();
             this.icbtClose = new FontAwesome.Sharp.IconButton();
             this.icbtMax = new FontAwesome.Sharp.IconButton();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.icbtMenu = new FontAwesome.Sharp.IconButton();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.panelMenu = new System.Windows.Forms.Panel();
             this.icbtLogOut = new FontAwesome.Sharp.IconButton();
             this.btnChangePass = new FontAwesome.Sharp.IconButton();
             this.icbtTongQuan = new FontAwesome.Sharp.IconButton();
             this.icbtHoaDon = new FontAwesome.Sharp.IconButton();
             this.icbtThongTin = new FontAwesome.Sharp.IconButton();
-            this.panelDesktop = new Guna.UI2.WinForms.Guna2Panel();
+            this.icbtMenu = new FontAwesome.Sharp.IconButton();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panelTitleBar.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTitleBar
@@ -76,10 +76,60 @@
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.DeepPink;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(349, 3);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(418, 27);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(331, 20);
             this.guna2HtmlLabel2.TabIndex = 13;
             this.guna2HtmlLabel2.Text = "CHƯƠNG TRÌNH QUẢN LÝ KÝ TÚC XÁ";
             this.guna2HtmlLabel2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // panelLogo
+            // 
+            this.panelLogo.Controls.Add(this.icbtMenu);
+            this.panelLogo.Controls.Add(this.iconPictureBox1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(230, 114);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Enabled = false;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(276, 12);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(331, 20);
+            this.guna2HtmlLabel1.TabIndex = 13;
+            this.guna2HtmlLabel1.Text = "CHƯƠNG TRÌNH QUẢN LÝ KÝ TÚC XÁ";
+            // 
+            // panelMenu
+            // 
+            this.panelMenu.AllowDrop = true;
+            this.panelMenu.AutoScroll = true;
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.panelMenu.Controls.Add(this.icbtLogOut);
+            this.panelMenu.Controls.Add(this.btnChangePass);
+            this.panelMenu.Controls.Add(this.icbtTongQuan);
+            this.panelMenu.Controls.Add(this.icbtHoaDon);
+            this.panelMenu.Controls.Add(this.icbtThongTin);
+            this.panelMenu.Controls.Add(this.panelLogo);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(230, 761);
+            this.panelMenu.TabIndex = 10;
+            // 
+            // panelDesktop
+            // 
+            this.panelDesktop.BackgroundImage = global::QLKTX.Properties.Resources.hostel;
+            this.panelDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelDesktop.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
+            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesktop.Location = new System.Drawing.Point(230, 40);
+            this.panelDesktop.Name = "panelDesktop";
+            this.panelDesktop.Size = new System.Drawing.Size(1071, 721);
+            this.panelDesktop.TabIndex = 12;
             // 
             // icbtMin
             // 
@@ -139,80 +189,6 @@
             this.icbtMax.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.icbtMax.UseVisualStyleBackColor = false;
             this.icbtMax.Click += new System.EventHandler(this.icbtMax_Click);
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.Controls.Add(this.icbtMenu);
-            this.panelLogo.Controls.Add(this.iconPictureBox1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(230, 114);
-            this.panelLogo.TabIndex = 0;
-            // 
-            // icbtMenu
-            // 
-            this.icbtMenu.AutoSize = true;
-            this.icbtMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.icbtMenu.FlatAppearance.BorderSize = 0;
-            this.icbtMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icbtMenu.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.icbtMenu.ForeColor = System.Drawing.Color.White;
-            this.icbtMenu.IconChar = FontAwesome.Sharp.IconChar.Bars;
-            this.icbtMenu.IconColor = System.Drawing.Color.Cornsilk;
-            this.icbtMenu.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.icbtMenu.IconSize = 30;
-            this.icbtMenu.Location = new System.Drawing.Point(160, 0);
-            this.icbtMenu.Name = "icbtMenu";
-            this.icbtMenu.Size = new System.Drawing.Size(60, 60);
-            this.icbtMenu.TabIndex = 2;
-            this.icbtMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtMenu.UseVisualStyleBackColor = false;
-            this.icbtMenu.Click += new System.EventHandler(this.icbtMenu_Click);
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Hotel;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.Cornsilk;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 95;
-            this.iconPictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(95, 95);
-            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.iconPictureBox1.TabIndex = 0;
-            this.iconPictureBox1.TabStop = false;
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Enabled = false;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(276, 12);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(418, 27);
-            this.guna2HtmlLabel1.TabIndex = 13;
-            this.guna2HtmlLabel1.Text = "CHƯƠNG TRÌNH QUẢN LÝ KÝ TÚC XÁ";
-            // 
-            // panelMenu
-            // 
-            this.panelMenu.AllowDrop = true;
-            this.panelMenu.AutoScroll = true;
-            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.panelMenu.Controls.Add(this.icbtLogOut);
-            this.panelMenu.Controls.Add(this.btnChangePass);
-            this.panelMenu.Controls.Add(this.icbtTongQuan);
-            this.panelMenu.Controls.Add(this.icbtHoaDon);
-            this.panelMenu.Controls.Add(this.icbtThongTin);
-            this.panelMenu.Controls.Add(this.panelLogo);
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(230, 761);
-            this.panelMenu.TabIndex = 10;
             // 
             // icbtLogOut
             // 
@@ -302,8 +278,8 @@
             this.icbtHoaDon.Name = "icbtHoaDon";
             this.icbtHoaDon.Size = new System.Drawing.Size(230, 55);
             this.icbtHoaDon.TabIndex = 3;
-            this.icbtHoaDon.Tag = "Hoá đơn điện nước";
-            this.icbtHoaDon.Text = "Hoá đơn điện nước";
+            this.icbtHoaDon.Tag = "Hoá đơn";
+            this.icbtHoaDon.Text = "Hoá đơn";
             this.icbtHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.icbtHoaDon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.icbtHoaDon.UseVisualStyleBackColor = false;
@@ -333,20 +309,44 @@
             this.icbtThongTin.UseVisualStyleBackColor = false;
             this.icbtThongTin.Click += new System.EventHandler(this.icbtThongTin_Click);
             // 
-            // panelDesktop
+            // icbtMenu
             // 
-            this.panelDesktop.BackgroundImage = global::QLKTX.Properties.Resources.hostel;
-            this.panelDesktop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelDesktop.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dash;
-            this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(230, 40);
-            this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1071, 721);
-            this.panelDesktop.TabIndex = 12;
+            this.icbtMenu.AutoSize = true;
+            this.icbtMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.icbtMenu.FlatAppearance.BorderSize = 0;
+            this.icbtMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icbtMenu.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icbtMenu.ForeColor = System.Drawing.Color.White;
+            this.icbtMenu.IconChar = FontAwesome.Sharp.IconChar.Bars;
+            this.icbtMenu.IconColor = System.Drawing.Color.Cornsilk;
+            this.icbtMenu.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.icbtMenu.IconSize = 30;
+            this.icbtMenu.Location = new System.Drawing.Point(160, 0);
+            this.icbtMenu.Name = "icbtMenu";
+            this.icbtMenu.Size = new System.Drawing.Size(60, 60);
+            this.icbtMenu.TabIndex = 2;
+            this.icbtMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.icbtMenu.UseVisualStyleBackColor = false;
+            this.icbtMenu.Click += new System.EventHandler(this.icbtMenu_Click);
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.Cornsilk;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Hotel;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.Cornsilk;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 95;
+            this.iconPictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(95, 95);
+            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.iconPictureBox1.TabIndex = 0;
+            this.iconPictureBox1.TabStop = false;
             // 
             // User
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1301, 761);
@@ -355,7 +355,6 @@
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.panelMenu);
             this.Font = new System.Drawing.Font("Verdana", 10F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1301, 761);
             this.Name = "User";
@@ -365,8 +364,8 @@
             this.panelTitleBar.PerformLayout();
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panelMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -36,6 +36,7 @@ namespace QLKTX.View.UC_Control
             cbbKhu.Texts = temp.Phong.Khu.MaKhu;
             cbbPhong.Texts = temp.Phong.MaPhong;
             txtNgayHetHan.Texts = temp.HopDong.NgayHetHan.Value.Date.ToString("dd/MM/yyyy");
+            this.spaceline.Width = this.Width;
 
         }
         private void btSave_Click(object sender, EventArgs e)

@@ -41,9 +41,10 @@
             // 
             this.lbOldPass.BackColor = System.Drawing.Color.Transparent;
             this.lbOldPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbOldPass.Location = new System.Drawing.Point(106, 106);
+            this.lbOldPass.Location = new System.Drawing.Point(322, 71);
+            this.lbOldPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lbOldPass.Name = "lbOldPass";
-            this.lbOldPass.Size = new System.Drawing.Size(151, 27);
+            this.lbOldPass.Size = new System.Drawing.Size(124, 22);
             this.lbOldPass.TabIndex = 0;
             this.lbOldPass.Text = "Mật khẩu hiện tại";
             // 
@@ -51,9 +52,10 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(106, 155);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(322, 154);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(120, 27);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(98, 22);
             this.guna2HtmlLabel2.TabIndex = 1;
             this.guna2HtmlLabel2.Text = "Mật khẩu mới";
             // 
@@ -61,9 +63,10 @@
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(106, 201);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(322, 246);
+            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(195, 27);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(159, 22);
             this.guna2HtmlLabel3.TabIndex = 2;
             this.guna2HtmlLabel3.Text = "Nhập lại mật khẩu mới";
             // 
@@ -78,12 +81,13 @@
             this.txtPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPass.Location = new System.Drawing.Point(321, 106);
+            this.txtPass.Location = new System.Drawing.Point(483, 71);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '●';
             this.txtPass.PlaceholderText = "";
             this.txtPass.SelectedText = "";
-            this.txtPass.Size = new System.Drawing.Size(249, 30);
+            this.txtPass.Size = new System.Drawing.Size(187, 24);
             this.txtPass.TabIndex = 3;
             this.txtPass.UseSystemPasswordChar = true;
             // 
@@ -98,12 +102,13 @@
             this.txtNewPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewPass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNewPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNewPass.Location = new System.Drawing.Point(321, 155);
+            this.txtNewPass.Location = new System.Drawing.Point(483, 154);
+            this.txtNewPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNewPass.Name = "txtNewPass";
             this.txtNewPass.PasswordChar = '●';
             this.txtNewPass.PlaceholderText = "";
             this.txtNewPass.SelectedText = "";
-            this.txtNewPass.Size = new System.Drawing.Size(249, 30);
+            this.txtNewPass.Size = new System.Drawing.Size(187, 24);
             this.txtNewPass.TabIndex = 4;
             this.txtNewPass.UseSystemPasswordChar = true;
             // 
@@ -118,34 +123,35 @@
             this.txtComfirmNewPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtComfirmNewPass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtComfirmNewPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtComfirmNewPass.Location = new System.Drawing.Point(321, 201);
+            this.txtComfirmNewPass.Location = new System.Drawing.Point(483, 246);
+            this.txtComfirmNewPass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtComfirmNewPass.Name = "txtComfirmNewPass";
             this.txtComfirmNewPass.PasswordChar = '●';
             this.txtComfirmNewPass.PlaceholderText = "";
             this.txtComfirmNewPass.SelectedText = "";
-            this.txtComfirmNewPass.Size = new System.Drawing.Size(249, 30);
+            this.txtComfirmNewPass.Size = new System.Drawing.Size(187, 24);
             this.txtComfirmNewPass.TabIndex = 5;
             this.txtComfirmNewPass.UseSystemPasswordChar = true;
             // 
             // btnApply
             // 
-            this.btnApply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnApply.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnApply.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnApply.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnApply.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnApply.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnApply.ForeColor = System.Drawing.Color.White;
-            this.btnApply.Location = new System.Drawing.Point(597, 384);
+            this.btnApply.Location = new System.Drawing.Point(643, 309);
+            this.btnApply.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnApply.Name = "btnApply";
-            this.btnApply.Size = new System.Drawing.Size(124, 50);
+            this.btnApply.Size = new System.Drawing.Size(93, 41);
             this.btnApply.TabIndex = 7;
             this.btnApply.Text = "Apply";
             this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // ChangePassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.txtComfirmNewPass);
@@ -154,8 +160,9 @@
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.lbOldPass);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ChangePassword";
-            this.Size = new System.Drawing.Size(849, 490);
+            this.Size = new System.Drawing.Size(1071, 721);
             this.ResumeLayout(false);
             this.PerformLayout();
 
