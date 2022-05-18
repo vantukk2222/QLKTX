@@ -97,9 +97,13 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="BLL\BLL_AccSV.cs" />
+    <Compile Include="BLL\BLL_DienNuoc.cs" />
     <Compile Include="BLL\BLL_HoaDon.cs" />
     <Compile Include="BLL\BLL_PhieuDKOKTX.cs" />
     <Compile Include="BLL\BLL_PhieuGiaHanHD.cs" />
+    <Compile Include="DienNuoc.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="PhieuGiaHanHD.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -307,7 +311,7 @@
     <None Include="Resources\building.png" />
     <None Include="Resources\Exit.png" />
     <EmbeddedResource Include="QLKTX.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -321,7 +325,7 @@
     </Content>
     <Content Include="QLKTX_log.ldf">
       <DependentUpon>QLKTX.mdf</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>

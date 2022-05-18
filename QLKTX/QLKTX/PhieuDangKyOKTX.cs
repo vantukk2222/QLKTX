@@ -25,6 +25,8 @@ namespace QLKTX
         public string Khoa { get; set; }
         public string SDT { get; set; }
         public string HeDaoTao { get; set; }
+        public string PassWord { get; set; }
+        public string Username { get; set; }
     
         public virtual Phieu Phieu { get; set; }
     }

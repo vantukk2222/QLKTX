@@ -90,6 +90,16 @@ namespace QLKTX.View.FormView
                 MessageBox.Show("Hệ đào tạo không hợp lệ mời nhập lại");
                 return;
             }
+            if (txtUsername.Texts == null || txtUsername.Texts == "" || txtUsername.Texts.Length > 20)
+            {
+                MessageBox.Show("Tên đăng nhập không hợp lệ mời nhập lại");
+                return;
+            }
+            if (txtPassword.Texts == null || txtPassword.Texts == "" || txtPassword.Texts.Length > 16)
+            {
+                MessageBox.Show("Mật khẩu không hợp lệ mời nhập lại");
+                return;
+            }
             bool isSV = BLL_QLSV.Instance.checkSV(txtmssv.Texts);
             if (isSV)
             {
@@ -97,7 +107,7 @@ namespace QLKTX.View.FormView
             }
             else
             {
-                string _MaPhieu = "DK" + Convert.ToString(BLL_PhieuDKOKTX.Instance.GetLastMaPhieuDKOKTX()).PadLeft(5, '0') + 1;
+                string _MaPhieu = "DK" + Convert.ToString(BLL_PhieuDKOKTX.Instance.GetLastMaPhieuDKOKTX()).PadLeft(5, '0');
                 pdk = new PhieuDangKyOKTX
                 {
                     MaPhieu = _MaPhieu,
@@ -111,6 +121,8 @@ namespace QLKTX.View.FormView
                     KhoaHoc = txtKhoahoc.Texts,
                     HeDaoTao = txtHedaotao.Texts,
                     SDT = txtSDT.Texts,
+                    PassWord = txtPassword.Texts,
+                    Username = txtUsername.Texts,
                 };
                 BLL_PhieuDKOKTX.Instance.AddPhieuDKOKTX(pdk);
                 MessageBox.Show("đăng ký thành công");

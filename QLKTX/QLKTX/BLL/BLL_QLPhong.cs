@@ -68,9 +68,13 @@ namespace QLKTX.BLL
             
             
         }
-        public Phong getPhongNotFull()
+        public Phong getPhongNotFullByGender(bool gender)
         {
-            return DataHelper.db.Phongs.Where(p => p.SoNguoiHienTai < p.SoNguoiToiDa).FirstOrDefault();
+            Khu temp;
+            if (gender)
+                return DataHelper.db.Phongs.Where(p => p.SoNguoiHienTai < p.SoNguoiToiDa & p.Khu.PhanLoai.Trim() == "Nam").FirstOrDefault();
+            else
+                return DataHelper.db.Phongs.Where(p => p.SoNguoiHienTai < p.SoNguoiToiDa & p.Khu.PhanLoai.Trim() == "Nu").FirstOrDefault();
         }
         public void AddSVIntoPhong(Phong phong, SV sv)
         {

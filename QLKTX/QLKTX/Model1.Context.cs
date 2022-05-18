@@ -28,6 +28,7 @@ namespace QLKTX
         public virtual DbSet<AccCB> AccCBs { get; set; }
         public virtual DbSet<AccSV> AccSVs { get; set; }
         public virtual DbSet<CanBoQuanLy> CanBoQuanLies { get; set; }
+        public virtual DbSet<DienNuoc> DienNuocs { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<HopDong> HopDongs { get; set; }
         public virtual DbSet<Khu> Khus { get; set; }

@@ -40,5 +40,10 @@ namespace QLKTX.BLL
             sv.AccSV.PassWord = pass;
             DataHelper.db.SaveChanges();
         }
+        public void setAccSV(SV sv, string pass, string user)
+        {
+            sv.AccSV.PassWord = pass;
+            sv.AccSV.UserName = user;
+        }
     }
 }

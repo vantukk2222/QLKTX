@@ -31,7 +31,7 @@ namespace QLKTX.View.UC_Control
                 x.SV.HoTen,
                 x.NgayLap,
                 x.NgayThu,
-                x.DienNuoc,
+                x.DienNuoc.TìnhTrang,
                 x.TienPhong,
                 x.status
             }).ToList();
@@ -76,7 +76,7 @@ namespace QLKTX.View.UC_Control
             {
                 foreach (DataGridViewRow i in dgvHoaDon.SelectedRows)
                 {
-                    if (!Convert.ToBoolean(i.Cells["DienNuoc"].Value.ToString()))
+                    if (!Convert.ToBoolean(i.Cells["TìnhTrang"].Value.ToString()))
                     {
                         string msv = i.Cells["MSSV"].Value.ToString();
                         DateTime dt = Convert.ToDateTime(i.Cells["NgayLap"].Value);

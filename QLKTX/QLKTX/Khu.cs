@@ -23,6 +23,7 @@ namespace QLKTX
         public string MaKhu { get; set; }
         public string SDT { get; set; }
         public string MaCB { get; set; }
+        public string PhanLoai { get; set; }
     
         public virtual CanBoQuanLy CanBoQuanLy { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

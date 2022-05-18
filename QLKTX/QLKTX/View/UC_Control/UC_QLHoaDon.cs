@@ -16,7 +16,7 @@ namespace QLKTX.View.UC_Control
         public UC_QLHoaDon()
         {
             InitializeComponent();
-          //  BLL_HoaDon.Instance.CreateHoaDonMonthly();
+            BLL_HoaDon.Instance.CreateHoaDonMonthly();
             loadData();
         }
 
@@ -28,10 +28,10 @@ namespace QLKTX.View.UC_Control
                 x.MaHoaDon,
                 x.TenHoaDon,
                 x.MSSV,
-                x.SV.HoTen,
+                //x.SV.HoTen,
                 x.NgayLap,
                 x.NgayThu,
-                x.DienNuoc,
+                x.DienNuoc.TìnhTrang,
                 x.TienPhong,
                 x.status
             }).ToList();
@@ -42,13 +42,13 @@ namespace QLKTX.View.UC_Control
             dgvHoaDon.Columns[0].HeaderText = "Mã hóa đơn";
             dgvHoaDon.Columns[1].HeaderText = "Tên hóa đơn";
             dgvHoaDon.Columns[2].HeaderText = "MSSV";
-            dgvHoaDon.Columns[3].HeaderText = "Họ tên";
-            dgvHoaDon.Columns[4].HeaderText = "Ngày lập";
-            dgvHoaDon.Columns[5].HeaderText = "Ngày thu";
-            dgvHoaDon.Columns[6].HeaderText = "Điện nước";
-            dgvHoaDon.Columns[7].HeaderText = "Tiền phòng";
-            dgvHoaDon.Columns[8].HeaderText = "Đã thanh toán";
-            dgvHoaDon.Columns[8].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //dgvHoaDon.Columns[3].HeaderText = "Họ tên";
+            dgvHoaDon.Columns[3].HeaderText = "Ngày lập";
+            dgvHoaDon.Columns[4].HeaderText = "Ngày thu";
+            dgvHoaDon.Columns[5].HeaderText = "Điện nước";
+            dgvHoaDon.Columns[6].HeaderText = "Tiền phòng";
+            dgvHoaDon.Columns[7].HeaderText = "Đã thanh toán";
+            dgvHoaDon.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
         }
 

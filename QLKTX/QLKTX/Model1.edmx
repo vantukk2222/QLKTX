@@ -17,8 +17,8 @@
           <Key>
             <PropertyRef Name="MSSV" />
           </Key>
-          <Property Name="UserName" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="PassWord" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PassWord" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="MSSV" Type="nchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="CanBoQuanLy">
@@ -33,17 +33,25 @@
           <Property Name="SDT" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="DiaChi" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="DienNuoc">
+          <Key>
+            <PropertyRef Name="MaDienNuoc" />
+          </Key>
+          <Property Name="MaDienNuoc" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="TìnhTrang" Type="bit" />
+          <Property Name="MaPhong" Type="nchar" MaxLength="10" />
+        </EntityType>
         <EntityType Name="HoaDon">
           <Key>
             <PropertyRef Name="MaHoaDon" />
           </Key>
           <Property Name="MaHoaDon" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="TenHoaDon" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="DienNuoc" Type="bit" Nullable="false" />
+          <Property Name="MaDienNuoc" Type="nchar" MaxLength="10" />
           <Property Name="TienPhong" Type="float" Nullable="false" />
           <Property Name="NgayLap" Type="date" Nullable="false" />
           <Property Name="NgayThu" Type="date" />
-          <Property Name="MSSV" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="MSSV" Type="nchar" MaxLength="10" />
           <Property Name="status" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="HopDong">
@@ -62,6 +70,7 @@
           <Property Name="MaKhu" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="SDT" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="MaCB" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="PhanLoai" Type="nchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="Phieu">
           <Key>
@@ -90,6 +99,8 @@
           <Property Name="Khoa" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="SDT" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="HeDaoTao" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="PassWord" Type="nvarchar" MaxLength="50" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="PhieuGiaHanHD">
           <Key>
@@ -166,8 +177,32 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_DienNuoc_Phong">
+          <End Role="Phong" Type="Self.Phong" Multiplicity="0..1" />
+          <End Role="DienNuoc" Type="Self.DienNuoc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Phong">
+              <PropertyRef Name="MaPhong" />
+            </Principal>
+            <Dependent Role="DienNuoc">
+              <PropertyRef Name="MaPhong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoaDon_DienNuoc">
+          <End Role="DienNuoc" Type="Self.DienNuoc" Multiplicity="0..1" />
+          <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DienNuoc">
+              <PropertyRef Name="MaDienNuoc" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="MaDienNuoc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_HoaDon_SV">
-          <End Role="SV" Type="Self.SV" Multiplicity="1" />
+          <End Role="SV" Type="Self.SV" Multiplicity="0..1" />
           <End Role="HoaDon" Type="Self.HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="SV">
@@ -283,7 +318,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_SV_HopDong">
-          <End Role="HopDong" Type="Self.HopDong" Multiplicity="0..1" />
+          <End Role="HopDong" Type="Self.HopDong" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="SV" Type="Self.SV" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HopDong">
@@ -310,6 +347,7 @@
           <EntitySet Name="AccCB" EntityType="Self.AccCB" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AccSV" EntityType="Self.AccSV" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CanBoQuanLy" EntityType="Self.CanBoQuanLy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DienNuoc" EntityType="Self.DienNuoc" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HopDong" EntityType="Self.HopDong" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Khu" EntityType="Self.Khu" Schema="dbo" store:Type="Tables" />
@@ -326,6 +364,14 @@
           <AssociationSet Name="FK_AccSV_SV" Association="Self.FK_AccSV_SV">
             <End Role="SV" EntitySet="SV" />
             <End Role="AccSV" EntitySet="AccSV" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DienNuoc_Phong" Association="Self.FK_DienNuoc_Phong">
+            <End Role="Phong" EntitySet="Phong" />
+            <End Role="DienNuoc" EntitySet="DienNuoc" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoaDon_DienNuoc" Association="Self.FK_HoaDon_DienNuoc">
+            <End Role="DienNuoc" EntitySet="DienNuoc" />
+            <End Role="HoaDon" EntitySet="HoaDon" />
           </AssociationSet>
           <AssociationSet Name="FK_HoaDon_SV" Association="Self.FK_HoaDon_SV">
             <End Role="SV" EntitySet="SV" />
@@ -380,6 +426,7 @@
           <EntitySet Name="AccCBs" EntityType="QLKTXModel.AccCB" />
           <EntitySet Name="AccSVs" EntityType="QLKTXModel.AccSV" />
           <EntitySet Name="CanBoQuanLies" EntityType="QLKTXModel.CanBoQuanLy" />
+          <EntitySet Name="DienNuocs" EntityType="QLKTXModel.DienNuoc" />
           <EntitySet Name="HoaDons" EntityType="QLKTXModel.HoaDon" />
           <EntitySet Name="HopDongs" EntityType="QLKTXModel.HopDong" />
           <EntitySet Name="Khus" EntityType="QLKTXModel.Khu" />
@@ -400,6 +447,14 @@
           <AssociationSet Name="FK_Khu_CanBoQuanLy" Association="QLKTXModel.FK_Khu_CanBoQuanLy">
             <End Role="CanBoQuanLy" EntitySet="CanBoQuanLies" />
             <End Role="Khu" EntitySet="Khus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DienNuoc_Phong" Association="QLKTXModel.FK_DienNuoc_Phong">
+            <End Role="Phong" EntitySet="Phongs" />
+            <End Role="DienNuoc" EntitySet="DienNuocs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_HoaDon_DienNuoc" Association="QLKTXModel.FK_HoaDon_DienNuoc">
+            <End Role="DienNuoc" EntitySet="DienNuocs" />
+            <End Role="HoaDon" EntitySet="HoaDons" />
           </AssociationSet>
           <AssociationSet Name="FK_HoaDon_SV" Association="QLKTXModel.FK_HoaDon_SV">
             <End Role="SV" EntitySet="SVs" />
@@ -455,8 +510,8 @@
           <Key>
             <PropertyRef Name="MSSV" />
           </Key>
-          <Property Name="UserName" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="PassWord" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PassWord" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MSSV" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="SV" Relationship="QLKTXModel.FK_AccSV_SV" FromRole="AccSV" ToRole="SV" />
         </EntityType>
@@ -474,18 +529,29 @@
           <NavigationProperty Name="AccCB" Relationship="QLKTXModel.FK_AccCB_CanBoQuanLy" FromRole="CanBoQuanLy" ToRole="AccCB" />
           <NavigationProperty Name="Khus" Relationship="QLKTXModel.FK_Khu_CanBoQuanLy" FromRole="CanBoQuanLy" ToRole="Khu" />
         </EntityType>
+        <EntityType Name="DienNuoc">
+          <Key>
+            <PropertyRef Name="MaDienNuoc" />
+          </Key>
+          <Property Name="MaDienNuoc" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="TìnhTrang" Type="Boolean" />
+          <Property Name="MaPhong" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Phong" Relationship="QLKTXModel.FK_DienNuoc_Phong" FromRole="DienNuoc" ToRole="Phong" />
+          <NavigationProperty Name="HoaDons" Relationship="QLKTXModel.FK_HoaDon_DienNuoc" FromRole="DienNuoc" ToRole="HoaDon" />
+        </EntityType>
         <EntityType Name="HoaDon">
           <Key>
             <PropertyRef Name="MaHoaDon" />
           </Key>
           <Property Name="MaHoaDon" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="TenHoaDon" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="DienNuoc" Type="Boolean" Nullable="false" />
+          <Property Name="MaDienNuoc" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="TienPhong" Type="Double" Nullable="false" />
           <Property Name="NgayLap" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="NgayThu" Type="DateTime" Precision="0" />
-          <Property Name="MSSV" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="MSSV" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="status" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="DienNuoc" Relationship="QLKTXModel.FK_HoaDon_DienNuoc" FromRole="HoaDon" ToRole="DienNuoc" />
           <NavigationProperty Name="SV" Relationship="QLKTXModel.FK_HoaDon_SV" FromRole="HoaDon" ToRole="SV" />
         </EntityType>
         <EntityType Name="HopDong">
@@ -506,6 +572,7 @@
           <Property Name="MaKhu" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="SDT" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="MaCB" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="PhanLoai" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="CanBoQuanLy" Relationship="QLKTXModel.FK_Khu_CanBoQuanLy" FromRole="Khu" ToRole="CanBoQuanLy" />
           <NavigationProperty Name="Phongs" Relationship="QLKTXModel.FK_Phong_Khu" FromRole="Khu" ToRole="Phong" />
         </EntityType>
@@ -541,6 +608,8 @@
           <Property Name="Khoa" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="SDT" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="HeDaoTao" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="PassWord" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Phieu" Relationship="QLKTXModel.FK_PhieuDangKyOKTX_Phieu" FromRole="PhieuDangKyOKTX" ToRole="Phieu" />
         </EntityType>
         <EntityType Name="PhieuGiaHanHD">
@@ -574,10 +643,11 @@
           <Property Name="SoNguoiHienTai" Type="Int32" Nullable="false" />
           <Property Name="SoNguoiToiDa" Type="Int32" Nullable="false" />
           <Property Name="Status" Type="Boolean" />
+          <Property Name="GiaPhong" Type="Double" />
+          <NavigationProperty Name="DienNuocs" Relationship="QLKTXModel.FK_DienNuoc_Phong" FromRole="Phong" ToRole="DienNuoc" />
           <NavigationProperty Name="Khu" Relationship="QLKTXModel.FK_Phong_Khu" FromRole="Phong" ToRole="Khu" />
           <NavigationProperty Name="Phieux" Relationship="QLKTXModel.FK_Phieu_Phong" FromRole="Phong" ToRole="Phieu" />
           <NavigationProperty Name="SVs" Relationship="QLKTXModel.FK_SV_Phong" FromRole="Phong" ToRole="SV" />
-          <Property Name="GiaPhong" Type="Double" />
         </EntityType>
         <EntityType Name="SV">
           <Key>
@@ -641,8 +711,32 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_DienNuoc_Phong">
+          <End Type="QLKTXModel.Phong" Role="Phong" Multiplicity="0..1" />
+          <End Type="QLKTXModel.DienNuoc" Role="DienNuoc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Phong">
+              <PropertyRef Name="MaPhong" />
+            </Principal>
+            <Dependent Role="DienNuoc">
+              <PropertyRef Name="MaPhong" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_HoaDon_DienNuoc">
+          <End Type="QLKTXModel.DienNuoc" Role="DienNuoc" Multiplicity="0..1" />
+          <End Type="QLKTXModel.HoaDon" Role="HoaDon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DienNuoc">
+              <PropertyRef Name="MaDienNuoc" />
+            </Principal>
+            <Dependent Role="HoaDon">
+              <PropertyRef Name="MaDienNuoc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_HoaDon_SV">
-          <End Type="QLKTXModel.SV" Role="SV" Multiplicity="1" />
+          <End Type="QLKTXModel.SV" Role="SV" Multiplicity="0..1" />
           <End Type="QLKTXModel.HoaDon" Role="HoaDon" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="SV">
@@ -666,7 +760,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_SV_HopDong">
-          <End Type="QLKTXModel.HopDong" Role="HopDong" Multiplicity="0..1" />
+          <End Type="QLKTXModel.HopDong" Role="HopDong" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Type="QLKTXModel.SV" Role="SV" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="HopDong">
@@ -744,7 +840,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_PhieuKyLuat_Phieu">
-          <End Type="QLKTXModel.Phieu" Role="Phieu" Multiplicity="1" />
+          <End Type="QLKTXModel.Phieu" Role="Phieu" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Type="QLKTXModel.PhieuKyLuat" Role="PhieuKyLuat" Multiplicity="0..1" />
           <ReferentialConstraint>
             <Principal Role="Phieu">
@@ -804,6 +902,15 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="DienNuocs">
+            <EntityTypeMapping TypeName="QLKTXModel.DienNuoc">
+              <MappingFragment StoreEntitySet="DienNuoc">
+                <ScalarProperty Name="MaPhong" ColumnName="MaPhong" />
+                <ScalarProperty Name="TìnhTrang" ColumnName="TìnhTrang" />
+                <ScalarProperty Name="MaDienNuoc" ColumnName="MaDienNuoc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="HoaDons">
             <EntityTypeMapping TypeName="QLKTXModel.HoaDon">
               <MappingFragment StoreEntitySet="HoaDon">
@@ -812,7 +919,7 @@
                 <ScalarProperty Name="NgayThu" ColumnName="NgayThu" />
                 <ScalarProperty Name="NgayLap" ColumnName="NgayLap" />
                 <ScalarProperty Name="TienPhong" ColumnName="TienPhong" />
-                <ScalarProperty Name="DienNuoc" ColumnName="DienNuoc" />
+                <ScalarProperty Name="MaDienNuoc" ColumnName="MaDienNuoc" />
                 <ScalarProperty Name="TenHoaDon" ColumnName="TenHoaDon" />
                 <ScalarProperty Name="MaHoaDon" ColumnName="MaHoaDon" />
               </MappingFragment>
@@ -831,6 +938,7 @@
           <EntitySetMapping Name="Khus">
             <EntityTypeMapping TypeName="QLKTXModel.Khu">
               <MappingFragment StoreEntitySet="Khu">
+                <ScalarProperty Name="PhanLoai" ColumnName="PhanLoai" />
                 <ScalarProperty Name="MaCB" ColumnName="MaCB" />
                 <ScalarProperty Name="SDT" ColumnName="SDT" />
                 <ScalarProperty Name="MaKhu" ColumnName="MaKhu" />
@@ -853,6 +961,8 @@
           <EntitySetMapping Name="PhieuDangKyOKTXes">
             <EntityTypeMapping TypeName="QLKTXModel.PhieuDangKyOKTX">
               <MappingFragment StoreEntitySet="PhieuDangKyOKTX">
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="PassWord" ColumnName="PassWord" />
                 <ScalarProperty Name="HeDaoTao" ColumnName="HeDaoTao" />
                 <ScalarProperty Name="SDT" ColumnName="SDT" />
                 <ScalarProperty Name="Khoa" ColumnName="Khoa" />

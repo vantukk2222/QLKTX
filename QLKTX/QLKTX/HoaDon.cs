@@ -16,13 +16,14 @@ namespace QLKTX
     {
         public string MaHoaDon { get; set; }
         public string TenHoaDon { get; set; }
-        public bool DienNuoc { get; set; }
+        public string MaDienNuoc { get; set; }
         public double TienPhong { get; set; }
         public System.DateTime NgayLap { get; set; }
         public Nullable<System.DateTime> NgayThu { get; set; }
         public string MSSV { get; set; }
         public bool status { get; set; }
     
+        public virtual DienNuoc DienNuoc { get; set; }
         public virtual SV SV { get; set; }
     }
 }

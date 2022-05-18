@@ -15,7 +15,7 @@ namespace QLKTX.View.UC_Control
 {
     public partial class UC_QLSV : UserControl
     {
-       // QLKTXEntities1 db = new QLKTXEntities1();
+        // QLKTXEntities1 db = new QLKTXEntities1();
         public UC_QLSV()
         {
             InitializeComponent();
@@ -55,7 +55,12 @@ namespace QLKTX.View.UC_Control
             guna2DataGridView1.Columns[9].HeaderText = "Hệ Đào Tạo";
             guna2DataGridView1.Columns[10].HeaderText = "SĐT";
             guna2DataGridView1.Columns[10].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            
+
+            foreach(DataGridViewRow i in guna2DataGridView1.Rows)
+            {
+                i.Cells[0].Value = "1";
+            }
+            guna2DataGridView1.Update();
         }
         public void LoadData()
         {

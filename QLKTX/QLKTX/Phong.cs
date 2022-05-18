@@ -17,6 +17,7 @@ namespace QLKTX
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Phong()
         {
+            this.DienNuocs = new HashSet<DienNuoc>();
             this.Phieux = new HashSet<Phieu>();
             this.SVs = new HashSet<SV>();
         }
@@ -30,6 +31,8 @@ namespace QLKTX
         public Nullable<bool> Status { get; set; }
         public Nullable<double> GiaPhong { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DienNuoc> DienNuocs { get; set; }
         public virtual Khu Khu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Phieu> Phieux { get; set; }

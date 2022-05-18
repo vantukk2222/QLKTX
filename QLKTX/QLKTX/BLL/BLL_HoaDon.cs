@@ -54,9 +54,9 @@ namespace QLKTX.BLL
 
            return check;
         }
-        public void createHoaDonTienPhongBySV(SV sv)
+        public void createHoaDonTienPhongBySV(SV sv,DienNuoc _DienNuoc)
         {
-            string TenHoaDon = "Tiền Phòng " +  " Tháng " + DateTime.Now.Month + "/" + DateTime.Now.Year;
+            string TenHoaDon = "Tiền Phòng " +sv.Phong.TenPhong.Trim() +  " Tháng " + DateTime.Now.Month + "/" + DateTime.Now.Year;
             if (CheckHoaDonThang(sv, TenHoaDon))
                 return;
             string MaHoaDon = "B" + Convert.ToString(GetLastMaHoaDon()).PadLeft(5, '0');
@@ -64,8 +64,8 @@ namespace QLKTX.BLL
                 NgayLap = DateTime.Now.Date,
                 MSSV = sv.MSSV,
                 MaHoaDon = MaHoaDon,
+                DienNuoc = _DienNuoc,
                 TenHoaDon = TenHoaDon,
-                DienNuoc =false,
                 status =false,
                 TienPhong = sv.Phong.GiaPhong.Value
             };
@@ -75,9 +75,25 @@ namespace QLKTX.BLL
         public void CreateHoaDonMonthly()
         {
             List<SV> sv = DataHelper.db.SVs.ToList();
-            foreach(SV i in sv)
+            List<Phong> phong = DataHelper.db.Phongs.ToList();
+            foreach (Phong i in phong)
             {
-                createHoaDonTienPhongBySV(i);
+                if (i.SoNguoiHienTai > 0)
+                {
+                    string TenHoaDon = "Tiền Phòng " + i.TenPhong.Trim() + " Tháng " + DateTime.Now.Month + "/" + DateTime.Now.Year;
+                    DienNuoc temp = DataHelper.db.HoaDons.Where(x=>x.TenHoaDon.Trim()==TenHoaDon).FirstOrDefault().DienNuoc;
+                    if (!BLL_HoaDon.Instance.CheckHoaDonThang(i.SVs.FirstOrDefault(), TenHoaDon))
+                    {
+                        temp = new DienNuoc { MaDienNuoc = BLL_DienNuoc.Instance.NewMaDienNuoc(), Phong = i, TìnhTrang = false };
+                        DataHelper.db.DienNuocs.Add(temp);
+                        DataHelper.db.SaveChanges();
+
+                    }
+                    foreach (SV j in i.SVs)
+                    {
+                        createHoaDonTienPhongBySV(j,temp);
+                    }
+                }
             }
         }
         public List<HoaDon> GetHoaDons(string msv)
@@ -97,12 +113,12 @@ namespace QLKTX.BLL
             HoaDon hoadon = DataHelper.db.HoaDons.Where(p => p.MSSV == mssv && p.NgayLap == ngaylap).Select(p => p).FirstOrDefault();
 
             hoadon.NgayThu = DateTime.Now.Date;
-            hoadon.DienNuoc = true;
+            hoadon.DienNuoc.TìnhTrang = true;
             var listhoadon = DataHelper.db.HoaDons.Where(p => p.TenHoaDon.Contains(hoadon.TenHoaDon)).Select(p => p);
             foreach (HoaDon i in listhoadon)
             {
                 DateTime dt = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-                i.DienNuoc = true;
+                i.DienNuoc.TìnhTrang = true;
                 i.NgayThu = dt;
             }
 

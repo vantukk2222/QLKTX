@@ -66,7 +66,8 @@ namespace QLKTX.BLL
                     MaHopDong = "HD" + Convert.ToString(BLL_HopDong.Instance.GetLastMaHopDong()).PadLeft(4, '0')
                 };
                 BLL_QLSV.Instance.AddSV(temp);
-                BLL_QLPhong.Instance.AddSVIntoPhong(BLL_QLPhong.Instance.getPhongNotFull(), temp);
+                BLL_AccSV.Instance.setAccSV(temp,p.PassWord,p.Username);
+                BLL_QLPhong.Instance.AddSVIntoPhong(BLL_QLPhong.Instance.getPhongNotFullByGender(temp.GioiTinh), temp);
                 DataHelper.db.Phieux.Find(p.MaPhieu).status = true;
             }
             DataHelper.db.SaveChanges();

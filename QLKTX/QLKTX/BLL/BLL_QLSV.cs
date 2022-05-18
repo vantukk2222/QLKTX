@@ -88,7 +88,7 @@ namespace QLKTX.BLL
 
             try
             {
-                if(sv.Phong!=null)
+                if (sv.Phong != null)
                     sv.Phong.SoNguoiHienTai--;
                 DataHelper.db.SVs.Remove(sv);
                 DataHelper.db.SaveChanges();
