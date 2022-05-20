@@ -99,12 +99,12 @@ namespace QLKTX.View.UC_Control
         private void icbtSearch_Click(object sender, EventArgs e)
         {
             string s;
-            if (cbbKhu.SelectedText == null)
-            {
-                s = "";
-            }
-            else s = cbbKhu.SelectedText;
-            ShowDataGridView(BLL_QLPhong.Instance.GetAllByKhuMa(s,txtSearch.Texts.Trim()));
+            if (cbbKhu.SelectedItem.ToString() == null)
+             {
+                 s = "";
+             }
+             else s = cbbKhu.SelectedItem.ToString();
+             ShowDataGridView(BLL_QLPhong.Instance.GetAllByKhuMa(s,txtSearch.Texts.Trim()));
 
         }
     }

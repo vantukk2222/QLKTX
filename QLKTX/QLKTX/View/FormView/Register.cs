@@ -101,9 +101,14 @@ namespace QLKTX.View.FormView
                 return;
             }
             bool isSV = BLL_QLSV.Instance.checkSV(txtmssv.Texts);
+            bool isUserName = BLL_AccSV.Instance.CheckAccount(txtUsername.Texts);
             if (isSV)
             {
-                MessageBox.Show("Trùng MSV");
+                MessageBox.Show("Trùng MSV!");
+            }
+            else if (isUserName)
+            {
+                MessageBox.Show("Username đã tồn tại!");
             }
             else
             {
@@ -126,9 +131,9 @@ namespace QLKTX.View.FormView
                 };
                 BLL_PhieuDKOKTX.Instance.AddPhieuDKOKTX(pdk);
                 MessageBox.Show("đăng ký thành công");
-                this.Hide();
-                Login flog = new Login();
-                flog.Show();
+                //this.Hide();
+                //Login flog = new Login();
+                //flog.Show();
             }
         }
     }

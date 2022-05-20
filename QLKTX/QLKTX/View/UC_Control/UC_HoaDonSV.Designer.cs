@@ -29,11 +29,12 @@ namespace QLKTX.View.UC_Control
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabcontrol1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.icbttiendn = new FontAwesome.Sharp.IconButton();
             this.dtpNgayCuoi = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtpNgayDau = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -45,7 +46,6 @@ namespace QLKTX.View.UC_Control
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.icbttiendn = new FontAwesome.Sharp.IconButton();
             this.tabcontrol1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
@@ -83,6 +83,29 @@ namespace QLKTX.View.UC_Control
             this.tabPage1.Size = new System.Drawing.Size(1063, 643);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Hoá đơn";
+            // 
+            // icbttiendn
+            // 
+            this.icbttiendn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.icbttiendn.BackColor = System.Drawing.Color.ForestGreen;
+            this.icbttiendn.FlatAppearance.BorderSize = 0;
+            this.icbttiendn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.icbttiendn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
+            this.icbttiendn.ForeColor = System.Drawing.Color.White;
+            this.icbttiendn.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckAlt;
+            this.icbttiendn.IconColor = System.Drawing.SystemColors.ButtonFace;
+            this.icbttiendn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.icbttiendn.IconSize = 25;
+            this.icbttiendn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.icbttiendn.Location = new System.Drawing.Point(916, 144);
+            this.icbttiendn.Name = "icbttiendn";
+            this.icbttiendn.Size = new System.Drawing.Size(130, 37);
+            this.icbttiendn.TabIndex = 13;
+            this.icbttiendn.Text = "Điện nước";
+            this.icbttiendn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.icbttiendn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.icbttiendn.UseVisualStyleBackColor = false;
+            this.icbttiendn.Click += new System.EventHandler(this.icbttiendn_Click);
             // 
             // dtpNgayCuoi
             // 
@@ -178,8 +201,8 @@ namespace QLKTX.View.UC_Control
             // 
             this.dgvHoaDon.AllowUserToAddRows = false;
             this.dgvHoaDon.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
-            this.dgvHoaDon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
+            this.dgvHoaDon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -188,23 +211,23 @@ namespace QLKTX.View.UC_Control
             this.dgvHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvHoaDon.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvHoaDon.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHoaDon.ColumnHeadersHeight = 50;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvHoaDon.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHoaDon.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvHoaDon.EnableHeadersVisualStyles = false;
             this.dgvHoaDon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(220)))), ((int)(((byte)(242)))));
             this.dgvHoaDon.Location = new System.Drawing.Point(3, 101);
@@ -289,29 +312,6 @@ namespace QLKTX.View.UC_Control
             this.iconPictureBox1.TabIndex = 28;
             this.iconPictureBox1.TabStop = false;
             // 
-            // icbttiendn
-            // 
-            this.icbttiendn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.icbttiendn.BackColor = System.Drawing.Color.ForestGreen;
-            this.icbttiendn.FlatAppearance.BorderSize = 0;
-            this.icbttiendn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icbttiendn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
-            this.icbttiendn.ForeColor = System.Drawing.Color.White;
-            this.icbttiendn.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckAlt;
-            this.icbttiendn.IconColor = System.Drawing.SystemColors.ButtonFace;
-            this.icbttiendn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icbttiendn.IconSize = 25;
-            this.icbttiendn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbttiendn.Location = new System.Drawing.Point(916, 156);
-            this.icbttiendn.Name = "icbttiendn";
-            this.icbttiendn.Size = new System.Drawing.Size(130, 37);
-            this.icbttiendn.TabIndex = 13;
-            this.icbttiendn.Text = "Điện nước";
-            this.icbttiendn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbttiendn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.icbttiendn.UseVisualStyleBackColor = false;
-            this.icbttiendn.Click += new System.EventHandler(this.icbttiendn_Click);
-            // 
             // UC_HoaDonSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -319,7 +319,7 @@ namespace QLKTX.View.UC_Control
             this.Controls.Add(this.tabcontrol1);
             this.Controls.Add(this.guna2Panel1);
             this.Font = new System.Drawing.Font("Verdana", 10F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_HoaDonSV";
             this.Size = new System.Drawing.Size(1071, 721);
             this.tabcontrol1.ResumeLayout(false);

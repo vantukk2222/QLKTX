@@ -44,7 +44,6 @@ namespace QLKTX.View.FormView
             this.dateNgaySinh = new RJCodeAdvance.RJControls.RJDatePicker();
             this.checkSex = new CustomBox.RJControls.RJToggleButton();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtmssv = new CustomBox.RJControls.RJTextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -57,6 +56,8 @@ namespace QLKTX.View.FormView
             this.txtPassword = new CustomBox.RJControls.RJTextBox();
             this.guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtUsername = new CustomBox.RJControls.RJTextBox();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,7 +69,7 @@ namespace QLKTX.View.FormView
             this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel10.Location = new System.Drawing.Point(807, 329);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(127, 32);
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(108, 27);
             this.guna2HtmlLabel10.TabIndex = 1187;
             this.guna2HtmlLabel10.Text = "Hệ đào tạo";
             // 
@@ -90,7 +91,7 @@ namespace QLKTX.View.FormView
             this.txtHedaotao.PasswordChar = false;
             this.txtHedaotao.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtHedaotao.PlaceholderText = "";
-            this.txtHedaotao.Size = new System.Drawing.Size(194, 40);
+            this.txtHedaotao.Size = new System.Drawing.Size(194, 35);
             this.txtHedaotao.TabIndex = 1186;
             this.txtHedaotao.Texts = "";
             this.txtHedaotao.UnderlinedStyle = false;
@@ -103,7 +104,7 @@ namespace QLKTX.View.FormView
             this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel9.Location = new System.Drawing.Point(435, 329);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(55, 32);
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(45, 27);
             this.guna2HtmlLabel9.TabIndex = 1185;
             this.guna2HtmlLabel9.Text = "SDT";
             // 
@@ -125,7 +126,7 @@ namespace QLKTX.View.FormView
             this.txtSDT.PasswordChar = false;
             this.txtSDT.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtSDT.PlaceholderText = "";
-            this.txtSDT.Size = new System.Drawing.Size(194, 40);
+            this.txtSDT.Size = new System.Drawing.Size(194, 35);
             this.txtSDT.TabIndex = 1184;
             this.txtSDT.Texts = "";
             this.txtSDT.UnderlinedStyle = false;
@@ -138,7 +139,7 @@ namespace QLKTX.View.FormView
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel8.Location = new System.Drawing.Point(433, 265);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(62, 32);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(53, 27);
             this.guna2HtmlLabel8.TabIndex = 1183;
             this.guna2HtmlLabel8.Text = "Khoa";
             // 
@@ -160,7 +161,7 @@ namespace QLKTX.View.FormView
             this.txtKhoa.PasswordChar = false;
             this.txtKhoa.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtKhoa.PlaceholderText = "";
-            this.txtKhoa.Size = new System.Drawing.Size(194, 40);
+            this.txtKhoa.Size = new System.Drawing.Size(194, 35);
             this.txtKhoa.TabIndex = 1182;
             this.txtKhoa.Texts = "";
             this.txtKhoa.UnderlinedStyle = false;
@@ -173,7 +174,7 @@ namespace QLKTX.View.FormView
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(808, 264);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(110, 32);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(94, 27);
             this.guna2HtmlLabel7.TabIndex = 1181;
             this.guna2HtmlLabel7.Text = "Khóa học";
             // 
@@ -195,7 +196,7 @@ namespace QLKTX.View.FormView
             this.txtKhoahoc.PasswordChar = false;
             this.txtKhoahoc.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtKhoahoc.PlaceholderText = "";
-            this.txtKhoahoc.Size = new System.Drawing.Size(194, 40);
+            this.txtKhoahoc.Size = new System.Drawing.Size(194, 35);
             this.txtKhoahoc.TabIndex = 1180;
             this.txtKhoahoc.Texts = "";
             this.txtKhoahoc.UnderlinedStyle = false;
@@ -208,7 +209,7 @@ namespace QLKTX.View.FormView
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(807, 192);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(114, 32);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(97, 27);
             this.guna2HtmlLabel6.TabIndex = 1179;
             this.guna2HtmlLabel6.Text = "Quê quán";
             // 
@@ -230,7 +231,7 @@ namespace QLKTX.View.FormView
             this.txtQue.PasswordChar = false;
             this.txtQue.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtQue.PlaceholderText = "";
-            this.txtQue.Size = new System.Drawing.Size(194, 40);
+            this.txtQue.Size = new System.Drawing.Size(194, 35);
             this.txtQue.TabIndex = 1178;
             this.txtQue.Texts = "";
             this.txtQue.UnderlinedStyle = false;
@@ -243,7 +244,7 @@ namespace QLKTX.View.FormView
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(435, 193);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(93, 32);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(80, 27);
             this.guna2HtmlLabel5.TabIndex = 1177;
             this.guna2HtmlLabel5.Text = "Lớp học";
             // 
@@ -265,7 +266,7 @@ namespace QLKTX.View.FormView
             this.txtLop.PasswordChar = false;
             this.txtLop.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtLop.PlaceholderText = "";
-            this.txtLop.Size = new System.Drawing.Size(194, 40);
+            this.txtLop.Size = new System.Drawing.Size(194, 35);
             this.txtLop.TabIndex = 1176;
             this.txtLop.Texts = "";
             this.txtLop.UnderlinedStyle = false;
@@ -290,7 +291,7 @@ namespace QLKTX.View.FormView
             // 
             this.checkSex.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkSex.AutoSize = true;
-            this.checkSex.Location = new System.Drawing.Point(552, 139);
+            this.checkSex.Location = new System.Drawing.Point(605, 135);
             this.checkSex.MinimumSize = new System.Drawing.Size(45, 22);
             this.checkSex.Name = "checkSex";
             this.checkSex.OffBackColor = System.Drawing.Color.Gray;
@@ -309,21 +310,9 @@ namespace QLKTX.View.FormView
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(803, 134);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(117, 32);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(99, 27);
             this.guna2HtmlLabel4.TabIndex = 1173;
             this.guna2HtmlLabel4.Text = "Ngày sinh";
-            // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(433, 135);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(97, 32);
-            this.guna2HtmlLabel3.TabIndex = 1172;
-            this.guna2HtmlLabel3.Text = "Giới tính";
             // 
             // guna2HtmlLabel2
             // 
@@ -333,7 +322,7 @@ namespace QLKTX.View.FormView
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(788, 66);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(147, 32);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(125, 27);
             this.guna2HtmlLabel2.TabIndex = 1171;
             this.guna2HtmlLabel2.Text = "Mã sinh viên";
             // 
@@ -355,7 +344,7 @@ namespace QLKTX.View.FormView
             this.txtmssv.PasswordChar = false;
             this.txtmssv.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtmssv.PlaceholderText = "";
-            this.txtmssv.Size = new System.Drawing.Size(194, 40);
+            this.txtmssv.Size = new System.Drawing.Size(194, 35);
             this.txtmssv.TabIndex = 1170;
             this.txtmssv.Texts = "";
             this.txtmssv.UnderlinedStyle = false;
@@ -368,7 +357,7 @@ namespace QLKTX.View.FormView
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(433, 67);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(87, 32);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(73, 27);
             this.guna2HtmlLabel1.TabIndex = 1169;
             this.guna2HtmlLabel1.Text = "Họ Tên";
             // 
@@ -390,7 +379,7 @@ namespace QLKTX.View.FormView
             this.txtname.PasswordChar = false;
             this.txtname.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtname.PlaceholderText = "";
-            this.txtname.Size = new System.Drawing.Size(194, 40);
+            this.txtname.Size = new System.Drawing.Size(194, 35);
             this.txtname.TabIndex = 1168;
             this.txtname.Texts = "";
             this.txtname.UnderlinedStyle = false;
@@ -429,7 +418,7 @@ namespace QLKTX.View.FormView
             this.guna2HtmlLabel11.ForeColor = System.Drawing.Color.MediumPurple;
             this.guna2HtmlLabel11.Location = new System.Drawing.Point(29, 13);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(233, 48);
+            this.guna2HtmlLabel11.Size = new System.Drawing.Size(186, 39);
             this.guna2HtmlLabel11.TabIndex = 1167;
             this.guna2HtmlLabel11.Text = "GET STARTED!";
             // 
@@ -458,7 +447,7 @@ namespace QLKTX.View.FormView
             this.guna2HtmlLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel12.Location = new System.Drawing.Point(808, 398);
             this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            this.guna2HtmlLabel12.Size = new System.Drawing.Size(116, 32);
+            this.guna2HtmlLabel12.Size = new System.Drawing.Size(97, 27);
             this.guna2HtmlLabel12.TabIndex = 1191;
             this.guna2HtmlLabel12.Text = "Password";
             // 
@@ -480,7 +469,7 @@ namespace QLKTX.View.FormView
             this.txtPassword.PasswordChar = true;
             this.txtPassword.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPassword.PlaceholderText = "";
-            this.txtPassword.Size = new System.Drawing.Size(194, 40);
+            this.txtPassword.Size = new System.Drawing.Size(194, 35);
             this.txtPassword.TabIndex = 1190;
             this.txtPassword.Texts = "";
             this.txtPassword.UnderlinedStyle = false;
@@ -493,7 +482,7 @@ namespace QLKTX.View.FormView
             this.guna2HtmlLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2HtmlLabel13.Location = new System.Drawing.Point(423, 398);
             this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
-            this.guna2HtmlLabel13.Size = new System.Drawing.Size(122, 32);
+            this.guna2HtmlLabel13.Size = new System.Drawing.Size(101, 27);
             this.guna2HtmlLabel13.TabIndex = 1193;
             this.guna2HtmlLabel13.Text = "Username";
             // 
@@ -515,17 +504,41 @@ namespace QLKTX.View.FormView
             this.txtUsername.PasswordChar = false;
             this.txtUsername.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtUsername.PlaceholderText = "";
-            this.txtUsername.Size = new System.Drawing.Size(194, 40);
+            this.txtUsername.Size = new System.Drawing.Size(194, 35);
             this.txtUsername.TabIndex = 1192;
             this.txtUsername.Texts = "";
             this.txtUsername.UnderlinedStyle = false;
             // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(552, 134);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(47, 27);
+            this.guna2HtmlLabel3.TabIndex = 1195;
+            this.guna2HtmlLabel3.Text = "Nam";
+            // 
+            // guna2HtmlLabel14
+            // 
+            this.guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.guna2HtmlLabel14.Location = new System.Drawing.Point(433, 134);
+            this.guna2HtmlLabel14.Name = "guna2HtmlLabel14";
+            this.guna2HtmlLabel14.Size = new System.Drawing.Size(88, 27);
+            this.guna2HtmlLabel14.TabIndex = 1194;
+            this.guna2HtmlLabel14.Text = "Giới tính:";
+            // 
             // Register
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1162, 531);
+            this.Controls.Add(this.guna2HtmlLabel3);
+            this.Controls.Add(this.guna2HtmlLabel14);
             this.Controls.Add(this.guna2HtmlLabel13);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.guna2HtmlLabel12);
@@ -548,7 +561,6 @@ namespace QLKTX.View.FormView
             this.Controls.Add(this.dateNgaySinh);
             this.Controls.Add(this.checkSex);
             this.Controls.Add(this.guna2HtmlLabel4);
-            this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.txtmssv);
             this.Controls.Add(this.guna2HtmlLabel1);
@@ -583,7 +595,6 @@ namespace QLKTX.View.FormView
         private RJCodeAdvance.RJControls.RJDatePicker dateNgaySinh;
         private CustomBox.RJControls.RJToggleButton checkSex;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private CustomBox.RJControls.RJTextBox txtmssv;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
@@ -596,6 +607,8 @@ namespace QLKTX.View.FormView
         private CustomBox.RJControls.RJTextBox txtPassword;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
         private CustomBox.RJControls.RJTextBox txtUsername;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
     }
 }
 

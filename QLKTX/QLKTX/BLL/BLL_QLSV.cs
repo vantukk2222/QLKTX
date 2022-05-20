@@ -66,7 +66,7 @@ namespace QLKTX.BLL
         }
         public bool checkSV(string mssv)
         {
-            return DataHelper.db.SVs.Find(mssv) != null;
+            return (DataHelper.db.SVs.Find(mssv) != null) || (DataHelper.db.PhieuDangKyOKTXes.Where(x => x.MSSV == mssv).Count() == 1);
         }
         public void AddSV(SV sv)
         {

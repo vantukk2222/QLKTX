@@ -428,7 +428,7 @@
             // 
             this.checkSex.AutoSize = true;
             this.checkSex.Enabled = false;
-            this.checkSex.Location = new System.Drawing.Point(203, 193);
+            this.checkSex.Location = new System.Drawing.Point(201, 190);
             this.checkSex.MinimumSize = new System.Drawing.Size(45, 22);
             this.checkSex.Name = "checkSex";
             this.checkSex.OffBackColor = System.Drawing.Color.Gray;

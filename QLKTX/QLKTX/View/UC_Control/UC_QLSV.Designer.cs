@@ -75,15 +75,14 @@ namespace QLKTX.View.UC_Control
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtName.Location = new System.Drawing.Point(2, 37);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.Location = new System.Drawing.Point(2, 28);
             this.txtName.Multiline = false;
             this.txtName.Name = "txtName";
-            this.txtName.Padding = new System.Windows.Forms.Padding(8, 5, 8, 5);
+            this.txtName.Padding = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.txtName.PasswordChar = false;
             this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtName.PlaceholderText = "";
-            this.txtName.Size = new System.Drawing.Size(859, 36);
+            this.txtName.Size = new System.Drawing.Size(735, 29);
             this.txtName.TabIndex = 2;
             this.txtName.Texts = "";
             this.txtName.UnderlinedStyle = false;
@@ -123,13 +122,13 @@ namespace QLKTX.View.UC_Control
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(220)))), ((int)(((byte)(242)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(2, 77);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(2, 59);
             this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(929, 569);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(778, 474);
             this.guna2DataGridView1.TabIndex = 9;
             this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.FeterRiver;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
@@ -157,10 +156,10 @@ namespace QLKTX.View.UC_Control
             // 
             // cbbKhoa
             // 
-            this.cbbKhoa.Location = new System.Drawing.Point(77, 7);
+            this.cbbKhoa.Location = new System.Drawing.Point(58, 5);
             this.cbbKhoa.Margin = new System.Windows.Forms.Padding(2);
             this.cbbKhoa.Name = "cbbKhoa";
-            this.cbbKhoa.Size = new System.Drawing.Size(74, 33);
+            this.cbbKhoa.Size = new System.Drawing.Size(56, 28);
             this.cbbKhoa.TabIndex = 1;
             // 
             // guna2HtmlLabel2
@@ -168,10 +167,10 @@ namespace QLKTX.View.UC_Control
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Enabled = false;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(4, 7);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(3, 5);
             this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(54, 27);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(44, 22);
             this.guna2HtmlLabel2.TabIndex = 8;
             this.guna2HtmlLabel2.Text = "Khóa";
             // 
@@ -180,11 +179,11 @@ namespace QLKTX.View.UC_Control
             this.tabcontrol1.Controls.Add(this.tabPage1);
             this.tabcontrol1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabcontrol1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.tabcontrol1.Location = new System.Drawing.Point(0, 34);
+            this.tabcontrol1.Location = new System.Drawing.Point(0, 26);
             this.tabcontrol1.Margin = new System.Windows.Forms.Padding(2);
             this.tabcontrol1.Name = "tabcontrol1";
             this.tabcontrol1.SelectedIndex = 0;
-            this.tabcontrol1.Size = new System.Drawing.Size(1079, 687);
+            this.tabcontrol1.Size = new System.Drawing.Size(923, 564);
             this.tabcontrol1.TabIndex = 32;
             // 
             // tabPage1
@@ -200,11 +199,11 @@ namespace QLKTX.View.UC_Control
             this.tabPage1.Controls.Add(this.cbbKhoa);
             this.tabPage1.Controls.Add(this.guna2HtmlLabel2);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.tabPage1.Location = new System.Drawing.Point(4, 34);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(1071, 649);
+            this.tabPage1.Size = new System.Drawing.Size(915, 531);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Sinh viên";
             // 
@@ -221,10 +220,10 @@ namespace QLKTX.View.UC_Control
             this.icbtDel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icbtDel.IconSize = 25;
             this.icbtDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtDel.Location = new System.Drawing.Point(946, 162);
+            this.icbtDel.Location = new System.Drawing.Point(793, 136);
             this.icbtDel.Margin = new System.Windows.Forms.Padding(2);
             this.icbtDel.Name = "icbtDel";
-            this.icbtDel.Size = new System.Drawing.Size(109, 28);
+            this.icbtDel.Size = new System.Drawing.Size(100, 31);
             this.icbtDel.TabIndex = 6;
             this.icbtDel.Text = "Delete";
             this.icbtDel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -245,10 +244,10 @@ namespace QLKTX.View.UC_Control
             this.icbtEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icbtEdit.IconSize = 25;
             this.icbtEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtEdit.Location = new System.Drawing.Point(946, 129);
+            this.icbtEdit.Location = new System.Drawing.Point(793, 101);
             this.icbtEdit.Margin = new System.Windows.Forms.Padding(2);
             this.icbtEdit.Name = "icbtEdit";
-            this.icbtEdit.Size = new System.Drawing.Size(109, 28);
+            this.icbtEdit.Size = new System.Drawing.Size(100, 31);
             this.icbtEdit.TabIndex = 5;
             this.icbtEdit.Text = "Edit";
             this.icbtEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -269,10 +268,10 @@ namespace QLKTX.View.UC_Control
             this.icbtAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icbtAdd.IconSize = 25;
             this.icbtAdd.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.icbtAdd.Location = new System.Drawing.Point(946, 87);
+            this.icbtAdd.Location = new System.Drawing.Point(793, 66);
             this.icbtAdd.Margin = new System.Windows.Forms.Padding(2);
             this.icbtAdd.Name = "icbtAdd";
-            this.icbtAdd.Size = new System.Drawing.Size(109, 37);
+            this.icbtAdd.Size = new System.Drawing.Size(100, 31);
             this.icbtAdd.TabIndex = 4;
             this.icbtAdd.Text = "Add new";
             this.icbtAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -286,16 +285,16 @@ namespace QLKTX.View.UC_Control
             this.icbtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(165)))), ((int)(((byte)(1)))));
             this.icbtSearch.FlatAppearance.BorderSize = 0;
             this.icbtSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icbtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.icbtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.icbtSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.icbtSearch.IconColor = System.Drawing.Color.Brown;
             this.icbtSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icbtSearch.IconSize = 25;
             this.icbtSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtSearch.Location = new System.Drawing.Point(867, 37);
+            this.icbtSearch.Location = new System.Drawing.Point(742, 28);
             this.icbtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.icbtSearch.Name = "icbtSearch";
-            this.icbtSearch.Size = new System.Drawing.Size(114, 36);
+            this.icbtSearch.Size = new System.Drawing.Size(101, 28);
             this.icbtSearch.TabIndex = 3;
             this.icbtSearch.Text = "Search";
             this.icbtSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -309,10 +308,10 @@ namespace QLKTX.View.UC_Control
             this.guna2HtmlLabel1.Enabled = false;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(49, 2);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(37, 2);
             this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(249, 38);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(201, 31);
             this.guna2HtmlLabel1.TabIndex = 27;
             this.guna2HtmlLabel1.Text = "Quản lý sinh viên";
             // 
@@ -325,7 +324,7 @@ namespace QLKTX.View.UC_Control
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1079, 34);
+            this.guna2Panel1.Size = new System.Drawing.Size(923, 26);
             this.guna2Panel1.TabIndex = 31;
             // 
             // iconPictureBox1
@@ -341,14 +340,14 @@ namespace QLKTX.View.UC_Control
             this.iconPictureBox1.Location = new System.Drawing.Point(0, 0);
             this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(34, 34);
+            this.iconPictureBox1.Size = new System.Drawing.Size(34, 26);
             this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.iconPictureBox1.TabIndex = 28;
             this.iconPictureBox1.TabStop = false;
             // 
             // UC_QLSV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.Controls.Add(this.tabcontrol1);
@@ -356,7 +355,7 @@ namespace QLKTX.View.UC_Control
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UC_QLSV";
-            this.Size = new System.Drawing.Size(1079, 721);
+            this.Size = new System.Drawing.Size(923, 590);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.tabcontrol1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

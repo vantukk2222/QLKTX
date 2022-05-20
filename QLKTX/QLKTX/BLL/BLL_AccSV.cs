@@ -29,6 +29,13 @@ namespace QLKTX.BLL
                 DataHelper.db.SaveChanges();
             }
         }
+        public bool CheckAccount(string username)
+        {
+            if (DataHelper.db.AccSVs.Where(x => x.UserName == username).Count() == 1
+                || DataHelper.db.PhieuDangKyOKTXes.Where(x => x.Username == username).Count() == 1)
+                return true;
+            return false;
+        }
         public bool CheckPassword(SV sv, string pass)
         {
             if (sv.AccSV.PassWord.Trim() == pass)
