@@ -385,5 +385,41 @@ namespace QLKTX.View.FormView
             }
 
         }
+
+        private void icbtTongQuan_Click(object sender, EventArgs e)
+        {
+            if (icbtMenu.IconChar == FontAwesome.Sharp.IconChar.Bars)
+            {
+                this.Width += 130;
+                iconPictureBox1.IconSize = 95;
+                iconPictureBox1.Dock = DockStyle.Bottom;
+                iconPictureBox1.Location = new Point(0, 19);
+                icbtMenu.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            }
+            else
+            {
+                iconPictureBox1.IconSize = 95;
+                iconPictureBox1.Dock = DockStyle.Bottom;
+                iconPictureBox1.Location = new Point(0, 19);
+            }
+            UC_ThongKe TK = new UC_ThongKe();
+            panelDesktop.Controls.Clear();
+            TK.BorderStyle = BorderStyle.None;
+            TK.Dock = DockStyle.Fill;
+            TK.BringToFront();
+            panelDesktop.Controls.Add(TK);
+
+
+            this.icbtMenu.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            panelMenu.Width = 230;
+            iconPictureBox1.Visible = true;
+            icbtMenu.Dock = DockStyle.None;
+            foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
+            {
+                menuButton.Text = "   " + menuButton.Tag.ToString();
+                menuButton.ImageAlign = ContentAlignment.MiddleLeft;
+                menuButton.Padding = new Padding(10, 0, 0, 0);
+            }
+        }
     }
 }

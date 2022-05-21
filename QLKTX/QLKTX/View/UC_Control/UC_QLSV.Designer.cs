@@ -76,13 +76,14 @@ namespace QLKTX.View.UC_Control
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtName.Location = new System.Drawing.Point(2, 28);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Multiline = false;
             this.txtName.Name = "txtName";
             this.txtName.Padding = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.txtName.PasswordChar = false;
             this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtName.PlaceholderText = "";
-            this.txtName.Size = new System.Drawing.Size(735, 29);
+            this.txtName.Size = new System.Drawing.Size(735, 34);
             this.txtName.TabIndex = 2;
             this.txtName.Texts = "";
             this.txtName.UnderlinedStyle = false;
@@ -159,7 +160,7 @@ namespace QLKTX.View.UC_Control
             this.cbbKhoa.Location = new System.Drawing.Point(58, 5);
             this.cbbKhoa.Margin = new System.Windows.Forms.Padding(2);
             this.cbbKhoa.Name = "cbbKhoa";
-            this.cbbKhoa.Size = new System.Drawing.Size(56, 28);
+            this.cbbKhoa.Size = new System.Drawing.Size(56, 33);
             this.cbbKhoa.TabIndex = 1;
             // 
             // guna2HtmlLabel2
@@ -170,7 +171,7 @@ namespace QLKTX.View.UC_Control
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(3, 5);
             this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(44, 22);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(54, 27);
             this.guna2HtmlLabel2.TabIndex = 8;
             this.guna2HtmlLabel2.Text = "Khóa";
             // 
@@ -199,11 +200,11 @@ namespace QLKTX.View.UC_Control
             this.tabPage1.Controls.Add(this.cbbKhoa);
             this.tabPage1.Controls.Add(this.guna2HtmlLabel2);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(915, 531);
+            this.tabPage1.Size = new System.Drawing.Size(915, 526);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Sinh viên";
             // 
@@ -223,7 +224,7 @@ namespace QLKTX.View.UC_Control
             this.icbtDel.Location = new System.Drawing.Point(793, 136);
             this.icbtDel.Margin = new System.Windows.Forms.Padding(2);
             this.icbtDel.Name = "icbtDel";
-            this.icbtDel.Size = new System.Drawing.Size(100, 31);
+            this.icbtDel.Size = new System.Drawing.Size(118, 39);
             this.icbtDel.TabIndex = 6;
             this.icbtDel.Text = "Delete";
             this.icbtDel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -247,7 +248,7 @@ namespace QLKTX.View.UC_Control
             this.icbtEdit.Location = new System.Drawing.Point(793, 101);
             this.icbtEdit.Margin = new System.Windows.Forms.Padding(2);
             this.icbtEdit.Name = "icbtEdit";
-            this.icbtEdit.Size = new System.Drawing.Size(100, 31);
+            this.icbtEdit.Size = new System.Drawing.Size(118, 31);
             this.icbtEdit.TabIndex = 5;
             this.icbtEdit.Text = "Edit";
             this.icbtEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -271,7 +272,7 @@ namespace QLKTX.View.UC_Control
             this.icbtAdd.Location = new System.Drawing.Point(793, 66);
             this.icbtAdd.Margin = new System.Windows.Forms.Padding(2);
             this.icbtAdd.Name = "icbtAdd";
-            this.icbtAdd.Size = new System.Drawing.Size(100, 31);
+            this.icbtAdd.Size = new System.Drawing.Size(118, 31);
             this.icbtAdd.TabIndex = 4;
             this.icbtAdd.Text = "Add new";
             this.icbtAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -294,7 +295,7 @@ namespace QLKTX.View.UC_Control
             this.icbtSearch.Location = new System.Drawing.Point(742, 28);
             this.icbtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.icbtSearch.Name = "icbtSearch";
-            this.icbtSearch.Size = new System.Drawing.Size(101, 28);
+            this.icbtSearch.Size = new System.Drawing.Size(119, 28);
             this.icbtSearch.TabIndex = 3;
             this.icbtSearch.Text = "Search";
             this.icbtSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -311,7 +312,7 @@ namespace QLKTX.View.UC_Control
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(37, 2);
             this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(201, 31);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(249, 38);
             this.guna2HtmlLabel1.TabIndex = 27;
             this.guna2HtmlLabel1.Text = "Quản lý sinh viên";
             // 
@@ -336,18 +337,18 @@ namespace QLKTX.View.UC_Control
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.IdCard;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 34;
+            this.iconPictureBox1.IconSize = 26;
             this.iconPictureBox1.Location = new System.Drawing.Point(0, 0);
             this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(34, 26);
+            this.iconPictureBox1.Size = new System.Drawing.Size(26, 26);
             this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.iconPictureBox1.TabIndex = 28;
             this.iconPictureBox1.TabStop = false;
             // 
             // UC_QLSV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.Controls.Add(this.tabcontrol1);

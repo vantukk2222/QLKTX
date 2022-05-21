@@ -117,7 +117,7 @@
           <Property Name="MaPhieu" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="HinhThucViPham" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="HinhThucKyLuat" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="ThoiGianViPham" Type="date" Nullable="false" />
+          <Property Name="status" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Phong">
           <Key>
@@ -629,7 +629,7 @@
           <Property Name="MaPhieu" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="HinhThucViPham" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="HinhThucKyLuat" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ThoiGianViPham" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Phieu" Relationship="QLKTXModel.FK_PhieuKyLuat_Phieu" FromRole="PhieuKyLuat" ToRole="Phieu" />
         </EntityType>
         <EntityType Name="Phong">
@@ -989,7 +989,7 @@
           <EntitySetMapping Name="PhieuKyLuats">
             <EntityTypeMapping TypeName="QLKTXModel.PhieuKyLuat">
               <MappingFragment StoreEntitySet="PhieuKyLuat">
-                <ScalarProperty Name="ThoiGianViPham" ColumnName="ThoiGianViPham" />
+                <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="HinhThucKyLuat" ColumnName="HinhThucKyLuat" />
                 <ScalarProperty Name="HinhThucViPham" ColumnName="HinhThucViPham" />
                 <ScalarProperty Name="MaPhieu" ColumnName="MaPhieu" />
@@ -1049,6 +1049,37 @@
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->
-    <Diagrams></Diagrams>
+    <Diagrams>
+      <Diagram DiagramId="a45ce1334fba448694942a709aa1bd06" Name="Diagram1">
+        <EntityTypeShape EntityType="QLKTXModel.AccCB" Width="1.5" PointX="3" PointY="9.125" />
+        <EntityTypeShape EntityType="QLKTXModel.AccSV" Width="1.5" PointX="12.75" PointY="12.5" />
+        <EntityTypeShape EntityType="QLKTXModel.CanBoQuanLy" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="QLKTXModel.DienNuoc" Width="1.5" PointX="7.5" PointY="19.5" />
+        <EntityTypeShape EntityType="QLKTXModel.HoaDon" Width="1.5" PointX="9.75" PointY="19" />
+        <EntityTypeShape EntityType="QLKTXModel.HopDong" Width="1.5" PointX="8.25" PointY="4.25" />
+        <EntityTypeShape EntityType="QLKTXModel.Khu" Width="1.5" PointX="3" PointY="12.25" />
+        <EntityTypeShape EntityType="QLKTXModel.Phieu" Width="1.5" PointX="7.5" PointY="11.625" />
+        <EntityTypeShape EntityType="QLKTXModel.PhieuDangKyOKTX" Width="1.5" PointX="9.75" PointY="22.875" />
+        <EntityTypeShape EntityType="QLKTXModel.PhieuGiaHanHD" Width="1.5" PointX="12.75" PointY="9.375" />
+        <EntityTypeShape EntityType="QLKTXModel.PhieuKyLuat" Width="1.5" PointX="9.75" PointY="8.125" />
+        <EntityTypeShape EntityType="QLKTXModel.Phong" Width="1.5" PointX="5.25" PointY="11.625" />
+        <EntityTypeShape EntityType="QLKTXModel.SV" Width="1.5" PointX="10.5" PointY="11.25" />
+        <AssociationConnector Association="QLKTXModel.FK_AccCB_CanBoQuanLy" />
+        <AssociationConnector Association="QLKTXModel.FK_AccSV_SV" />
+        <AssociationConnector Association="QLKTXModel.FK_Khu_CanBoQuanLy" />
+        <AssociationConnector Association="QLKTXModel.FK_DienNuoc_Phong" />
+        <AssociationConnector Association="QLKTXModel.FK_HoaDon_DienNuoc" />
+        <AssociationConnector Association="QLKTXModel.FK_HoaDon_SV" />
+        <AssociationConnector Association="QLKTXModel.FK_PhieuGiaHanHD_HopDong" />
+        <AssociationConnector Association="QLKTXModel.FK_SV_HopDong" />
+        <AssociationConnector Association="QLKTXModel.FK_Phong_Khu" />
+        <AssociationConnector Association="QLKTXModel.FK_Phieu_Phong" />
+        <AssociationConnector Association="QLKTXModel.FK_Phieu_SV" />
+        <AssociationConnector Association="QLKTXModel.FK_PhieuDangKyOKTX_Phieu" />
+        <AssociationConnector Association="QLKTXModel.FK_PhieuGiaHanHD_Phieu" />
+        <AssociationConnector Association="QLKTXModel.FK_PhieuKyLuat_Phieu" />
+        <AssociationConnector Association="QLKTXModel.FK_SV_Phong" />
+      </Diagram>
+    </Diagrams>
   </Designer>
 </edmx:Edmx>

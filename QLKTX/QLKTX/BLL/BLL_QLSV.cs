@@ -100,5 +100,9 @@ namespace QLKTX.BLL
 
 
         }
+        public int GetSoLuongSV()
+        {
+            return DataHelper.db.SVs.Count();
+        }
     }
 }

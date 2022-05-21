@@ -101,6 +101,7 @@
     <Compile Include="BLL\BLL_HoaDon.cs" />
     <Compile Include="BLL\BLL_PhieuDKOKTX.cs" />
     <Compile Include="BLL\BLL_PhieuGiaHanHD.cs" />
+    <Compile Include="BLL\BLL_PhieuKyLuat.cs" />
     <Compile Include="DienNuoc.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -239,6 +240,12 @@
     <Compile Include="View\UC_Control\UC_QLSV.Designer.cs">
       <DependentUpon>UC_QLSV.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UC_Control\UC_ThongKe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UC_Control\UC_ThongKe.Designer.cs">
+      <DependentUpon>UC_ThongKe.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\FormView\ApproveSVForm.resx">
       <DependentUpon>ApproveSVForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,6 +290,9 @@
     <EmbeddedResource Include="View\UC_Control\UC_QLSV.resx">
       <DependentUpon>UC_QLSV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\UC_Control\UC_ThongKe.resx">
+      <DependentUpon>UC_ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -311,7 +321,7 @@
     <None Include="Resources\building.png" />
     <None Include="Resources\Exit.png" />
     <EmbeddedResource Include="QLKTX.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -325,7 +335,7 @@
     </Content>
     <Content Include="QLKTX_log.ldf">
       <DependentUpon>QLKTX.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>

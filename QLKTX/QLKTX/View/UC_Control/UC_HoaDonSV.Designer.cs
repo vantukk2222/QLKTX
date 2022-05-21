@@ -29,33 +29,37 @@ namespace QLKTX.View.UC_Control
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabcontrol1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabHoaDon = new System.Windows.Forms.TabPage();
             this.icbttiendn = new FontAwesome.Sharp.IconButton();
-            this.dtpNgayCuoi = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.dtpNgayDau = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.icbttienphong = new FontAwesome.Sharp.IconButton();
-            this.icbtSearch = new FontAwesome.Sharp.IconButton();
             this.dgvHoaDon = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.tabPhieuPhat = new System.Windows.Forms.TabPage();
+            this.dgvPhieuPhat = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnNopPhat = new FontAwesome.Sharp.IconButton();
             this.tabcontrol1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabHoaDon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.tabPhieuPhat.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuPhat)).BeginInit();
             this.SuspendLayout();
             // 
             // tabcontrol1
             // 
-            this.tabcontrol1.Controls.Add(this.tabPage1);
+            this.tabcontrol1.Controls.Add(this.tabHoaDon);
+            this.tabcontrol1.Controls.Add(this.tabPhieuPhat);
             this.tabcontrol1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabcontrol1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.tabcontrol1.Location = new System.Drawing.Point(0, 45);
@@ -64,25 +68,20 @@ namespace QLKTX.View.UC_Control
             this.tabcontrol1.Size = new System.Drawing.Size(1071, 676);
             this.tabcontrol1.TabIndex = 36;
             // 
-            // tabPage1
+            // tabHoaDon
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.tabPage1.Controls.Add(this.icbttiendn);
-            this.tabPage1.Controls.Add(this.dtpNgayCuoi);
-            this.tabPage1.Controls.Add(this.dtpNgayDau);
-            this.tabPage1.Controls.Add(this.guna2HtmlLabel4);
-            this.tabPage1.Controls.Add(this.guna2HtmlLabel3);
-            this.tabPage1.Controls.Add(this.icbttienphong);
-            this.tabPage1.Controls.Add(this.icbtSearch);
-            this.tabPage1.Controls.Add(this.dgvHoaDon);
-            this.tabPage1.Controls.Add(this.guna2HtmlLabel2);
-            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1063, 643);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Hoá đơn";
+            this.tabHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.tabHoaDon.Controls.Add(this.icbttiendn);
+            this.tabHoaDon.Controls.Add(this.guna2HtmlLabel3);
+            this.tabHoaDon.Controls.Add(this.icbttienphong);
+            this.tabHoaDon.Controls.Add(this.dgvHoaDon);
+            this.tabHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.tabHoaDon.Location = new System.Drawing.Point(4, 34);
+            this.tabHoaDon.Name = "tabHoaDon";
+            this.tabHoaDon.Padding = new System.Windows.Forms.Padding(3);
+            this.tabHoaDon.Size = new System.Drawing.Size(1063, 638);
+            this.tabHoaDon.TabIndex = 0;
+            this.tabHoaDon.Text = "Hoá đơn";
             // 
             // icbttiendn
             // 
@@ -97,52 +96,15 @@ namespace QLKTX.View.UC_Control
             this.icbttiendn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icbttiendn.IconSize = 25;
             this.icbttiendn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbttiendn.Location = new System.Drawing.Point(916, 144);
+            this.icbttiendn.Location = new System.Drawing.Point(916, 180);
             this.icbttiendn.Name = "icbttiendn";
-            this.icbttiendn.Size = new System.Drawing.Size(130, 37);
+            this.icbttiendn.Size = new System.Drawing.Size(130, 57);
             this.icbttiendn.TabIndex = 13;
             this.icbttiendn.Text = "Điện nước";
             this.icbttiendn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.icbttiendn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.icbttiendn.UseVisualStyleBackColor = false;
             this.icbttiendn.Click += new System.EventHandler(this.icbttiendn_Click);
-            // 
-            // dtpNgayCuoi
-            // 
-            this.dtpNgayCuoi.Checked = true;
-            this.dtpNgayCuoi.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpNgayCuoi.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpNgayCuoi.Location = new System.Drawing.Point(482, 60);
-            this.dtpNgayCuoi.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpNgayCuoi.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpNgayCuoi.Name = "dtpNgayCuoi";
-            this.dtpNgayCuoi.Size = new System.Drawing.Size(200, 33);
-            this.dtpNgayCuoi.TabIndex = 12;
-            this.dtpNgayCuoi.Value = new System.DateTime(2022, 5, 7, 13, 23, 53, 653);
-            // 
-            // dtpNgayDau
-            // 
-            this.dtpNgayDau.Checked = true;
-            this.dtpNgayDau.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpNgayDau.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpNgayDau.Location = new System.Drawing.Point(118, 60);
-            this.dtpNgayDau.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpNgayDau.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpNgayDau.Name = "dtpNgayDau";
-            this.dtpNgayDau.Size = new System.Drawing.Size(200, 33);
-            this.dtpNgayDau.TabIndex = 11;
-            this.dtpNgayDau.Value = new System.DateTime(2022, 5, 7, 13, 23, 53, 653);
-            // 
-            // guna2HtmlLabel4
-            // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Enabled = false;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(421, 66);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(46, 22);
-            this.guna2HtmlLabel4.TabIndex = 10;
-            this.guna2HtmlLabel4.Text = "Đến :";
             // 
             // guna2HtmlLabel3
             // 
@@ -168,7 +130,7 @@ namespace QLKTX.View.UC_Control
             this.icbttienphong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.icbttienphong.Location = new System.Drawing.Point(916, 101);
             this.icbttienphong.Name = "icbttienphong";
-            this.icbttienphong.Size = new System.Drawing.Size(130, 37);
+            this.icbttienphong.Size = new System.Drawing.Size(130, 60);
             this.icbttienphong.TabIndex = 5;
             this.icbttienphong.Text = "Tiền phòng";
             this.icbttienphong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -176,33 +138,12 @@ namespace QLKTX.View.UC_Control
             this.icbttienphong.UseVisualStyleBackColor = false;
             this.icbttienphong.Click += new System.EventHandler(this.icbttienphong_Click);
             // 
-            // icbtSearch
-            // 
-            this.icbtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.icbtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(165)))), ((int)(((byte)(1)))));
-            this.icbtSearch.FlatAppearance.BorderSize = 0;
-            this.icbtSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icbtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.icbtSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.icbtSearch.IconColor = System.Drawing.Color.Brown;
-            this.icbtSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icbtSearch.IconSize = 25;
-            this.icbtSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtSearch.Location = new System.Drawing.Point(783, 60);
-            this.icbtSearch.Name = "icbtSearch";
-            this.icbtSearch.Size = new System.Drawing.Size(117, 35);
-            this.icbtSearch.TabIndex = 3;
-            this.icbtSearch.Text = "Search";
-            this.icbtSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.icbtSearch.UseVisualStyleBackColor = false;
-            // 
             // dgvHoaDon
             // 
             this.dgvHoaDon.AllowUserToAddRows = false;
             this.dgvHoaDon.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
-            this.dgvHoaDon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
+            this.dgvHoaDon.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -211,23 +152,23 @@ namespace QLKTX.View.UC_Control
             this.dgvHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvHoaDon.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvHoaDon.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHoaDon.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvHoaDon.ColumnHeadersHeight = 50;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvHoaDon.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHoaDon.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvHoaDon.EnableHeadersVisualStyles = false;
             this.dgvHoaDon.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(220)))), ((int)(((byte)(242)))));
             this.dgvHoaDon.Location = new System.Drawing.Point(3, 101);
@@ -261,17 +202,6 @@ namespace QLKTX.View.UC_Control
             this.dgvHoaDon.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
             this.dgvHoaDon.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Enabled = false;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(17, 66);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(76, 22);
-            this.guna2HtmlLabel2.TabIndex = 8;
-            this.guna2HtmlLabel2.Text = "Từ ngày :";
-            // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
@@ -280,7 +210,7 @@ namespace QLKTX.View.UC_Control
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(51, 3);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(243, 31);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(296, 38);
             this.guna2HtmlLabel1.TabIndex = 27;
             this.guna2HtmlLabel1.Text = "Thống kê tiền phòng";
             // 
@@ -312,9 +242,109 @@ namespace QLKTX.View.UC_Control
             this.iconPictureBox1.TabIndex = 28;
             this.iconPictureBox1.TabStop = false;
             // 
+            // tabPhieuPhat
+            // 
+            this.tabPhieuPhat.Controls.Add(this.btnNopPhat);
+            this.tabPhieuPhat.Controls.Add(this.dgvPhieuPhat);
+            this.tabPhieuPhat.Location = new System.Drawing.Point(4, 34);
+            this.tabPhieuPhat.Name = "tabPhieuPhat";
+            this.tabPhieuPhat.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPhieuPhat.Size = new System.Drawing.Size(1063, 638);
+            this.tabPhieuPhat.TabIndex = 1;
+            this.tabPhieuPhat.Text = "Phiếu Phạt";
+            this.tabPhieuPhat.UseVisualStyleBackColor = true;
+            // 
+            // dgvPhieuPhat
+            // 
+            this.dgvPhieuPhat.AllowUserToAddRows = false;
+            this.dgvPhieuPhat.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
+            this.dgvPhieuPhat.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvPhieuPhat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvPhieuPhat.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvPhieuPhat.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvPhieuPhat.BackgroundColor = System.Drawing.Color.White;
+            this.dgvPhieuPhat.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvPhieuPhat.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvPhieuPhat.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPhieuPhat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvPhieuPhat.ColumnHeadersHeight = 50;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPhieuPhat.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvPhieuPhat.EnableHeadersVisualStyles = false;
+            this.dgvPhieuPhat.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(220)))), ((int)(((byte)(242)))));
+            this.dgvPhieuPhat.Location = new System.Drawing.Point(-1, 79);
+            this.dgvPhieuPhat.Name = "dgvPhieuPhat";
+            this.dgvPhieuPhat.ReadOnly = true;
+            this.dgvPhieuPhat.RowHeadersVisible = false;
+            this.dgvPhieuPhat.RowHeadersWidth = 51;
+            this.dgvPhieuPhat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPhieuPhat.Size = new System.Drawing.Size(897, 521);
+            this.dgvPhieuPhat.TabIndex = 15;
+            this.dgvPhieuPhat.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.FeterRiver;
+            this.dgvPhieuPhat.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
+            this.dgvPhieuPhat.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvPhieuPhat.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvPhieuPhat.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvPhieuPhat.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvPhieuPhat.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvPhieuPhat.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(220)))), ((int)(((byte)(242)))));
+            this.dgvPhieuPhat.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.dgvPhieuPhat.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvPhieuPhat.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.dgvPhieuPhat.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvPhieuPhat.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvPhieuPhat.ThemeStyle.HeaderStyle.Height = 50;
+            this.dgvPhieuPhat.ThemeStyle.ReadOnly = true;
+            this.dgvPhieuPhat.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
+            this.dgvPhieuPhat.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvPhieuPhat.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.dgvPhieuPhat.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgvPhieuPhat.ThemeStyle.RowsStyle.Height = 22;
+            this.dgvPhieuPhat.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
+            this.dgvPhieuPhat.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
+            // btnNopPhat
+            // 
+            this.btnNopPhat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNopPhat.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnNopPhat.FlatAppearance.BorderSize = 0;
+            this.btnNopPhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNopPhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
+            this.btnNopPhat.ForeColor = System.Drawing.Color.White;
+            this.btnNopPhat.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckAlt;
+            this.btnNopPhat.IconColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnNopPhat.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNopPhat.IconSize = 25;
+            this.btnNopPhat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNopPhat.Location = new System.Drawing.Point(917, 79);
+            this.btnNopPhat.Name = "btnNopPhat";
+            this.btnNopPhat.Size = new System.Drawing.Size(130, 60);
+            this.btnNopPhat.TabIndex = 16;
+            this.btnNopPhat.Text = "Nộp phạt";
+            this.btnNopPhat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNopPhat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnNopPhat.UseVisualStyleBackColor = false;
+            this.btnNopPhat.Click += new System.EventHandler(this.btnNopPhat_Click);
+            // 
             // UC_HoaDonSV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tabcontrol1);
             this.Controls.Add(this.guna2Panel1);
@@ -323,12 +353,14 @@ namespace QLKTX.View.UC_Control
             this.Name = "UC_HoaDonSV";
             this.Size = new System.Drawing.Size(1071, 721);
             this.tabcontrol1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabHoaDon.ResumeLayout(false);
+            this.tabHoaDon.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            this.tabPhieuPhat.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuPhat)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -336,18 +368,16 @@ namespace QLKTX.View.UC_Control
         #endregion
 
         private System.Windows.Forms.TabControl tabcontrol1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgayCuoi;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgayDau;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private System.Windows.Forms.TabPage tabHoaDon;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private FontAwesome.Sharp.IconButton icbttienphong;
-        private FontAwesome.Sharp.IconButton icbtSearch;
         private Guna.UI2.WinForms.Guna2DataGridView dgvHoaDon;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconButton icbttiendn;
+        private System.Windows.Forms.TabPage tabPhieuPhat;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvPhieuPhat;
+        private FontAwesome.Sharp.IconButton btnNopPhat;
     }
 }

@@ -92,5 +92,17 @@ namespace QLKTX.BLL
 
 
         }
+        public int GetSoPhongDangSuDung()
+        {
+            return DataHelper.db.Phongs.Where(p => p.SoNguoiHienTai > 0).Count();
+        }
+        public int GetSoPhongTrong()
+        {
+            return DataHelper.db.Phongs.Where(p => p.SoNguoiHienTai == 0).Count();
+        }
+        public int GetSoPhongToiDa()
+        {
+            return DataHelper.db.Phongs.Count();
+        }
     }
 }

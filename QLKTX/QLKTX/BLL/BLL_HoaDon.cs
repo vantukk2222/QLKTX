@@ -124,5 +124,27 @@ namespace QLKTX.BLL
 
             DataHelper.db.SaveChanges();
         }
+        public double GetDoanhThu(DateTime start, DateTime end)
+        {
+            double doanhthu = 0;
+            var l1 = DataHelper.db.HoaDons.Where(p => p.NgayThu >= start && p.NgayThu <= end);
+            foreach (HoaDon i in l1)
+            {
+                if (i.status == true)
+                    doanhthu += i.TienPhong;
+            }
+            return doanhthu;
+        }
+        public List<SV> GetSVNoTienPhong(DateTime start, DateTime end)
+        {
+            List<SV> l1 = new List<SV>();
+            var l2 = DataHelper.db.HoaDons.Where(p => p.NgayLap >= start && p.NgayLap <= end && p.MSSV != null);
+            foreach (HoaDon i in l2)
+            {
+                if (i.status == false && l1.Contains(i.SV) == false)
+                    l1.Add(i.SV);
+            }
+            return l1;
+        } 
     }
 }

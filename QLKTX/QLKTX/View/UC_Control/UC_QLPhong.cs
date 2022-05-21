@@ -23,6 +23,7 @@ namespace QLKTX.View.UC_Control
             {
                 cbbKhu.Items.Add(String.Concat(tenkhu.Where(c => !Char.IsWhiteSpace(c))));
             }
+            cbbKhu.SelectedIndex = 0;
         }
         public void ShowDataGridView(List<Phong> list)
         {
@@ -99,9 +100,9 @@ namespace QLKTX.View.UC_Control
         private void icbtSearch_Click(object sender, EventArgs e)
         {
             string s;
-            if (cbbKhu.SelectedItem.ToString() == null)
+            if (cbbKhu.SelectedItem == null)
              {
-                 s = "";
+                 s = "All";
              }
              else s = cbbKhu.SelectedItem.ToString();
              ShowDataGridView(BLL_QLPhong.Instance.GetAllByKhuMa(s,txtSearch.Texts.Trim()));

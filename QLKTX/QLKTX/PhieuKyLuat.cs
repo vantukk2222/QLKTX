@@ -17,7 +17,7 @@ namespace QLKTX
         public string MaPhieu { get; set; }
         public string HinhThucViPham { get; set; }
         public string HinhThucKyLuat { get; set; }
-        public System.DateTime ThoiGianViPham { get; set; }
+        public bool status { get; set; }
     
         public virtual Phieu Phieu { get; set; }
     }
