@@ -22,11 +22,11 @@ namespace QLKTX.View.UC_Control
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-            if (BLL_AccSV.Instance.CheckPassword(temp, txtPass.Text))
+            if (BLL_Acc.Instance.CheckPassword(temp, txtPass.Text))
             {
                 if (txtNewPass.Text == txtComfirmNewPass.Text)
                 {
-                    BLL_AccSV.Instance.ChangePassword(temp, txtNewPass.Text);
+                    BLL_Acc.Instance.ChangePassword(temp, txtNewPass.Text);
                 }
                 else
                 {

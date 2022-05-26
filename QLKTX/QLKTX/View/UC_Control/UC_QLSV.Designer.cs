@@ -83,7 +83,7 @@ namespace QLKTX.View.UC_Control
             this.txtName.PasswordChar = false;
             this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtName.PlaceholderText = "";
-            this.txtName.Size = new System.Drawing.Size(735, 34);
+            this.txtName.Size = new System.Drawing.Size(746, 34);
             this.txtName.TabIndex = 2;
             this.txtName.Texts = "";
             this.txtName.UnderlinedStyle = false;
@@ -100,7 +100,7 @@ namespace QLKTX.View.UC_Control
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.LightGray;
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -129,7 +129,7 @@ namespace QLKTX.View.UC_Control
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(778, 474);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(784, 474);
             this.guna2DataGridView1.TabIndex = 9;
             this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.FeterRiver;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
@@ -137,7 +137,7 @@ namespace QLKTX.View.UC_Control
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.LightGray;
             this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(220)))), ((int)(((byte)(242)))));
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -221,7 +221,7 @@ namespace QLKTX.View.UC_Control
             this.icbtDel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icbtDel.IconSize = 25;
             this.icbtDel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtDel.Location = new System.Drawing.Point(793, 136);
+            this.icbtDel.Location = new System.Drawing.Point(804, 136);
             this.icbtDel.Margin = new System.Windows.Forms.Padding(2);
             this.icbtDel.Name = "icbtDel";
             this.icbtDel.Size = new System.Drawing.Size(118, 39);
@@ -245,7 +245,7 @@ namespace QLKTX.View.UC_Control
             this.icbtEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icbtEdit.IconSize = 25;
             this.icbtEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtEdit.Location = new System.Drawing.Point(793, 101);
+            this.icbtEdit.Location = new System.Drawing.Point(804, 101);
             this.icbtEdit.Margin = new System.Windows.Forms.Padding(2);
             this.icbtEdit.Name = "icbtEdit";
             this.icbtEdit.Size = new System.Drawing.Size(118, 31);
@@ -269,7 +269,7 @@ namespace QLKTX.View.UC_Control
             this.icbtAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icbtAdd.IconSize = 25;
             this.icbtAdd.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.icbtAdd.Location = new System.Drawing.Point(793, 66);
+            this.icbtAdd.Location = new System.Drawing.Point(804, 66);
             this.icbtAdd.Margin = new System.Windows.Forms.Padding(2);
             this.icbtAdd.Name = "icbtAdd";
             this.icbtAdd.Size = new System.Drawing.Size(118, 31);
@@ -292,7 +292,7 @@ namespace QLKTX.View.UC_Control
             this.icbtSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icbtSearch.IconSize = 25;
             this.icbtSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtSearch.Location = new System.Drawing.Point(742, 28);
+            this.icbtSearch.Location = new System.Drawing.Point(753, 28);
             this.icbtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.icbtSearch.Name = "icbtSearch";
             this.icbtSearch.Size = new System.Drawing.Size(119, 28);

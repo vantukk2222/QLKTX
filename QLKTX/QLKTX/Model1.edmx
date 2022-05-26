@@ -20,6 +20,7 @@
           <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="PassWord" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="MSSV" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="status" Type="bit" />
         </EntityType>
         <EntityType Name="CanBoQuanLy">
           <Key>
@@ -514,6 +515,7 @@
           <Property Name="PassWord" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MSSV" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="SV" Relationship="QLKTXModel.FK_AccSV_SV" FromRole="AccSV" ToRole="SV" />
+          <Property Name="status" Type="Boolean" />
         </EntityType>
         <EntityType Name="CanBoQuanLy">
           <Key>
@@ -883,6 +885,7 @@
           <EntitySetMapping Name="AccSVs">
             <EntityTypeMapping TypeName="QLKTXModel.AccSV">
               <MappingFragment StoreEntitySet="AccSV">
+                <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="MSSV" ColumnName="MSSV" />
                 <ScalarProperty Name="PassWord" ColumnName="PassWord" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />

@@ -28,7 +28,7 @@ namespace QLKTX
         public string LoaiPhong { get; set; }
         public int SoNguoiHienTai { get; set; }
         public int SoNguoiToiDa { get; set; }
-        public Nullable<bool> Status { get; set; }
+        public bool Status { get; set; }
         public Nullable<double> GiaPhong { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

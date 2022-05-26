@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
 using QLKTX.DTA;
+using QLKTX.BLL;
 
 namespace QLKTX.View.FormView
 {
@@ -30,8 +31,8 @@ namespace QLKTX.View.FormView
                 switch (cbbRole.SelectedIndex)
                 {
 					case 0:
-                        tempCB = DataHelper.db.AccCBs.Where(cb => cb.UserName == txtUsername.Text.Trim() & cb.PassWord == txtPassword.Text.Trim()).FirstOrDefault();
-                        if (tempCB!=null)
+                        tempCB = BLL_Acc.Instance.LoginCB(txtUsername.Text.Trim(), txtPassword.Text.Trim());
+						if (tempCB!=null)
 						{
 							Main fmain = new Main();
 							fmain.Show();
@@ -43,17 +44,21 @@ namespace QLKTX.View.FormView
                         break;
                     //Login SV
                     case 1:
-                        tempSV = DataHelper.db.AccSVs.Where(sv => sv.UserName == txtUsername.Text.Trim() & sv.PassWord == txtPassword.Text.Trim()).FirstOrDefault();
+                        tempSV = BLL_Acc.Instance.LoginSV(txtUsername.Text.Trim(), txtPassword.Text.Trim());
                         if (tempSV!=null)
 						{
-                            AccSV temp = DataHelper.db.AccSVs.Where(sv => sv.UserName == txtUsername.Text.Trim() & sv.PassWord == txtPassword.Text.Trim()).First();
-                            User fuser = new User(tempSV.SV);
-                            fuser.Show();
-							this.Hide();
-
-
-
-							MessageBox.Show("Welcome " + tempSV.SV.HoTen);
+							if (!tempSV.status)
+							{
+								MessageBox.Show(" Tài khoản của bạn đã bị khóa\n Vui lòng liên hệ với cán bộ KTX để giải quyết");
+								break;
+							}
+							else
+							{
+								User fuser = new User(tempSV.SV);
+								fuser.Show();
+								this.Hide();
+								MessageBox.Show("Welcome sinh viên " + tempSV.SV.HoTen);
+							}
 						}
 						else
 							MessageBox.Show("Check your username and password");

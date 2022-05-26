@@ -45,9 +45,11 @@ namespace QLKTX.View.UC_Control
             guna2DataGridView1.Columns[3].HeaderText = "Mã Khu";
             guna2DataGridView1.Columns[4].HeaderText = "Số Người Hiện Tại";
             guna2DataGridView1.Columns[5].HeaderText = "Số Người Tối Đa";
-            guna2DataGridView1.Columns[6].HeaderText = "Tình Trạng";
-            guna2DataGridView1.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
+            guna2DataGridView1.Columns[6].HeaderText = "Status";
+            this.Size = this.MinimumSize;
+            //window state
+            guna2DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            
         }
         public void ShowDataDetail(List<SV> list)
         {

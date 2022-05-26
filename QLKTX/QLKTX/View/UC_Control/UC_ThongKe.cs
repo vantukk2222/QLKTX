@@ -20,20 +20,23 @@ namespace QLKTX.View.UC_Control
 
         private void UC_ThongKe_Load(object sender, EventArgs e)
         {
-            lbSoPhongSuDung.Text = BLL_QLPhong.Instance.GetSoPhongDangSuDung().ToString();
-            lbSoPhongTrong.Text = BLL_QLPhong.Instance.GetSoPhongTrong().ToString();
-            lbTongSoPhong.Text = BLL_QLPhong.Instance.GetSoPhongToiDa().ToString();
-            lbSoSV.Text = BLL_QLSV.Instance.GetSoLuongSV().ToString();
             LoadInfo();
         }
         public void LoadInfo()
         {
+            lbSoPhongSuDung.Text = BLL_QLPhong.Instance.GetSoPhongDangSuDung().ToString();
+            lbSoPhongTrong.Text = BLL_QLPhong.Instance.GetSoPhongTrong().ToString();
+            lbTongSoPhong.Text = BLL_QLPhong.Instance.GetSoPhongToiDa().ToString();
+            lbSoSV.Text = BLL_QLSV.Instance.GetSoLuongSV().ToString();
             lbDoanhThu.Text = BLL_HoaDon.Instance.GetDoanhThu(dtpNgayDau.Value.Date, dtpNgayCuoi.Value.Date).ToString();
-            dgvSVNoTienPhong.DataSource = BLL_HoaDon.Instance.GetSVNoTienPhong(dtpNgayDau.Value, dtpNgayCuoi.Value).Select(x => new { x.MSSV, x.HoTen, x.Phong.TenPhong, SoThangNo = x.HoaDons.Where(p => p.status == false).Count() }).ToList();
+            lbSoSVBiKhoaTaiKhoan.Text = BLL_QLSV.Instance.GetSoSVBiKhoaTaiKhoan().ToString();
+            dgvSVNoTienPhong.DataSource = BLL_HoaDon.Instance.GetSVNoTienPhong(dtpNgayDau.Value, dtpNgayCuoi.Value).Select(x => new { x.MSSV, x.HoTen, x.Phong.TenPhong, SoThangNo = x.HoaDons.Where(p => p.status == false).Count(),status=x.AccSV.status }).ToList();
             dgvSVNoTienPhong.Columns[0].HeaderText = "MSSV";
             dgvSVNoTienPhong.Columns[1].HeaderText = "Họ Tên";
             dgvSVNoTienPhong.Columns[2].HeaderText = "Phòng";
             dgvSVNoTienPhong.Columns[3].HeaderText = "Số Tháng Nợ";
+            dgvSVNoTienPhong.Columns[4].HeaderText = "Trạng Thái tài khoản";
+            dgvSVNoTienPhong.Columns[4].ValueType = typeof(bool);
 
         }
         private void btnSearch_Click(object sender, EventArgs e)
@@ -51,21 +54,15 @@ namespace QLKTX.View.UC_Control
 
         private void icbtDel_Click(object sender, EventArgs e)
         {
-            if (dgvSVNoTienPhong.SelectedRows.Count > 0)
+            foreach (DataGridViewRow i in dgvSVNoTienPhong.Rows)
             {
-                DialogResult dialogResult = MessageBox.Show("Bạn chắc chưa?", "Delete Students", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
+                if (Int32.Parse(i.Cells[3].Value.ToString()) > 3)
                 {
-                    foreach (DataGridViewRow i in dgvSVNoTienPhong.SelectedRows)
-                    {
-                        BLL_QLSV.Instance.DeleteSV(i.Cells[0].FormattedValue.ToString());
-                        MessageBox.Show(i.Cells[0].FormattedValue.ToString());
-
-                    }
-
-                    LoadInfo();
+                    BLL_QLSV.Instance.khoaAccSV(BLL_QLSV.Instance.GetSVByMSSV(i.Cells[0].Value.ToString()));
                 }
+                
             }
+            LoadInfo();
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -84,6 +81,25 @@ namespace QLKTX.View.UC_Control
                 BLL_PhieuKyLuat.Instance.AddPhieuKyLuat(temp);
             }
             MessageBox.Show("đã tạo phiếu kỷ luật");
+        }
+
+        private void icbUnlock_Click(object sender, EventArgs e)
+        {
+            if (dgvSVNoTienPhong.SelectedRows.Count > 0)
+            {
+                BLL_QLSV.Instance.MokhoaAccSV(BLL_QLSV.Instance.GetSVByMSSV(dgvSVNoTienPhong.SelectedRows[0].Cells[0].FormattedValue.ToString()));
+                LoadInfo();
+            }
+            foreach (DataGridViewRow i in dgvSVNoTienPhong.Rows)
+            {
+                if (Int32.Parse(i.Cells[3].Value.ToString()) <= 3)
+                {
+                    BLL_QLSV.Instance.MokhoaAccSV(BLL_QLSV.Instance.GetSVByMSSV(i.Cells[0].Value.ToString()));
+                }
+
+            }
+            LoadInfo();
+
         }
     }
 }

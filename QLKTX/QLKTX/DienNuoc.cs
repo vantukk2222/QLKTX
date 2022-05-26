@@ -21,7 +21,7 @@ namespace QLKTX
         }
     
         public string MaDienNuoc { get; set; }
-        public Nullable<bool> TìnhTrang { get; set; }
+        public bool TìnhTrang { get; set; }
         public string MaPhong { get; set; }
     
         public virtual Phong Phong { get; set; }

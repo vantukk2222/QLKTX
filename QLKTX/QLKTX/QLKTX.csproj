@@ -96,7 +96,7 @@
     <Compile Include="AccSV.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="BLL\BLL_AccSV.cs" />
+    <Compile Include="BLL\BLL_Acc.cs" />
     <Compile Include="BLL\BLL_DienNuoc.cs" />
     <Compile Include="BLL\BLL_HoaDon.cs" />
     <Compile Include="BLL\BLL_PhieuDKOKTX.cs" />
@@ -320,9 +320,7 @@
     <None Include="Resources\hostel.png" />
     <None Include="Resources\building.png" />
     <None Include="Resources\Exit.png" />
-    <EmbeddedResource Include="QLKTX.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <EmbeddedResource Include="QLKTX.mdf" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
@@ -335,7 +333,6 @@
     </Content>
     <Content Include="QLKTX_log.ldf">
       <DependentUpon>QLKTX.mdf</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>

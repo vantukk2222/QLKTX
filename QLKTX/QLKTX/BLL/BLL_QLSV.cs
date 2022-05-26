@@ -43,6 +43,12 @@ namespace QLKTX.BLL
                                     select SV).ToList();
             return SinhVien;
         }
+        
+        public int GetSoSVBiKhoaTaiKhoan()
+        {
+            return DataHelper.db.AccSVs.Where(x => x.status == false).Count();
+        }
+
         public List<SV> GetAllSVContainName(string name)
         {
             return DataHelper.db.SVs.Where(sv=>sv.HoTen.Contains(name)).ToList();
@@ -73,7 +79,7 @@ namespace QLKTX.BLL
             try
             {
                 DataHelper.db.SVs.Add(sv);
-                BLL_AccSV.Instance.CreateAccSV(sv.MSSV);
+                BLL_Acc.Instance.CreateAccSV(sv.MSSV);
                 DataHelper.db.SaveChanges();
             }
             catch
@@ -103,6 +109,17 @@ namespace QLKTX.BLL
         public int GetSoLuongSV()
         {
             return DataHelper.db.SVs.Count();
+        }
+        public void khoaAccSV(SV sv)
+        {
+            sv.AccSV.status = false;
+            DataHelper.db.SaveChanges();
+        }
+
+        internal void MokhoaAccSV(SV sv)
+        {
+            sv.AccSV.status = true;
+            DataHelper.db.SaveChanges();
         }
     }
 }

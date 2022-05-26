@@ -101,7 +101,7 @@ namespace QLKTX.View.FormView
                 return;
             }
             bool isSV = BLL_QLSV.Instance.checkSV(txtmssv.Texts);
-            bool isUserName = BLL_AccSV.Instance.CheckAccount(txtUsername.Texts);
+            bool isUserName = BLL_Acc.Instance.CheckAccount(txtUsername.Texts);
             if (isSV)
             {
                 MessageBox.Show("Trùng MSV!");

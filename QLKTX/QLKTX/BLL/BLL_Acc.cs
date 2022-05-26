@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace QLKTX.BLL
 {
-    public class BLL_AccSV
+    public class BLL_Acc
     {
-        private static BLL_AccSV _Instance;
-        public static BLL_AccSV Instance
+        private static BLL_Acc _Instance;
+        public static BLL_Acc Instance
         {
             get
             {
                 if (_Instance == null)
-                    _Instance = new BLL_AccSV();
+                    _Instance = new BLL_Acc();
                 return _Instance;
             }
         }
@@ -23,7 +23,7 @@ namespace QLKTX.BLL
         {
             if (DataHelper.db.AccSVs.Where(x => x.MSSV == mssv).Count() == 0)
             {
-                AccSV acc = new AccSV { MSSV = mssv, UserName = mssv, PassWord = mssv };
+                AccSV acc = new AccSV { MSSV = mssv, UserName = mssv, PassWord = mssv,status=true };
 
                 DataHelper.db.AccSVs.Add(acc);
                 DataHelper.db.SaveChanges();
@@ -51,6 +51,24 @@ namespace QLKTX.BLL
         {
             sv.AccSV.PassWord = pass;
             sv.AccSV.UserName = user;
+        }
+        public AccSV LoginSV(string username, string password)
+        {
+            var l1 = DataHelper.db.AccSVs.Where(x => x.UserName == username && x.PassWord == password);
+            if (l1.Count() == 1) 
+            { 
+                return l1.FirstOrDefault();
+            }           
+            return null;
+        }
+        public AccCB LoginCB(string username,string password)
+        {
+            var l1 = DataHelper.db.AccCBs.Where(x => x.UserName == username && x.PassWord == password);
+            if (l1.Count() == 1)
+            {
+                return l1.FirstOrDefault();
+            }
+            return null;
         }
     }
 }
