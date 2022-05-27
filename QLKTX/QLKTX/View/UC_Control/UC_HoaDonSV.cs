@@ -61,7 +61,7 @@ namespace QLKTX.View.UC_Control
             dgvHoaDon.Columns[6].HeaderText = "Điện nước";
             dgvHoaDon.Columns[7].HeaderText = "Tiền phòng";
             dgvHoaDon.Columns[8].HeaderText = "Đã thanh toán";
-            dgvHoaDon.Columns[8].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //dgvHoaDon.Columns[8].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             /////////////////////////////////
             dgvPhieuPhat.Columns[0].HeaderText = "Mã phiếu";
             dgvPhieuPhat.Columns[1].HeaderText = "Tên phiếu";
@@ -71,7 +71,7 @@ namespace QLKTX.View.UC_Control
             dgvPhieuPhat.Columns[5].HeaderText = "Hình thức vi phạm";
             dgvPhieuPhat.Columns[6].HeaderText = "Hình thức kỷ luật";
             dgvPhieuPhat.Columns[4].HeaderText = "Ngày lập";
-            dgvPhieuPhat.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            //dgvPhieuPhat.Columns[7].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
         private void icbttienphong_Click(object sender, EventArgs e)

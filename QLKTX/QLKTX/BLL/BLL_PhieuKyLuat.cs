@@ -50,5 +50,12 @@ namespace QLKTX.BLL
             temp.status = true;
             DataHelper.db.SaveChanges();
         }
+        public int SoPhieuKyLuatChuaThanhToan(SV sv)
+        {
+            int count = 0;
+            var l1 = DataHelper.db.PhieuKyLuats.Where(p => p.Phieu.MSSV == sv.MSSV && p.Phieu.status == false).Select(p => p);
+            count = l1.Count();
+            return count;
+        }
     }
 }

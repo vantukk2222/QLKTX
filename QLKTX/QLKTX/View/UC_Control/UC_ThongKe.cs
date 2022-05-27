@@ -87,7 +87,10 @@ namespace QLKTX.View.UC_Control
         {
             if (dgvSVNoTienPhong.SelectedRows.Count > 0)
             {
-                BLL_QLSV.Instance.MokhoaAccSV(BLL_QLSV.Instance.GetSVByMSSV(dgvSVNoTienPhong.SelectedRows[0].Cells[0].FormattedValue.ToString()));
+                foreach (DataGridViewRow i in dgvSVNoTienPhong.SelectedRows)
+                {
+                    BLL_QLSV.Instance.MokhoaAccSV(BLL_QLSV.Instance.GetSVByMSSV(i.Cells[0].FormattedValue.ToString()));
+                }
                 LoadInfo();
             }
             foreach (DataGridViewRow i in dgvSVNoTienPhong.Rows)

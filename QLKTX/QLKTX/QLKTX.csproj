@@ -320,7 +320,9 @@
     <None Include="Resources\hostel.png" />
     <None Include="Resources\building.png" />
     <None Include="Resources\Exit.png" />
-    <EmbeddedResource Include="QLKTX.mdf" />
+    <EmbeddedResource Include="QLKTX.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
@@ -333,6 +335,7 @@
     </Content>
     <Content Include="QLKTX_log.ldf">
       <DependentUpon>QLKTX.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>

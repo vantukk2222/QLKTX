@@ -1,4 +1,5 @@
-﻿using QLKTX.View.UC_Control;
+﻿using QLKTX.BLL;
+using QLKTX.View.UC_Control;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace QLKTX.View.FormView
 {
@@ -21,8 +23,8 @@ namespace QLKTX.View.FormView
         {
             temp = sv;
             InitializeComponent();
-        }
 
+        }
         private void icbtThongTin_Click(object sender, EventArgs e)
         {
             panelDesktop.Controls.Clear();

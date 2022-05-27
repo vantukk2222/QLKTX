@@ -58,6 +58,9 @@ namespace QLKTX.View.FormView
 								fuser.Show();
 								this.Hide();
 								MessageBox.Show("Welcome sinh viên " + tempSV.SV.HoTen);
+								int count = BLL_PhieuKyLuat.Instance.SoPhieuKyLuatChuaThanhToan(tempSV.SV);
+								MessageBox.Show("Bạn có " + count.ToString() + " phiếu phạt chưa xử lý");
+
 							}
 						}
 						else
