@@ -41,8 +41,11 @@ namespace QLKTX.View.UC_Control
         }
         private void btSave_Click(object sender, EventArgs e)
         {
-            temp.SDT = txtSDT.Texts;
-            BLL_QLSV.Instance.EditSV(temp);
+            if (Int32.TryParse(txtmssv.Text, out int count)&&count>8&&count<11)
+            {
+                temp.SDT = txtSDT.Texts;
+                BLL_QLSV.Instance.EditSV(temp);
+            }
         }
 
         private void btnGiaHan_Click(object sender, EventArgs e)
@@ -58,5 +61,7 @@ namespace QLKTX.View.UC_Control
             BLL_PhieuGiaHanHD.Instance.AddPhieuGiaHan(HD);
             MessageBox.Show("Đăng ký gia hạn thành công");
         }
+
+
     }
 }

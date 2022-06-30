@@ -81,7 +81,7 @@ namespace QLKTX.BLL
                 if (i.SoNguoiHienTai > 0)
                 {
                     string TenHoaDon = "Tiền Phòng " + i.TenPhong.Trim() + " Tháng " + DateTime.Now.Month + "/" + DateTime.Now.Year;
-                    DienNuoc temp = DataHelper.db.HoaDons.Where(x=>x.TenHoaDon.Trim()==TenHoaDon).FirstOrDefault().DienNuoc;
+                    DienNuoc temp=null;
                     if (!BLL_HoaDon.Instance.CheckHoaDonThang(i.SVs.FirstOrDefault(), TenHoaDon))
                     {
                         temp = new DienNuoc { MaDienNuoc = BLL_DienNuoc.Instance.NewMaDienNuoc(), Phong = i, TìnhTrang = false };

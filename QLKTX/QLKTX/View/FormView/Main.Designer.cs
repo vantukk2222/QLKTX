@@ -31,8 +31,6 @@ namespace QLKTX.View.FormView
         {
             this.panelMenu = new System.Windows.Forms.Panel();
             this.icbtLogOut = new FontAwesome.Sharp.IconButton();
-            this.icbtInDanhSach = new FontAwesome.Sharp.IconButton();
-            this.icbtGioiThieu = new FontAwesome.Sharp.IconButton();
             this.icbtTongQuan = new FontAwesome.Sharp.IconButton();
             this.icbtPhieuBaoCao = new FontAwesome.Sharp.IconButton();
             this.icbtHoaDon = new FontAwesome.Sharp.IconButton();
@@ -60,8 +58,6 @@ namespace QLKTX.View.FormView
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
             this.panelMenu.Controls.Add(this.icbtLogOut);
-            this.panelMenu.Controls.Add(this.icbtInDanhSach);
-            this.panelMenu.Controls.Add(this.icbtGioiThieu);
             this.panelMenu.Controls.Add(this.icbtTongQuan);
             this.panelMenu.Controls.Add(this.icbtPhieuBaoCao);
             this.panelMenu.Controls.Add(this.icbtHoaDon);
@@ -97,52 +93,6 @@ namespace QLKTX.View.FormView
             this.icbtLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.icbtLogOut.UseVisualStyleBackColor = false;
             this.icbtLogOut.Click += new System.EventHandler(this.icbtLogOut_Click);
-            // 
-            // icbtInDanhSach
-            // 
-            this.icbtInDanhSach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.icbtInDanhSach.Dock = System.Windows.Forms.DockStyle.Top;
-            this.icbtInDanhSach.FlatAppearance.BorderSize = 0;
-            this.icbtInDanhSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icbtInDanhSach.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.icbtInDanhSach.ForeColor = System.Drawing.Color.White;
-            this.icbtInDanhSach.IconChar = FontAwesome.Sharp.IconChar.Print;
-            this.icbtInDanhSach.IconColor = System.Drawing.Color.Cornsilk;
-            this.icbtInDanhSach.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.icbtInDanhSach.IconSize = 30;
-            this.icbtInDanhSach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtInDanhSach.Location = new System.Drawing.Point(0, 444);
-            this.icbtInDanhSach.Name = "icbtInDanhSach";
-            this.icbtInDanhSach.Size = new System.Drawing.Size(230, 55);
-            this.icbtInDanhSach.TabIndex = 7;
-            this.icbtInDanhSach.Tag = "In danh sách";
-            this.icbtInDanhSach.Text = "In danh sách";
-            this.icbtInDanhSach.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtInDanhSach.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.icbtInDanhSach.UseVisualStyleBackColor = false;
-            // 
-            // icbtGioiThieu
-            // 
-            this.icbtGioiThieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(71)))), ((int)(((byte)(71)))));
-            this.icbtGioiThieu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.icbtGioiThieu.FlatAppearance.BorderSize = 0;
-            this.icbtGioiThieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icbtGioiThieu.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.icbtGioiThieu.ForeColor = System.Drawing.Color.White;
-            this.icbtGioiThieu.IconChar = FontAwesome.Sharp.IconChar.BookOpen;
-            this.icbtGioiThieu.IconColor = System.Drawing.Color.Cornsilk;
-            this.icbtGioiThieu.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.icbtGioiThieu.IconSize = 30;
-            this.icbtGioiThieu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtGioiThieu.Location = new System.Drawing.Point(0, 389);
-            this.icbtGioiThieu.Name = "icbtGioiThieu";
-            this.icbtGioiThieu.Size = new System.Drawing.Size(230, 55);
-            this.icbtGioiThieu.TabIndex = 6;
-            this.icbtGioiThieu.Tag = "Giới thiệu";
-            this.icbtGioiThieu.Text = "Giới thiệu";
-            this.icbtGioiThieu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtGioiThieu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.icbtGioiThieu.UseVisualStyleBackColor = false;
             // 
             // icbtTongQuan
             // 
@@ -453,12 +403,10 @@ namespace QLKTX.View.FormView
 
         private System.Windows.Forms.Panel panelMenu;
         private FontAwesome.Sharp.IconButton icbtQLP;
-        private FontAwesome.Sharp.IconButton icbtGioiThieu;
         private FontAwesome.Sharp.IconButton icbtTongQuan;
         private FontAwesome.Sharp.IconButton icbtPhieuBaoCao;
         private FontAwesome.Sharp.IconButton icbtHoaDon;
         private FontAwesome.Sharp.IconButton icbtQLSV;
-        private FontAwesome.Sharp.IconButton icbtInDanhSach;
         private FontAwesome.Sharp.IconButton icbtLogOut;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;

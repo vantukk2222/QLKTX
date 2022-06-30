@@ -74,7 +74,7 @@ namespace QLKTX.BLL
         }
         public void DeletePhieuDKOKTX(PhieuDangKyOKTX p)
         {
-            DataHelper.db.PhieuDangKyOKTXes.Remove(p);
+            DataHelper.db.Phieux.Remove(p.Phieu);
             DataHelper.db.SaveChanges();
         }
         public PhieuDangKyOKTX SearchPhieuDK(string maPhieu)

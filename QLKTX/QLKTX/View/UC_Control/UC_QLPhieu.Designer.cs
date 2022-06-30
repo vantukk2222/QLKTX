@@ -29,15 +29,15 @@ namespace QLKTX.View.UC_Control
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabBC = new System.Windows.Forms.TabPage();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.icbtDel = new FontAwesome.Sharp.IconButton();
@@ -52,20 +52,15 @@ namespace QLKTX.View.UC_Control
             this.btnDeleteAll = new FontAwesome.Sharp.IconButton();
             this.btnAcceptAll = new FontAwesome.Sharp.IconButton();
             this.btnAccept = new FontAwesome.Sharp.IconButton();
-            this.rjTextBox1 = new CustomBox.RJControls.RJTextBox();
             this.dgvDKOKTX = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnDelDKO = new FontAwesome.Sharp.IconButton();
             this.btnViewDKO = new FontAwesome.Sharp.IconButton();
-            this.btnSearchDKO = new FontAwesome.Sharp.IconButton();
             this.tabGiaHan = new System.Windows.Forms.TabPage();
             this.btnDelAllGH = new FontAwesome.Sharp.IconButton();
             this.btnAcceptAllGH = new FontAwesome.Sharp.IconButton();
             this.btnAcceptGH = new FontAwesome.Sharp.IconButton();
             this.btnDelGH = new FontAwesome.Sharp.IconButton();
-            this.btnViewGH = new FontAwesome.Sharp.IconButton();
-            this.rjTextBox2 = new CustomBox.RJControls.RJTextBox();
             this.dgvGiaHan = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
@@ -203,10 +198,8 @@ namespace QLKTX.View.UC_Control
             // 
             // dgvBaoCao
             // 
-            this.dgvBaoCao.AllowUserToAddRows = false;
-            this.dgvBaoCao.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
-            this.dgvBaoCao.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
+            this.dgvBaoCao.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvBaoCao.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -215,28 +208,27 @@ namespace QLKTX.View.UC_Control
             this.dgvBaoCao.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBaoCao.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvBaoCao.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBaoCao.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvBaoCao.ColumnHeadersHeight = 50;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBaoCao.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBaoCao.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvBaoCao.ColumnHeadersHeight = 4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(186)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBaoCao.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvBaoCao.EnableHeadersVisualStyles = false;
             this.dgvBaoCao.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(220)))), ((int)(((byte)(242)))));
             this.dgvBaoCao.Location = new System.Drawing.Point(3, 101);
             this.dgvBaoCao.Name = "dgvBaoCao";
-            this.dgvBaoCao.ReadOnly = true;
             this.dgvBaoCao.RowHeadersVisible = false;
             this.dgvBaoCao.RowHeadersWidth = 51;
             this.dgvBaoCao.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -255,8 +247,8 @@ namespace QLKTX.View.UC_Control
             this.dgvBaoCao.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.dgvBaoCao.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvBaoCao.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvBaoCao.ThemeStyle.HeaderStyle.Height = 50;
-            this.dgvBaoCao.ThemeStyle.ReadOnly = true;
+            this.dgvBaoCao.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgvBaoCao.ThemeStyle.ReadOnly = false;
             this.dgvBaoCao.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(234)))), ((int)(((byte)(247)))));
             this.dgvBaoCao.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvBaoCao.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
@@ -304,17 +296,15 @@ namespace QLKTX.View.UC_Control
             this.tabDK.Controls.Add(this.btnDeleteAll);
             this.tabDK.Controls.Add(this.btnAcceptAll);
             this.tabDK.Controls.Add(this.btnAccept);
-            this.tabDK.Controls.Add(this.rjTextBox1);
             this.tabDK.Controls.Add(this.dgvDKOKTX);
             this.tabDK.Controls.Add(this.btnDelDKO);
             this.tabDK.Controls.Add(this.btnViewDKO);
-            this.tabDK.Controls.Add(this.btnSearchDKO);
             this.tabDK.Location = new System.Drawing.Point(4, 29);
             this.tabDK.Name = "tabDK";
             this.tabDK.Padding = new System.Windows.Forms.Padding(3);
             this.tabDK.Size = new System.Drawing.Size(1063, 643);
             this.tabDK.TabIndex = 1;
-            this.tabDK.Text = "phiếu đăng ký ở";
+            this.tabDK.Text = "Phiếu đăng ký ở";
             // 
             // btnDeleteAll
             // 
@@ -385,60 +375,35 @@ namespace QLKTX.View.UC_Control
             this.btnAccept.UseVisualStyleBackColor = false;
             this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.Silver;
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 1;
-            this.rjTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(13, 64);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox1.PlaceholderText = "";
-            this.rjTextBox1.Size = new System.Drawing.Size(753, 35);
-            this.rjTextBox1.TabIndex = 9;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
-            // 
             // dgvDKOKTX
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvDKOKTX.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.dgvDKOKTX.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvDKOKTX.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvDKOKTX.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvDKOKTX.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDKOKTX.BackgroundColor = System.Drawing.Color.White;
             this.dgvDKOKTX.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDKOKTX.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDKOKTX.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDKOKTX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDKOKTX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvDKOKTX.ColumnHeadersHeight = 50;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDKOKTX.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDKOKTX.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgvDKOKTX.EnableHeadersVisualStyles = false;
             this.dgvDKOKTX.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDKOKTX.Location = new System.Drawing.Point(6, 111);
@@ -517,27 +482,6 @@ namespace QLKTX.View.UC_Control
             this.btnViewDKO.UseVisualStyleBackColor = false;
             this.btnViewDKO.Click += new System.EventHandler(this.btnViewDKO_Click);
             // 
-            // btnSearchDKO
-            // 
-            this.btnSearchDKO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearchDKO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(165)))), ((int)(((byte)(1)))));
-            this.btnSearchDKO.FlatAppearance.BorderSize = 0;
-            this.btnSearchDKO.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchDKO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSearchDKO.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.btnSearchDKO.IconColor = System.Drawing.Color.Brown;
-            this.btnSearchDKO.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSearchDKO.IconSize = 25;
-            this.btnSearchDKO.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearchDKO.Location = new System.Drawing.Point(773, 64);
-            this.btnSearchDKO.Name = "btnSearchDKO";
-            this.btnSearchDKO.Size = new System.Drawing.Size(130, 40);
-            this.btnSearchDKO.TabIndex = 4;
-            this.btnSearchDKO.Text = "Search";
-            this.btnSearchDKO.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearchDKO.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSearchDKO.UseVisualStyleBackColor = false;
-            // 
             // tabGiaHan
             // 
             this.tabGiaHan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
@@ -545,10 +489,7 @@ namespace QLKTX.View.UC_Control
             this.tabGiaHan.Controls.Add(this.btnAcceptAllGH);
             this.tabGiaHan.Controls.Add(this.btnAcceptGH);
             this.tabGiaHan.Controls.Add(this.btnDelGH);
-            this.tabGiaHan.Controls.Add(this.btnViewGH);
-            this.tabGiaHan.Controls.Add(this.rjTextBox2);
             this.tabGiaHan.Controls.Add(this.dgvGiaHan);
-            this.tabGiaHan.Controls.Add(this.iconButton3);
             this.tabGiaHan.Location = new System.Drawing.Point(4, 29);
             this.tabGiaHan.Name = "tabGiaHan";
             this.tabGiaHan.Padding = new System.Windows.Forms.Padding(3);
@@ -569,7 +510,7 @@ namespace QLKTX.View.UC_Control
             this.btnDelAllGH.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDelAllGH.IconSize = 25;
             this.btnDelAllGH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelAllGH.Location = new System.Drawing.Point(916, 353);
+            this.btnDelAllGH.Location = new System.Drawing.Point(916, 292);
             this.btnDelAllGH.Name = "btnDelAllGH";
             this.btnDelAllGH.Size = new System.Drawing.Size(141, 37);
             this.btnDelAllGH.TabIndex = 19;
@@ -638,7 +579,7 @@ namespace QLKTX.View.UC_Control
             this.btnDelGH.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDelGH.IconSize = 25;
             this.btnDelGH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelGH.Location = new System.Drawing.Point(916, 297);
+            this.btnDelGH.Location = new System.Drawing.Point(916, 236);
             this.btnDelGH.Name = "btnDelGH";
             this.btnDelGH.Size = new System.Drawing.Size(141, 37);
             this.btnDelGH.TabIndex = 16;
@@ -648,82 +589,35 @@ namespace QLKTX.View.UC_Control
             this.btnDelGH.UseVisualStyleBackColor = false;
             this.btnDelGH.Click += new System.EventHandler(this.btnDelGH_Click);
             // 
-            // btnViewGH
-            // 
-            this.btnViewGH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnViewGH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(149)))), ((int)(((byte)(236)))));
-            this.btnViewGH.FlatAppearance.BorderSize = 0;
-            this.btnViewGH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewGH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btnViewGH.ForeColor = System.Drawing.Color.White;
-            this.btnViewGH.IconChar = FontAwesome.Sharp.IconChar.Pen;
-            this.btnViewGH.IconColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnViewGH.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnViewGH.IconSize = 25;
-            this.btnViewGH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnViewGH.Location = new System.Drawing.Point(916, 239);
-            this.btnViewGH.Name = "btnViewGH";
-            this.btnViewGH.Size = new System.Drawing.Size(141, 37);
-            this.btnViewGH.TabIndex = 15;
-            this.btnViewGH.Text = "View";
-            this.btnViewGH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnViewGH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnViewGH.UseVisualStyleBackColor = false;
-            // 
-            // rjTextBox2
-            // 
-            this.rjTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox2.BorderColor = System.Drawing.Color.Silver;
-            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox2.BorderRadius = 0;
-            this.rjTextBox2.BorderSize = 1;
-            this.rjTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.rjTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.rjTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rjTextBox2.Location = new System.Drawing.Point(13, 64);
-            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox2.Multiline = false;
-            this.rjTextBox2.Name = "rjTextBox2";
-            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.rjTextBox2.PasswordChar = false;
-            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.rjTextBox2.PlaceholderText = "";
-            this.rjTextBox2.Size = new System.Drawing.Size(776, 35);
-            this.rjTextBox2.TabIndex = 14;
-            this.rjTextBox2.Texts = "";
-            this.rjTextBox2.UnderlinedStyle = false;
-            // 
             // dgvGiaHan
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dgvGiaHan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            this.dgvGiaHan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvGiaHan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvGiaHan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvGiaHan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvGiaHan.BackgroundColor = System.Drawing.Color.White;
             this.dgvGiaHan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvGiaHan.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvGiaHan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGiaHan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGiaHan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvGiaHan.ColumnHeadersHeight = 50;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvGiaHan.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvGiaHan.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgvGiaHan.EnableHeadersVisualStyles = false;
             this.dgvGiaHan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvGiaHan.Location = new System.Drawing.Point(6, 111);
@@ -755,27 +649,6 @@ namespace QLKTX.View.UC_Control
             this.dgvGiaHan.ThemeStyle.RowsStyle.Height = 24;
             this.dgvGiaHan.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvGiaHan.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(165)))), ((int)(((byte)(1)))));
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton3.IconColor = System.Drawing.Color.Brown;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 25;
-            this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(796, 70);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(119, 31);
-            this.iconButton3.TabIndex = 11;
-            this.iconButton3.Text = "Search";
-            this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton3.UseVisualStyleBackColor = false;
             // 
             // guna2HtmlLabel1
             // 
@@ -859,13 +732,9 @@ namespace QLKTX.View.UC_Control
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.TabPage tabDK;
         private Guna.UI2.WinForms.Guna2DataGridView dgvDKOKTX;
-        private FontAwesome.Sharp.IconButton btnSearchDKO;
         private FontAwesome.Sharp.IconButton btnDelDKO;
         private FontAwesome.Sharp.IconButton btnViewDKO;
-        private CustomBox.RJControls.RJTextBox rjTextBox1;
         private System.Windows.Forms.TabPage tabGiaHan;
-        private CustomBox.RJControls.RJTextBox rjTextBox2;
-        private FontAwesome.Sharp.IconButton iconButton3;
         private Guna.UI2.WinForms.Guna2DataGridView dgvGiaHan;
         private FontAwesome.Sharp.IconButton btnAccept;
         private FontAwesome.Sharp.IconButton btnAcceptAll;
@@ -874,6 +743,5 @@ namespace QLKTX.View.UC_Control
         private FontAwesome.Sharp.IconButton btnAcceptAllGH;
         private FontAwesome.Sharp.IconButton btnAcceptGH;
         private FontAwesome.Sharp.IconButton btnDelGH;
-        private FontAwesome.Sharp.IconButton btnViewGH;
     }
 }

@@ -234,7 +234,7 @@ namespace QLKTX.View.FormView
 
          private void icbtQLP_Click(object sender, EventArgs e)
         {
-
+            panelDesktop.Controls.Clear();
             if (icbtMenu.IconChar == FontAwesome.Sharp.IconChar.Bars)
             {
                 this.Width += 130;

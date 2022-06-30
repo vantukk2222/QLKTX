@@ -69,5 +69,6 @@ namespace QLKTX.View.UC_Control
             }).ToList();
             SetColumnsName();
         }
+
     }
 }

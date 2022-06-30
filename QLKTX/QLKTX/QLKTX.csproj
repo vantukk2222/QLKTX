@@ -318,8 +318,9 @@
     <None Include="Resources\USER.png" />
     <None Include="Resources\hotel-room %281%29.png" />
     <None Include="Resources\hostel.png" />
-    <None Include="Resources\building.png" />
     <None Include="Resources\Exit.png" />
+    <None Include="Resources\building.png" />
+    <None Include="Resources\BK-KTX.jpg" />
     <EmbeddedResource Include="QLKTX.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>

@@ -48,7 +48,7 @@ namespace QLKTX.View.UC_Control
             guna2DataGridView1.Columns[6].HeaderText = "Status";
             this.Size = this.MinimumSize;
             //window state
-            guna2DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            //guna2DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             
         }
         public void ShowDataDetail(List<SV> list)
