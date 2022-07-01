@@ -16,6 +16,7 @@ namespace QLKTX.View.UC_Control
         public UC_ThongKe()
         {
             InitializeComponent();
+            dtpNgayCuoi.Value = DateTime.Now;
         }
 
         private void UC_ThongKe_Load(object sender, EventArgs e)

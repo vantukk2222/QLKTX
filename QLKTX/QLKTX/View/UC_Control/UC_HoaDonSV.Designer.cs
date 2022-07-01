@@ -65,7 +65,7 @@ namespace QLKTX.View.UC_Control
             this.tabcontrol1.Location = new System.Drawing.Point(0, 45);
             this.tabcontrol1.Name = "tabcontrol1";
             this.tabcontrol1.SelectedIndex = 0;
-            this.tabcontrol1.Size = new System.Drawing.Size(1071, 676);
+            this.tabcontrol1.Size = new System.Drawing.Size(1121, 676);
             this.tabcontrol1.TabIndex = 36;
             // 
             // tabHoaDon
@@ -76,10 +76,10 @@ namespace QLKTX.View.UC_Control
             this.tabHoaDon.Controls.Add(this.icbttienphong);
             this.tabHoaDon.Controls.Add(this.dgvHoaDon);
             this.tabHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.tabHoaDon.Location = new System.Drawing.Point(4, 29);
+            this.tabHoaDon.Location = new System.Drawing.Point(4, 34);
             this.tabHoaDon.Name = "tabHoaDon";
             this.tabHoaDon.Padding = new System.Windows.Forms.Padding(3);
-            this.tabHoaDon.Size = new System.Drawing.Size(1063, 643);
+            this.tabHoaDon.Size = new System.Drawing.Size(1113, 638);
             this.tabHoaDon.TabIndex = 0;
             this.tabHoaDon.Text = "Hoá đơn";
             // 
@@ -91,14 +91,14 @@ namespace QLKTX.View.UC_Control
             this.icbttiendn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.icbttiendn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
             this.icbttiendn.ForeColor = System.Drawing.Color.White;
-            this.icbttiendn.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckAlt;
+            this.icbttiendn.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckDollar;
             this.icbttiendn.IconColor = System.Drawing.SystemColors.ButtonFace;
             this.icbttiendn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icbttiendn.IconSize = 25;
             this.icbttiendn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbttiendn.Location = new System.Drawing.Point(916, 180);
+            this.icbttiendn.Location = new System.Drawing.Point(951, 180);
             this.icbttiendn.Name = "icbttiendn";
-            this.icbttiendn.Size = new System.Drawing.Size(130, 37);
+            this.icbttiendn.Size = new System.Drawing.Size(145, 37);
             this.icbttiendn.TabIndex = 13;
             this.icbttiendn.Text = "Điện nước";
             this.icbttiendn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -123,14 +123,14 @@ namespace QLKTX.View.UC_Control
             this.icbttienphong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.icbttienphong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
             this.icbttienphong.ForeColor = System.Drawing.Color.White;
-            this.icbttienphong.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckAlt;
+            this.icbttienphong.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckDollar;
             this.icbttienphong.IconColor = System.Drawing.SystemColors.ButtonFace;
             this.icbttienphong.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icbttienphong.IconSize = 25;
             this.icbttienphong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbttienphong.Location = new System.Drawing.Point(916, 113);
+            this.icbttienphong.Location = new System.Drawing.Point(951, 115);
             this.icbttienphong.Name = "icbttienphong";
-            this.icbttienphong.Size = new System.Drawing.Size(130, 37);
+            this.icbttienphong.Size = new System.Drawing.Size(145, 37);
             this.icbttienphong.TabIndex = 5;
             this.icbttienphong.Text = "Tiền phòng";
             this.icbttienphong.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -177,7 +177,7 @@ namespace QLKTX.View.UC_Control
             this.dgvHoaDon.RowHeadersVisible = false;
             this.dgvHoaDon.RowHeadersWidth = 51;
             this.dgvHoaDon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHoaDon.Size = new System.Drawing.Size(897, 521);
+            this.dgvHoaDon.Size = new System.Drawing.Size(918, 521);
             this.dgvHoaDon.TabIndex = 9;
             this.dgvHoaDon.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.FeterRiver;
             this.dgvHoaDon.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(224)))), ((int)(((byte)(244)))));
@@ -206,10 +206,10 @@ namespace QLKTX.View.UC_Control
             // 
             this.tabPhieuPhat.Controls.Add(this.btnNopPhat);
             this.tabPhieuPhat.Controls.Add(this.dgvPhieuPhat);
-            this.tabPhieuPhat.Location = new System.Drawing.Point(4, 29);
+            this.tabPhieuPhat.Location = new System.Drawing.Point(4, 34);
             this.tabPhieuPhat.Name = "tabPhieuPhat";
             this.tabPhieuPhat.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPhieuPhat.Size = new System.Drawing.Size(1063, 643);
+            this.tabPhieuPhat.Size = new System.Drawing.Size(1063, 638);
             this.tabPhieuPhat.TabIndex = 1;
             this.tabPhieuPhat.Text = "Phiếu Phạt";
             this.tabPhieuPhat.UseVisualStyleBackColor = true;
@@ -222,7 +222,7 @@ namespace QLKTX.View.UC_Control
             this.btnNopPhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNopPhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold);
             this.btnNopPhat.ForeColor = System.Drawing.Color.White;
-            this.btnNopPhat.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckAlt;
+            this.btnNopPhat.IconChar = FontAwesome.Sharp.IconChar.MoneyCheckDollar;
             this.btnNopPhat.IconColor = System.Drawing.SystemColors.ButtonFace;
             this.btnNopPhat.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNopPhat.IconSize = 25;
@@ -309,7 +309,7 @@ namespace QLKTX.View.UC_Control
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(51, 3);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(243, 31);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(296, 38);
             this.guna2HtmlLabel1.TabIndex = 27;
             this.guna2HtmlLabel1.Text = "Thống kê tiền phòng";
             // 
@@ -321,7 +321,7 @@ namespace QLKTX.View.UC_Control
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1071, 45);
+            this.guna2Panel1.Size = new System.Drawing.Size(1121, 45);
             this.guna2Panel1.TabIndex = 35;
             // 
             // iconPictureBox1
@@ -330,7 +330,7 @@ namespace QLKTX.View.UC_Control
             this.iconPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.iconPictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.IdCard;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.DriversLicense;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 45;
@@ -343,14 +343,14 @@ namespace QLKTX.View.UC_Control
             // 
             // UC_HoaDonSV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tabcontrol1);
             this.Controls.Add(this.guna2Panel1);
             this.Font = new System.Drawing.Font("Verdana", 10F);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_HoaDonSV";
-            this.Size = new System.Drawing.Size(1071, 721);
+            this.Size = new System.Drawing.Size(1121, 721);
             this.tabcontrol1.ResumeLayout(false);
             this.tabHoaDon.ResumeLayout(false);
             this.tabHoaDon.PerformLayout();

@@ -15,7 +15,6 @@ namespace QLKTX.View.UC_Control
 {
     public partial class UC_QLSV : UserControl
     {
-        // QLKTXEntities1 db = new QLKTXEntities1();
         public UC_QLSV()
         {
             InitializeComponent();
@@ -55,6 +54,7 @@ namespace QLKTX.View.UC_Control
             guna2DataGridView1.Columns[9].HeaderText = "Hệ Đào Tạo";
             guna2DataGridView1.Columns[10].HeaderText = "SĐT";
             guna2DataGridView1.Columns[10].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            
 
             foreach(DataGridViewRow i in guna2DataGridView1.Rows)
             {

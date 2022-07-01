@@ -62,10 +62,10 @@ namespace QLKTX.View.UC_Control
             this.tabPage1.Controls.Add(this.dgvHoaDon);
             this.tabPage1.Controls.Add(this.guna2HtmlLabel2);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1063, 643);
+            this.tabPage1.Size = new System.Drawing.Size(1063, 638);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Hoá đơn";
             // 
@@ -102,7 +102,7 @@ namespace QLKTX.View.UC_Control
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(421, 66);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(46, 22);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(55, 27);
             this.guna2HtmlLabel4.TabIndex = 10;
             this.guna2HtmlLabel4.Text = "Đến :";
             // 
@@ -208,7 +208,7 @@ namespace QLKTX.View.UC_Control
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(17, 66);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(76, 22);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(95, 27);
             this.guna2HtmlLabel2.TabIndex = 8;
             this.guna2HtmlLabel2.Text = "Từ ngày :";
             // 
@@ -231,7 +231,7 @@ namespace QLKTX.View.UC_Control
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(51, 3);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(243, 31);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(296, 38);
             this.guna2HtmlLabel1.TabIndex = 27;
             this.guna2HtmlLabel1.Text = "Thống kê tiền phòng";
             // 
@@ -252,7 +252,7 @@ namespace QLKTX.View.UC_Control
             this.iconPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.iconPictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.IdCard;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.DriversLicense;
             this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 45;
@@ -265,7 +265,7 @@ namespace QLKTX.View.UC_Control
             // 
             // UC_QLHoaDon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.Controls.Add(this.tabcontrol1);

@@ -63,10 +63,18 @@ namespace QLKTX.BLL
         }
         public AccCB LoginCB(string username,string password)
         {
-            var l1 = DataHelper.db.AccCBs.Where(x => x.UserName == username && x.PassWord == password);
-            if (l1.Count() == 1)
+            var l1 = DataHelper.db.AccCBs.Where(x => x.UserName.Equals(username) && x.PassWord.Equals(password));
+            try
             {
-                return l1.FirstOrDefault();
+                if (l1.Count() == 1)
+                {
+                    return l1.FirstOrDefault();
+                }
+            }
+            catch (Exception)
+            {
+
+                
             }
             return null;
         }

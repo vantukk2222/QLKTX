@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
-using QLKTX.DTA;
+//using QLKTX.DTA;
 using QLKTX.BLL;
 
 namespace QLKTX.View.FormView
@@ -35,7 +35,7 @@ namespace QLKTX.View.FormView
 						if (tempCB!=null)
 						{
 							Main fmain = new Main();
-							fmain.Show();
+							fmain.ShowDialog();
 							this.Hide();
 							MessageBox.Show("Welcome cán bộ " + tempCB.CanBoQuanLy.HoTen);
 						}

@@ -1,5 +1,5 @@
 ﻿using QLKTX.BLL;
-using QLKTX.DTA;
+//using QLKTX.DTA;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
